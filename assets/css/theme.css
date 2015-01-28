@@ -695,7 +695,6 @@ body{color:#2c2c2c;font:16px/125% 'open_sanslight',Helvetica,sans-serif normal}
 .MainFooter-nav{border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:30px;padding-bottom:20px;}
 .MainFooter-nav ul{border-left:solid 1px rgba(255,255,255,0.1);min-height:150px;padding:0 0 0 10px;}
 .MainFooter-nav ul li{float:left;padding:0 0 5px 0;width:100%}
-.footer-logo{opacity:.5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50);}
 .footer-logo img{display:block;margin:0 auto;max-width:100%}
 .copyright ul{margin:0;padding:0;}
 .copyright ul li{float:left;margin-right:10px;}
@@ -748,9 +747,10 @@ body{color:#2c2c2c;font:16px/125% 'open_sanslight',Helvetica,sans-serif normal}
 }@media (max-width: 580px){.TopNav-toggle{background-image:none}
 .MainHeader nav{padding-left:50px}
 .MainHeader .social-nav li:first-child{display:none}
-.Logo{top:30px;left:10px}
+.Logo{top:40px;left:5px;width:200px}
 .MainContent-item{width:100%}
 .EmpresasSistema-list ul li{width:100%;}
 .EmpresasSistema-list ul li span{text-align:center}
 .CatalogoProgramas-list li a figure img{width:60px}
+.social-nav ul{padding-top:20px;text-align:center}
 }
