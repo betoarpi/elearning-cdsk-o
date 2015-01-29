@@ -221,22 +221,21 @@ body
 					padding 10px 
 					position relative
 					text-align left
+					transition all 0.2s ease-in-out
 					width 100%
 						
 					span 
-						display none
-						left -50px
+						left -20px
 						opacity 0
 						position absolute
 						top 14px
-						transition all 2s
+						transition all 0.2s ease-in-out
 					
 					&:hover 
 						background none
 						color red
 						
 						span 
-							display block
 							left -10px
 							opacity 1
 				
@@ -347,9 +346,64 @@ body
 		
 		&.next
 			right 20px
+
+// Inner Banner
+.InnerBanner 
+	margin-bottom 20px
+	
+#InnerBanner-img
+	float left
+	height 370px
+	position relative
+	z-index 0
+
+.InnerBanner-slider li 
+	padding 0
+
+.InnerBanner-textbox
+	background rgba(0,0,0,0.5)
+	bottom 0
+	box-sizing border-box
+	color white
+	display block
+	font-size 20px
+	padding 20px
+	position absolute
+	text-align right
+	width 100%
+	
+	a 
+		color white
+		display block
+		margin 0 auto
+		text-decoration none
+		width 80%
+	
+		h2 
+			font-family titleFont
+			font-size 28px
+			margin 0 0 5px 0
+			text-transform uppercase
+
+.slides-navigation
+	display block !important
+	
+	a 
+		color white
+		font-size 30px
+		opacity 0.6
+		
+		&:hover
+			opacity 1
+		
+		&.prev
+			left 20px
+		
+		&.next
+			right 20px
 	
 // Main Content
-.MainContent-item
+.MainContent-item, .MainContent-interna-item
 	float left
 	width 50%
 	padding 0 20px 20px 20px
@@ -403,6 +457,20 @@ body
 			border-bottom 4px solid shadowGray
 		
 	&:nth-child(even)
+		clear left
+
+.MainContent-interna-item
+	padding 0 10px 20px 10px
+	width 33.33%
+	
+	.Title 
+		color red
+		margin-top 0
+	
+	&:nth-child(even)
+		clear none
+	
+	&:nth-child(3n+2)
 		clear left
 
 // Empresas del Sistema
@@ -671,6 +739,107 @@ body
 					&:hover 
 						background #0976b4
 						color white
+
+// Menú Interno
+.MenuInterno
+	margin -50px 0 20px 0
+	overflow hidden
+	position relative
+	z-index 5
+	
+.MenuInterno-heading, .MenuInterno-heading-toggle
+	background red
+	border-bottom 1px solid darkRed
+	color white
+	float left
+	font normal 24px/26px titleFont
+	margin 0
+	position relative
+	padding 10px
+	width 100%
+	
+	span.heading-toggle 
+		color rgba(255,255,255,0.5)
+		position absolute
+		right 14px
+		font-size 16px
+		top 16px
+
+.MenuInterno-heading-toggle
+	cursor pointer
+
+.MenuInterno-list
+	background gray
+	border 1px solid rgba(0,0,0,0.15)
+	border-bottom 4px solid shadowGray
+	color black
+	float left
+	margin 0
+	padding 10px
+	width 100%
+		
+	li 
+		float left
+		width 100%
+		
+		&:nth-child(odd)
+			clear left
+		
+		a 
+			border-bottom 1px solid rgba(0,0,0,0.15)
+			color black
+			float left
+			position relative
+			padding 10px 10px 10px 10px
+			width 100%
+			
+			span
+				color rgba(0,0,0,0.15)
+				position absolute
+				right 80px
+				opacity 0
+				top 12px
+				transition all 0.2s ease-in-out
+			
+			&:hover 
+				color red
+				text-decoration none
+				
+				span 
+					color red
+					opacity 1
+					right 0
+			
+			img 
+				display block
+				height 60px
+				margin 0 auto 10px auto
+				max-width 100%
+				
+		&:last-child
+			a 
+				border-bottom none
+
+.MenuInterno-toggle
+	color red
+	display none
+	float left
+	margin-bottom 10px
+	text-align center
+	width 100%
+	
+	&:hover 
+		color black
+		
+.breadcrumb
+	background none
+	
+	a 
+		color darkRed
+		
+		&:hover 
+			color red
+			text-decoration none	
 					
 @media (max-width: 1200px)
 	.MainNav 
@@ -768,15 +937,27 @@ body
 	.MainContent-item
 		width 100%
 	
+	.MainContent-interna-item
+		width 50%
+		
+		&:nth-child(2n+3)
+			clear none
+		
+		&:nth-child(2n+2)
+			clear none
+	
 	.EmpresasSistema-list 
 		ul
 			li 
 				width 100%
 				
 @media (min-width: 768px)
-	.EmpresasSistema-list 
+	.EmpresasSistema-list
 		ul
 			display block !important
+	
+	.MenuInterno-list
+		display block !important
 
 @media (max-width: 768px)
 	.MainContent-item
@@ -812,6 +993,9 @@ body
 	.EmpresasSistema-toggle
 		display block
 	
+	.MenuInterno-list
+		display none
+	
 	.TabPanel 
 		padding 0 50px
 	
@@ -840,8 +1024,12 @@ body
 		left 5px
 		width 200px
 		
-	.MainContent-item
+	.MainContent-item, .MainContent-interna-item
 		width 100%
+	
+	.MainContent-interna-item
+		padding-left 0
+		padding-right 0
 	
 	.EmpresasSistema-list 
 		ul

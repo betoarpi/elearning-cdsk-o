@@ -8,6 +8,11 @@ $(function() {
         pagination: false
     });
 
+    $('#InnerBanner-img').superslides({
+        inherit_height_from: '#InnerBanner-img',
+        pagination: false
+    });
+
     // Empresas Del Sistema Toggle
     function toggleMenu(){
     	event.preventDefault();
@@ -17,6 +22,16 @@ $(function() {
     }
 
     $('.EmpresasSistema-toggle').on('click', toggleMenu);
+
+    // Menu Interno Toggle
+    function toggleMenu2(){
+        event.preventDefault();
+        $('.heading-toggle').toggleClass('glyphicon-menu-down');
+        $('.heading-toggle').toggleClass('glyphicon-menu-up');
+        $('.MenuInterno-list').slideToggle();
+    }
+
+    $('.MenuInterno-heading-toggle').on('click', toggleMenu2);
 
     //TopNav
     function toggleTopNav(){
