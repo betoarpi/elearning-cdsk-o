@@ -13,6 +13,12 @@ $(function() {
         pagination: false
     });
 
+    $('#ItemSlider').superslides({
+        inherit_height_from: '#ItemSlider',
+        inherit_width_from: '#ItemSlider',
+        pagination: true
+    });
+
     // Empresas Del Sistema Toggle
     function toggleMenu(){
     	event.preventDefault();

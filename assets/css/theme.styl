@@ -408,7 +408,7 @@ body
 	width 50%
 	padding 0 20px 20px 20px
 	
-	a 
+	a, .MainContent-interna-item-container 
 		background gray
 		border 1px solid gray
 		border-bottom 4px solid shadowGray
@@ -472,6 +472,28 @@ body
 	
 	&:nth-child(3n+2)
 		clear left
+	
+	&.full 
+		width 100%
+	
+	#ItemSlider
+		height 300px
+		margin-bottom 20px
+		
+		.slides-pagination
+			width 100%
+			padding 10px
+			
+			a 
+				background red
+				height 16px
+				width 16px
+				float right
+				border 1px solid white
+				padding 0
+				
+				&.current
+					background black
 
 // Empresas del Sistema
 .EmpresasSistema
@@ -1028,8 +1050,8 @@ body
 		width 100%
 	
 	.MainContent-interna-item
-		padding-left 0
-		padding-right 0
+		padding-left 20px
+		padding-right 20px
 	
 	.EmpresasSistema-list 
 		ul
