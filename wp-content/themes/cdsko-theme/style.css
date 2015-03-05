@@ -1,0 +1,28 @@
+/*
+Theme Name: Tema Cedesko 2015
+Theme URI: http://www.cedesko1.com/themes/cdsko-theme
+Author: Medrenlogic team
+Author URI: http://medrenlogic.com.mx/
+Description: El tema Cedesko 2015 ofrece un nuevo diseño, enfocado al fácil manejo de la información, y diseñado con sencillez pero poderoso en sus funcionalidades. La tipografía de este tema es legible en la inmensa variedad de tamaños de pantalla. Está diseñado para responder a los requerimientos de los dispositivos móviles, dando prioridad a la usabilidad y la experiencia de usuario, sin importar si el usuario visita la página desde un smartphone, una tablet, una laptop, o una computadora de escritorio.
+Version: 1.0
+License: GNU General Public License v2 o más reciente
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, gray, red, white, dark, light, two-columns, left-sidebar, responsive-layout, custom-menu, featured-images, sticky-post
+Text Domain: cdsko-theme
+
+Este tema, tal como WordPress, está bajo la licencia de uso GPL.
+
+Los estilos del Tema Cedesko 2015 se importan desde el archivo: theme.css
+*/
+
+@import url(theme-assets/css/theme.css);
+
+/*.MainContent-grid {
+	-moz-column-count: 2;
+    -moz-column-gap: 0px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0px;
+    column-count: 2;
+    column-gap: 0px;
+    width: 960px;
+}*/

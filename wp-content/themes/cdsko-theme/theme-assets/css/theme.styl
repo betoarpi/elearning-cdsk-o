@@ -1,0 +1,1502 @@
+// Imported Stylesheets
+@import 'bootstrap.min.css'
+@import 'superslides.css'
+@import '../fonts/opensans.css'
+@import '../fonts/exo2.css'
+@import '../fonts/icons.css'
+@import 'customize.styl'
+@import 'nib/vendor'
+
+vendor-prefixes = webkit moz o ms official
+
+// Color Variables
+black = #2c2c2c
+darkerRed = #5a1819
+darkRed = #7d2022
+gray = #e7e7e7
+red = #cd2f31
+shadowGray = #9e9e9e
+shadowRed = #ac2527
+white = #ffffff
+
+// Font Variables
+bodyFont = 'open_sanslight', Helvetica, sans-serif
+bodyFontItalic = 'open_sanslight_italic', Helvetica, sans-serif
+fontBold = 'open_sanssemibold', Helvetica, sans-serif
+fontBoldItalic = 'open_sanssemibold_italic', Helvetica, sans-serif
+titleFont = 'exo_2.0extra_bold', 'Arial Black', 'Arial Bold', sans-serif
+titleFontItalic = 'exo_2.0extra_bold_italic', 'Arial Black', 'Arial Bold', sans-serif
+
+/**
+//// Custom Reset Styles
+////////////////////////////////////////////////////////////////
+*/
+
+body
+	color black
+	font 16px/125% bodyFont normal
+
+.seo-title
+	left -9999px
+	position absolute
+	top -9999px
+
+b,
+strong 
+	font-weight 700
+
+dfn,
+cite,
+em,
+i 
+	font-style italic
+
+blockquote 
+	border-left 4px solid #707070
+	border-left 4px solid rgba(51, 51, 51, 0.7)
+	color #707070
+	color rgba(51, 51, 51, 0.7)
+	font-size 18px
+	font-size 1.8rem
+	font-style italic
+	line-height 1.6667
+	margin-bottom 1.6667em
+	padding-left 0.7778em
+
+blockquote p 
+	margin-bottom 1.6667em
+
+blockquote > plast-child 
+	margin-bottom 0
+
+blockquote cite,
+blockquote small 
+	color #333
+	font-size 15px
+	font-size 1.5rem
+	font-family "Noto Sans", sans-serif
+	line-height 1.6
+
+blockquote em,
+blockquote i,
+blockquote cite 
+	font-style normal
+
+blockquote strong,
+blockquote b 
+	font-weight 400
+
+address 
+	font-style italic
+	margin 0 0 1.6em
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre 
+	font-family Inconsolata, monospace
+	-webkit-hyphens none
+	-moz-hyphens none
+	-ms-hyphens none
+	hyphens none
+
+pre 
+	background-color transparent
+	background-color rgba(0, 0, 0, 0.01)
+	border 1px solid #eaeaea
+	border 1px solid rgba(51, 51, 51, 0.1)
+	line-height 1.2
+	margin-bottom 1.6em
+	max-width 100%
+	overflow auto
+	padding 0.8em
+	white-space pre
+	white-space pre-wrap
+	word-wrap break-word
+
+abbr[title] 
+	border-bottom 1px dotted #eaeaea
+	border-bottom 1px dotted rgba(51, 51, 51, 0.1)
+	cursor help
+
+mark,
+ins 
+	background-color #fff9c0
+	text-decoration none
+
+sup,
+sub 
+	font-size 75%
+	height 0
+	line-height 0
+	position relative
+	vertical-align baseline
+
+sup 
+	bottom 1ex
+
+sub 
+	top .5ex
+
+small 
+	font-size 75%
+
+big 
+	font-size 125%
+
+/**
+//// Links
+////////////////////////////////////////////////////////////////
+*/
+ 
+a
+	color red
+	text-decoration none
+
+a:hover, a:focus 
+	color shadowRed
+	
+/**
+//// Elements
+////////////////////////////////////////////////////////////////
+*/
+
+hr
+	background-color #eaeaea
+	background-color rgba(51, 51, 51, 0.1)
+	border 0
+	height 1px
+	margin-bottom 1.6em
+
+dl
+	margin-bottom 1.6em
+
+dt
+	font-weight bold
+
+dd
+	margin-bottom 1.6em
+
+caption
+	font-weight normal
+	text-align left
+
+del
+	opacity 0.8
+
+/* Placeholder text color -- selectors need to be separate to work. */
+::-webkit-input-placeholder
+	color shadowGray
+	font-family bodyFont
+
+:-moz-placeholder
+	color shadowGray
+	font-family bodyFont
+
+::-moz-placeholder
+	color shadowGray
+	font-family bodyFont
+	opacity: 1 /* Since FF19 lowers the opacity of the placeholder by default */
+
+:-ms-input-placeholder
+	color shadowGray
+	font-family bodyFont
+	
+/**
+//// Genericons
+////////////////////////////////////////////////////////////////
+*/
+
+.social-navigation a:before,
+.secondary-toggle:before,
+.dropdown-toggle:after,
+.bypostauthor > article .fn:after,
+.comment-reply-title small a:before,
+.comment-navigation .nav-next a:after,
+.comment-navigation .nav-previous a:before,
+.posted-on:before,
+.byline:before,
+.cat-links:before,
+.tags-links:before,
+.comments-link:before,
+.entry-format:before,
+.edit-link:before,
+.full-size-link:before,
+.pagination .prev:before,
+.pagination .next:before,
+.image-navigation a:before,
+.image-navigation a:after,
+.format-link .entry-title a:after,
+.entry-content .more-link:after,
+.entry-summary .more-link:after,
+.author-link:after
+	-moz-osx-font-smoothing grayscale
+	-webkit-font-smoothing antialiased
+	display inline-block
+	font-family "Genericons"
+	font-size 16px
+	font-style normal
+	font-weight normal
+	font-variant normal
+	line-height 1
+	speak none
+	text-align center
+	text-decoration inherit
+	text-transform none
+	vertical-align top
+
+/**
+//// Header Styles
+////////////////////////////////////////////////////////////////
+*/
+.MainHeader
+	display block
+	position absolute 
+	top 0
+	width 100%
+	z-index 100
+	
+	nav 
+		padding-left 115px
+	
+	.social-nav
+		background url('../img/social-nav-glow.png') right bottom no-repeat
+		background-size 100% 100% 
+		float left
+		margin 0
+		padding 10px 0
+		text-align right
+		width 100%
+		
+		li
+			border-right 1px solid rgba(0,0,0, 0.2)
+			display inline-block
+			font-family fontBold
+			padding 0 10px
+			text-shadow 1px 1px 0 rgba(255,255,255, 0.4)
+			
+			a 
+				color black
+				display block
+				text-decoration none
+				transition all 0.3s ease-in-out
+				
+				&:hover 
+					color red
+					text-shadow 1px 1px 0 rgba(255,255,255, 0)
+				
+				&.social-icon
+					background shadowGray
+					border-radius 50%
+					color white
+					font-family icomoon
+					max-height 32px
+					max-width 32px
+					text-shadow none
+					padding 8px
+				
+				&.icon-facebook
+					background #3b5998
+					&:hover 
+						background black
+						color white
+				
+				&.icon-twitter
+					background #5ea9dd
+					&:hover 
+						background black
+						color white
+				
+				&.icon-linkedin
+					background #0976b4
+					&:hover
+						background black
+						color white
+			
+			&.no-border
+				border none
+				padding 0
+				margin 0 5px
+
+.Logo 
+	display block
+	position absolute
+	top 40px
+	left 0px
+	width 229px
+	height 127px
+	transition all 0.3s ease-in-out
+	z-index 10
+	
+	img 
+		display block
+		width 100%
+
+.TopNav
+	background black url('../img/cedesko-wording.png') 130px 6px no-repeat
+	background-size 450px
+	float left
+	color shadowGray
+	margin-bottom 0
+	padding 10px 15px 10px 115px
+	width 100%
+		
+	li 
+		border-right 1px solid rgba(255,255,255, 0.1)
+		float left
+		
+		a
+			color shadowGray
+			display block
+			text-decoration none
+			padding 0 10px
+			
+			.visible-devices
+				display none
+			
+			&:hover 
+				color red
+		
+		&.a-right
+			float right
+		
+		&.no-border
+			border none
+		
+		&.inicio-sesion
+			a 
+				color red
+
+.TopNav-toggle
+	background black url('../img/cedesko-wording.png') 130px 8px no-repeat
+	background-size 65%
+	color shadowGray
+	float left
+	font-size 20px
+	margin-bottom 0
+	padding 10px 15px 10px 115px
+	text-align right
+	width 100%
+	
+	&:hover, &:active 
+		color red
+		text-decoration none
+	
+	&:visited, &:link
+		color shadowGray
+		text-decoration none
+
+.MainNav 
+	background red
+	border-bottom 4px solid shadowRed
+	color white
+	float left
+	font-size 0
+	position relative
+	padding 0 0 0 115px
+	text-align right
+	width 100%
+	
+	li 
+		border-right 1px solid darkRed
+		display inline-block
+		vertical-align middle
+		
+		a
+			color white
+			display inline-block
+			font-size 16px
+			padding 20px 30px
+			text-align center
+			text-decoration none
+			vertical-align middle
+			
+			&:hover 
+				background darkRed
+				
+			&.less-padding
+				padding 10px 30px
+		
+		&:last-child
+			border none
+	
+	.SubMenu
+		background rgba(44,44,44,0.95)
+		border 1px solid rgba(255,255,255,0.08)
+		display none
+		left 115px
+		max-width 920px
+		position absolute
+		padding 20px 0
+		top 60px
+		width 100%
+		z-index -1
+		
+		.title 
+			color shadowGray
+			font-family titleFont
+		
+		ul
+			background url('../img/sub-menu-title-sep.png') left top no-repeat
+			box-sizing border-box
+			float left
+			padding-left 20px
+		
+			li 
+				border none
+				border-bottom 1px solid rgba(255,255,255,0.1)
+				width 100%
+				
+				a 
+					display block
+					color shadowGray
+					padding 10px 
+					position relative
+					text-align left
+					transition all 0.2s ease-in-out
+					width 100%
+						
+					span 
+						left -20px
+						opacity 0
+						position absolute
+						top 14px
+						transition all 0.2s ease-in-out
+					
+					&:hover 
+						background none
+						color red
+						
+						span 
+							left -10px
+							opacity 1
+				
+				&:last-child
+					border-bottom none
+			
+		&.active
+			display block
+		
+		.SubMenu-featured
+			padding-right 40px
+			
+			.title 
+				color red
+				text-align left
+				text-transform uppercase
+			
+			p 
+				color shadowGray
+				font-size 16px
+				text-align left
+			
+			.MoreBtn
+				color shadowGray
+				padding 0
+				
+				&:hover 
+					color red
+					background none
+
+.MainNav-toggle
+	background red
+	border-bottom 4px solid shadowRed
+	color rgba(255,255,255,0.6)
+	float left
+	font-size 18px
+	padding 10px 10px 10px 115px
+	text-align right
+	text-transform uppercase
+	transition all 0.4s ease-out
+	width 100%
+	
+	span 
+		font-size 20px
+	
+	&:hover, &:active 
+		color white !important
+		text-decoration none
+	
+	&:visited, &:link
+		color rgba(255,255,255,0.6)
+		text-decoration none
+	
+	&.active
+		border-bottom 4px solid red
+	
+/**
+//// Home Banner
+////////////////////////////////////////////////////////////////
+*/
+.HomeBanner 
+	margin-bottom 20px
+	
+#slides
+	float left
+	height 620px
+	position relative
+	z-index 0
+
+.HomeBanner-slider li 
+	padding 0
+
+.HomeBanner-textbox
+	background rgba(0,0,0,0.5)
+	bottom 0
+	box-sizing border-box
+	color white
+	display block
+	font-size 20px
+	padding 20px
+	position absolute
+	text-align right
+	width 100%
+	
+	a 
+		color white
+		display block
+		margin 0 auto
+		text-decoration none
+		width 80%
+	
+		h2 
+			font-family titleFont
+			font-size 28px
+			margin 0 0 5px 0
+			text-transform uppercase
+
+.slides-navigation
+	display block !important
+	
+	a 
+		color white
+		font-size 30px
+		opacity 0.6
+		
+		&:hover
+			opacity 1
+		
+		&.prev
+			left 20px
+		
+		&.next
+			right 20px
+
+/**
+//// Inner Banner
+////////////////////////////////////////////////////////////////
+*/
+.InnerBanner
+	background gray 
+	margin-bottom 20px
+	
+#InnerBanner-img
+	float left
+	height 370px
+	position relative
+	z-index 0
+
+.InnerBanner-slider li 
+	padding 0
+
+.InnerBanner-textbox
+	background rgba(0,0,0,0.5)
+	bottom 0
+	box-sizing border-box
+	color white
+	display block
+	font-size 20px
+	padding 20px
+	position absolute
+	text-align right
+	width 100%
+	
+	a 
+		color white
+		display block
+		margin 0 auto
+		text-decoration none
+		width 80%
+	
+		h2 
+			font-family titleFont
+			font-size 28px
+			margin 0 0 5px 0
+			text-transform uppercase
+
+.slides-navigation
+	display block !important
+	
+	a 
+		color white
+		font-size 30px
+		opacity 0.6
+		
+		&:hover
+			opacity 1
+		
+		&.prev
+			left 20px
+		
+		&.next
+			right 20px
+	
+/**
+//// Main Content
+////////////////////////////////////////////////////////////////
+*/  
+.MainContent-item, .MainContent-interna-item, .MainContent-interna-full
+	float left
+	width 50%
+	padding 0 20px 20px 20px
+	
+	.MainContent-item-container, .MainContent-interna-item-container 
+		background gray
+		border 1px solid gray
+		border-bottom 4px solid shadowGray
+		color black
+		float left
+		padding 10px
+		text-decoration none
+		width 100%
+		
+		.ItemCategory
+			color red
+			float left
+			font normal 28px/125% titleFont
+			margin-bottom 10px
+			text-transform uppercase
+			width 100%
+		
+		.ItemThumbnail
+			float left
+			width 100%
+			margin-bottom 10px
+			
+			img 
+				display block 
+				width 100%
+		
+		.Title 
+			font normal 24px/125% titleFont
+			
+		time 
+			color darkRed
+		
+		.MoreBtn 
+			float right
+			border none
+			padding 5px 20px
+			background red
+			color white
+			transition all 0.2s ease-in-out
+			
+			&:hover
+				background black
+		
+		&:hover
+			border 1px solid rgba(0,0,0,0.15)
+			border-bottom 4px solid shadowGray
+		
+	&:nth-child(even)
+		clear left
+	
+	&.category-cedesko, &.category-ultimo-programa-desarrollado
+		float right
+		clear right
+
+.MainContent-interna-full
+	width 100%
+	
+	.MainContent-interna-item-container
+		padding 0 20px 10px 20px
+
+.MainContent-interna-item
+	padding 0 10px 20px 10px
+	width 33.33%
+	
+	.Title 
+		color red
+		margin-top 0
+	
+	&:nth-child(even)
+		clear none
+	
+	&:nth-child(3n+2)
+		clear left
+	
+	&.full 
+		width 100%
+	
+	#ItemSlider
+		height 300px
+		margin-bottom 20px
+		
+		.slides-pagination
+			width 100%
+			padding 10px
+			
+			a 
+				background red
+				height 16px
+				width 16px
+				float right
+				border 1px solid white
+				padding 0
+				
+				&.current
+					background black
+
+/**
+//// Aside Sidebar
+////////////////////////////////////////////////////////////////
+*/  
+.AsideSidebar
+	padding 40px 0 0
+	
+.AsideSidebar-item
+	float left
+	margin-bottom 20px
+	width 100%
+	
+	.AsideSidebar-item-container
+		background gray
+		border 1px solid gray
+		border-bottom 4px solid shadowGray
+		color black
+		float left
+		padding 10px
+		text-decoration none
+		width 100%
+		
+		.ItemCategory
+			color red
+			float left
+			font normal 28px/125% titleFont
+			margin-bottom 10px
+			text-transform uppercase
+			width 100%
+		
+		.ItemThumbnail
+			float left
+			width 100%
+			margin-bottom 10px
+			
+			img 
+				display block 
+				width 100%
+		
+		.Title 
+			font normal 24px/125% titleFont
+			
+		time 
+			color darkRed
+		
+		.MoreBtn 
+			float right
+			border none
+			padding 5px 20px
+			background red
+			color white
+			transition all 0.2s ease-in-out
+			
+			&:hover
+				background black
+		
+		&:hover
+			border 1px solid rgba(0,0,0,0.15)
+			border-bottom 4px solid shadowGray
+
+/**
+//// Empresas del Sistema
+////////////////////////////////////////////////////////////////
+*/
+.EmpresasSistema
+	margin -50px 0 20px 0
+	overflow hidden
+	position relative
+	z-index 5
+	
+.EmpresasSistema-heading
+	background red
+	border-bottom 1px solid darkRed
+	color white
+	float left
+	font normal 24px/26px titleFont
+	margin 0
+	padding 10px
+	width 100%
+
+.EmpresasSistema-list
+	background gray
+	border 1px solid rgba(0,0,0,0.15)
+	border-bottom 4px solid shadowGray
+	color black
+	float left
+	font-size 14px
+	margin 0
+	padding 10px
+	width 100%
+	
+	ul 
+		float left
+		margin 0
+		padding 0
+		width 100%
+		
+		li 
+			float left
+			padding 0 10px 10px 10px
+			width 50%
+			
+			&:nth-child(odd)
+				clear left
+			
+			a 
+				color black
+				float left
+				text-align center
+				width 100%
+				
+				img 
+					display block
+					height 60px
+					margin 0 auto 10px auto
+					max-width 100%
+
+.EmpresasSistema-toggle
+	color red
+	display none
+	float left
+	margin-bottom 10px
+	text-align center
+	width 100%
+	
+	&:hover 
+		color black
+
+/**
+//// Tab Panel
+////////////////////////////////////////////////////////////////
+*/
+.TabPanel-navigation
+	border-bottom 1px solid gray
+	margin 20px 0
+	padding 0
+	
+	li
+		background white
+		float left
+		margin-bottom -12px
+		padding 0 10px
+		
+		&:first-child
+			border-right 1px solid gray
+		
+		a 
+			color red
+			float left
+			font normal 22px/24px titleFont
+			padding 0 10px
+			text-decoration none
+			width 100%
+			
+			&:hover
+				color darkRed
+
+.TabPanel-content
+	background gray
+	border-bottom 4px solid shadowGray
+	margin-bottom 20px
+	
+.TabItem
+	margin 20px 0
+	overflow hidden
+	
+	a
+		color black
+		float left
+		width 100%
+		
+		&:hover 
+			text-decoration none
+	
+		.title 
+			color red 
+			font normal 24px/26px titleFont
+
+.TabItem-thumbnail
+	float left
+	margin-bottom 20px
+	width 100%
+	
+	img 
+		display block
+		width 100%
+
+/**
+//// Catalogo de Programas
+////////////////////////////////////////////////////////////////
+*/
+.CatalogoProgramas
+	.title 
+		border-bottom 1px solid gray
+		display block
+		color red
+		font normal 28px/30px titleFont
+		text-align center
+		text-transform uppercase
+		width 100%
+		
+		span 
+			background white
+			display block
+			margin 0 auto -17px auto
+			max-width 410px
+			padding 0 20px
+			width auto
+	
+.CatalogoProgramas-list
+	display block
+	float none
+	margin 40px 0 20px 0
+	text-align center
+	
+	li 
+		display inline-block
+		vertical-align top
+		margin 0 18px 10px 18px
+		width 175px
+		
+		a 
+			color black
+			float left
+			width 100%
+			
+			figure 
+				float left
+				width 100%
+		
+				img 
+					display block 
+					margin 0 auto 10px auto
+					width 100px
+
+/**
+//// Ad Area
+////////////////////////////////////////////////////////////////
+*/
+.AdArea-full
+	float left
+	width 100%
+	
+	a 
+		float left
+		width 100%
+		
+		img 
+			display block 
+			width 100%
+
+/**
+//// Footer
+////////////////////////////////////////////////////////////////
+*/
+.MainFooter
+	background black url('../../theme-assets/img/footer-bg.png') repeat
+	color shadowGray
+	float left
+	padding 40px 0
+	width 100%
+	
+	a 
+		color shadowGray
+		
+		&:hover
+			color red
+			text-decoration none
+			
+.MainFooter-nav
+	border-bottom 1px solid  rgba(255,255,255,0.1)
+	margin-bottom 30px
+	padding-bottom 20px
+	
+	ul 
+		border-left solid 1px rgba(255,255,255,0.1)
+		min-height 150px
+		padding 0 0 0 10px 
+		
+		li 
+			float left
+			padding 0 0 5px 0
+			width 100%
+	
+.footer-logo
+	img 
+		display block
+		margin 0 auto
+		max-width 100%
+	
+.copyright 
+	ul 
+		margin 0
+		padding 0
+		
+		li 
+			float left
+			margin-right 10px
+			
+			&:last-child
+				margin 0
+
+.social-nav
+	ul 
+		float left
+		margin 0
+		padding 0
+		text-align right
+		width 100%
+		
+		li
+			display inline-block
+			margin 0 5px
+			
+			a 
+				background shadowGray
+				border-radius 50%
+				color white
+				display block
+				max-height 32px
+				max-width 32px
+				opacity 0.5
+				padding 8px
+				transition all 0.3s ease-in-out
+				
+				&:hover 
+					opacity 1
+				
+				&.icon-facebook
+					&:hover 
+						background #3b5998
+						color white
+				
+				&.icon-twitter
+					&:hover 
+						background #5ea9dd
+						color white
+				
+				&.icon-linkedin
+					&:hover 
+						background #0976b4
+						color white
+
+/**
+//// Menú Interno
+////////////////////////////////////////////////////////////////
+*/
+.MenuInterno, .Sidebar
+	margin -50px 0 20px 0
+	overflow hidden
+	position relative
+	z-index 5
+	
+.MenuInterno-heading, .MenuInterno-heading-toggle
+	background red
+	border-bottom 1px solid darkRed
+	color white
+	float left
+	font normal 24px/26px titleFont
+	margin 0
+	position relative
+	padding 10px
+	width 100%
+	
+	span.heading-toggle 
+		color rgba(255,255,255,0.5)
+		position absolute
+		right 14px
+		font-size 16px
+		top 16px
+
+.MenuInterno-heading-toggle
+	cursor pointer
+
+.MenuInterno-list, .Sidebar aside.widget
+	background gray
+	border 1px solid rgba(0,0,0,0.15)
+	border-bottom 4px solid shadowGray
+	color black
+	float left
+	margin 0
+	padding 10px
+	width 100%
+		
+	li 
+		float left
+		width 100%
+		
+		&:nth-child(odd)
+			clear left
+		
+		a 
+			border-bottom 1px solid rgba(0,0,0,0.15)
+			color black
+			float left
+			position relative
+			padding 10px 10px 10px 10px
+			width 100%
+			
+			span
+				color rgba(0,0,0,0.15)
+				position absolute
+				right 80px
+				opacity 0
+				top 12px
+				transition all 0.2s ease-in-out
+			
+			&:hover 
+				color red
+				text-decoration none
+				
+				span 
+					color red
+					opacity 1
+					right 0
+			
+			img 
+				display block
+				height 60px
+				margin 0 auto 10px auto
+				max-width 100%
+				
+		&:last-child
+			a 
+				border-bottom none
+
+.MenuInterno-toggle
+	color red
+	display none
+	float left
+	margin-bottom 10px
+	text-align center
+	width 100%
+	
+	&:hover 
+		color black
+
+.Sidebar aside.widget
+	margin-bottom 30px
+	
+	.MenuInterno-heading
+		font-size 20px
+	
+	ul
+		float left
+		padding 10px 0 0 0
+		width 100%
+		
+		li 
+			border-bottom 1px solid rgba(0,0,0,0.15)
+			float left
+			padding 10px
+			width 100%
+			
+			a 
+				border none
+				float left
+				font-family titleFont
+				padding 0
+				width 100%
+			
+			.post-date
+				color red
+				font-size 0.8em
+			
+			&:last-child
+				border none
+				padding-bottom 0
+
+.searchform 
+	.MenuInterno-heading
+		margin-bottom 10px
+		
+	input[type="text"]
+		border 1px solid rgba(0,0,0,0.15)
+		float left
+		padding 5px 10px
+		width 100%
+		margin-bottom 10px
+	
+	.MoreBtn 
+		float right
+		border none
+		padding 5px 20px
+		background red
+		color white
+		transition all 0.2s ease-in-out
+		
+		&:hover
+			background black
+		
+.breadcrumbs
+	box-sizing border-box
+	color #777777
+	float left
+	padding 0 20px 20px 20px
+	width 100%
+	
+	span
+		display inline-block
+		margin 0 3px
+	
+		a 
+			color darkRed
+			
+			&:hover 
+				color red
+				text-decoration none	
+		
+		&.trail-browse
+			display none
+		
+		&.sep 
+			color gray
+
+/**
+//// Media Queries
+////////////////////////////////////////////////////////////////
+*/					
+@media (max-width: 1200px)
+	.MainNav 
+		li 
+			a
+				padding 20px 15px
+				
+				&.less-padding
+					padding 10px 15px
+		
+			.SubMenu
+				max-width 700px
+	
+	.TopNav
+		li 
+			a 
+				font-size 14px
+	
+	.AsideSidebar
+		.AsideSidebar-item
+			.ItemCategory
+				font-size 20px
+					
+@media (min-width: 992px)
+	.TopNav
+		display block !important
+	
+	.MainNav
+		display block !important
+	
+	.TopNav-toggle
+		display none
+	
+	.MainNav-toggle
+		display none
+
+@media (max-width: 992px)
+	.MainHeader
+		.social-nav
+			li.no-border
+				margin-top 10px
+				
+	.Logo 
+		top 60px
+		left 0px
+		
+	.TopNav 
+		background-image none
+		display none
+		
+		li 
+			border none
+			border-bottom 1px solid rgba(255,255,255,0.1)
+			float left
+			width 100%
+			
+			a 
+				font-size 16px
+				text-align right
+				padding 10px 0
+				
+				.visible-devices
+					display inline-block
+					padding-left 5px
+			
+			&.no-border
+				border-bottom 1px solid rgba(255,255,255,0.1)
+			
+			&:last-child
+				border none
+	
+	.TopNav-toggle
+		display block
+	
+	.MainNav
+		display none
+		
+		li 
+			border none
+			border-bottom 1px solid darkRed
+			float left
+			width 100%
+			
+			a 
+				padding 10px 20px
+				text-align right
+				width 100%
+				
+				br 
+					display none
+			
+			&:last-child
+				border none
+			
+			&.no-border
+				a 
+					padding 10px 20px
+	
+	.MainNav-toggle
+		display block
+	
+	.MainNav
+		.SubMenu, .SubMenu.active
+			display none
+			
+	.MainContent-item
+		width 100%
+	
+	.MainContent-interna-item
+		width 50%
+		
+		&:nth-child(2n+3)
+			clear none
+		
+		&:nth-child(2n+2)
+			clear none
+	
+	.EmpresasSistema-list 
+		ul
+			li 
+				width 100%
+				
+@media (min-width: 768px)
+	.EmpresasSistema-list
+		ul
+			display block !important
+	
+	.MenuInterno-list
+		display block !important
+
+@media (max-width: 768px)
+	.MainHeader
+		.social-nav
+			li.no-border
+				margin-top 0
+	
+	.Logo 
+		top 40px
+		left 10px
+				
+	.MainContent-item
+		width 50%
+	
+	.EmpresasSistema
+		margin-top 0
+		padding 0 35px
+	
+	.EmpresasSistema-list 
+		ul
+			display none
+			
+			li 
+				border-bottom 1px solid rgba(0,0,0,0.2)
+				padding 10px 0
+				width 90%
+				
+				&:last-child 
+					border none
+				
+				img 
+					display inline-block !important
+					margin 0 !important
+					height 40px !important
+				
+				span 
+					display inline-block
+					text-align left
+					padding 0 0 0 10px
+					width 80%
+	
+	.EmpresasSistema-toggle
+		display block
+	
+	.MenuInterno-list
+		display none
+	
+	.TabPanel 
+		padding 0 50px
+	
+	.TabItem
+		border-bottom 1px solid rgba(0,0,0,0.08)
+		margin 0 20px
+		padding-bottom 10px
+		
+		&:last-child
+			border none
+	
+	.AsideSidebar
+		padding 40px 35px
+
+@media (max-width: 580px)
+	.TopNav-toggle
+		background-image none
+		
+	.MainHeader
+		nav 
+			padding-left 50px
+		
+		.social-nav
+			li:first-child
+				display none
+				
+	.Logo 
+		top 40px
+		left 5px
+		width 200px
+		
+	.MainContent-item, .MainContent-interna-item
+		width 100%
+	
+	.MainContent-interna-item
+		padding-left 20px
+		padding-right 20px
+	
+	.EmpresasSistema-list 
+		ul
+			li 
+				width 100%
+				
+				span 
+					text-align center
+	
+	.CatalogoProgramas-list
+		li 
+			a 
+				figure 
+					img 
+						width 60px
+	
+	.social-nav
+		ul
+			padding-top 20px
+			text-align center
