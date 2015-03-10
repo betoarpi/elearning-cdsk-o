@@ -43,7 +43,7 @@
                 <div class="row">
                     <nav class="col-sm-12">
                         <h6 class="seo-title">Navegación Principal</h6>
-                        <a href="#" class="Logo">
+                        <a href="<?php bloginfo('siteurl'); ?>" class="Logo">
                             <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/cedesko-logo-2.png" alt="Cedesko">
                         </a>
                         <?php //Load Social Nav

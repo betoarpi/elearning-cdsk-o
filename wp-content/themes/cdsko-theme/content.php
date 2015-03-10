@@ -16,7 +16,7 @@
 		</span>
 		<?php if ( has_post_thumbnail() ) { ?>
 		<figure class="ItemThumbnail">
-			<?php the_post_thumbnail('news-thumb'); ?>
+			<?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?>
 		</figure>
 		<?php } ?>
 

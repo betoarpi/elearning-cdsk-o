@@ -25,7 +25,7 @@
     <li><a href="#" class="less-padding">Embajadores <br>Coca-Cola</a>
         <div class="SubMenu container">
             <div class="row">
-                <h3 class="col-sm-3 title">Embajadores Coca-Cola</h3>
+                <h3 class="col-sm-3 title">Embajadores <br>Coca-Cola</h3>
                 <?php wp_nav_menu( 
                     array( 
                         'menu' => 'embajadores-coca-cola', 

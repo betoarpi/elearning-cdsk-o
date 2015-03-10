@@ -41,6 +41,39 @@ body
 	position absolute
 	top -9999px
 
+.MainTitle
+	color red
+	font 37px/125% titleFont normal
+
+h1
+	font-family titleFont
+	font-size 42px
+	line-height 125%
+h2
+	color rgba(0,0,0,0.65)
+	font-family titleFont
+	font-size 37px
+	line-height 125%
+h3
+	color rgba(0,0,0,0.65)
+	font-family titleFont
+	font-size 28px
+	line-height 125%
+h4 
+	color rgba(0,0,0,0.65)
+	font-family titleFont
+	font-size 21px
+	line-height 125%
+h5	
+	color rgba(0,0,0,0.65)
+	font-family titleFont
+	font-size 16px
+	line-height 125%	
+h6
+	color rgba(0,0,0,0.65)
+	font-family titleFont
+	font normal 12px/125% fontBold
+
 b,
 strong 
 	font-weight 700
@@ -436,7 +469,7 @@ del
 		
 		.title 
 			color shadowGray
-			font-family titleFont
+			font normal 21px/125% titleFont
 		
 		ul
 			background url('../img/sub-menu-title-sep.png') left top no-repeat
@@ -560,6 +593,9 @@ del
 		margin 0 auto
 		text-decoration none
 		width 80%
+		
+		h1, h2, h3, h4, h5, h6
+			color white
 	
 		h2 
 			font-family titleFont
@@ -665,7 +701,7 @@ del
 		.ItemCategory
 			color red
 			float left
-			font normal 28px/125% titleFont
+			font normal 21px/125% titleFont
 			margin-bottom 10px
 			text-transform uppercase
 			width 100%
@@ -680,7 +716,7 @@ del
 				width 100%
 		
 		.Title 
-			font normal 24px/125% titleFont
+			font normal 28px/125% titleFont
 			
 		time 
 			color darkRed
@@ -774,7 +810,7 @@ del
 		.ItemCategory
 			color red
 			float left
-			font normal 28px/125% titleFont
+			font normal 21px/125% titleFont
 			margin-bottom 10px
 			text-transform uppercase
 			width 100%
@@ -789,7 +825,7 @@ del
 				width 100%
 		
 		.Title 
-			font normal 24px/125% titleFont
+			font normal 28px/125% titleFont
 			
 		time 
 			color darkRed
@@ -824,7 +860,7 @@ del
 	border-bottom 1px solid darkRed
 	color white
 	float left
-	font normal 24px/26px titleFont
+	font normal 28px/125% titleFont
 	margin 0
 	padding 10px
 	width 100%
@@ -898,7 +934,7 @@ del
 		a 
 			color red
 			float left
-			font normal 22px/24px titleFont
+			font normal 21px/24px titleFont
 			padding 0 10px
 			text-decoration none
 			width 100%
@@ -925,7 +961,7 @@ del
 	
 		.title 
 			color red 
-			font normal 24px/26px titleFont
+			font normal 28px/125% titleFont
 
 .TabItem-thumbnail
 	float left
@@ -1107,7 +1143,7 @@ del
 	border-bottom 1px solid darkRed
 	color white
 	float left
-	font normal 24px/26px titleFont
+	font normal 28px/125% titleFont
 	margin 0
 	position relative
 	padding 10px
@@ -1190,7 +1226,7 @@ del
 	margin-bottom 30px
 	
 	.MenuInterno-heading
-		font-size 20px
+		font-size 21px
 	
 	ul
 		float left
@@ -1207,12 +1243,13 @@ del
 				border none
 				float left
 				font-family titleFont
+				font-size 16px
 				padding 0
 				width 100%
 			
 			.post-date
 				color red
-				font-size 0.8em
+				font-size 12px
 			
 			&:last-child
 				border none
@@ -1263,6 +1300,147 @@ del
 		
 		&.sep 
 			color gray
+
+/**
+//// eLearning Templates and General Styles
+////////////////////////////////////////////////////////////////
+*/
+		
+/* Course Unit Template	*/
+.wpcw_fe_quiz_box_pending
+	background none 
+	border none
+	font-size 16px
+	
+.wpcw_fe_outer_wrap 
+	float left 
+	width 100%
+
+.wpcw_fe_quiz_q_image
+	float left
+	margin-bottom 20px
+	width 100%
+	
+	img 
+		display block
+		max-width 100%
+		width 100%
+
+.wpcw_fe_quiz_title
+	font normal 28px/125% titleFont
+
+.wpcw_fe_quiz_q_hdr
+	border-color rgba(0,0,0,0.05)
+	margin 0 0 20px 0
+
+.wpcw_fe_quiz_q_title
+	color darkRed
+	font normal 21px/125% titleFontItalic
+	margin-bottom 20px
+
+.wpcw_fe_quiz_q_single
+	background rgba(255,255,255,0.4)
+	border 1px solid rgba(0,0,0,0.05)
+	display block
+	font-size 16px
+	margin 5px 0 15px 0
+	overflow hidden
+	padding 20px
+	width 100%
+	
+ul.wpcw_fe_quiz_q_answers,
+.wpcw_fe_quiz_q_possible_list
+	float left
+	padding 0
+	width 100%
+	
+	li 
+		margin-left 0 !important
+
+.wpcw_fe_quiz_box_wrap
+	display block
+	overflow hidden
+	
+	textarea 
+		border 1px solid rgba(0,0,0,0.1)
+		float left
+		height 200px
+		width 100%
+
+a.fe_btn_completion, 
+.wpcw_fe_quiz_submit_data input.fe_btn_completion,
+.wpcw_fe_progress_box_download a.fe_btn_download,
+a.fe_btn_navigation
+	background #7fbf4d
+	border none
+	border-radius 0px
+	box-shadow none
+	color white
+	font 16px/125% bodyFont normal
+	padding 10px 20px
+	
+	&:hover 
+		background #63a62f
+		box-shadow none
+		text-decoration none
+
+a.fe_btn_navigation
+	background black
+	display block
+	&:hover 
+		background red
+
+.wpcw_fe_progress_box_complete
+	background white 
+	color rgba(0,0,0,0.65)
+	float left
+	font 21px/125% normal titleFont
+	padding 15px 20px !important
+	text-align center
+	width 100%
+
+#wpcw_fe_timer_countdown
+	clear both
+	color red
+	background-position 0 center
+	display block
+	font normal 21px/125% titleFont
+	margin 10px auto
+	padding-top 10px
+	padding-bottom 8px
+
+.wpcw_fe_progress_box_error
+	color red
+	font normal 21px/125% titleFont
+	text-align center
+
+.wpcw_fe_progress_box_warning
+	font normal 21px/125% titleFont
+	text-align center
+
+.wpcw_fe_progress_box_success
+	color black
+	float left
+	font-size 16px
+	padding 15px 20px
+	width 100%
+
+.wpcw_fe_quiz_box_full_answers
+	float left
+	width 100%
+
+.wpcw_fe_quiz_box_full_answers b,
+.wpcw_fe_quiz_q_result_incorrect
+	color red
+
+.wpcw_fe_quiz_q_single b 
+	color black
+	font normal 16px/125% titleFont
+
+.wpcw_fe_quiz_q_result_correct,
+.wpcw_fe_quiz_q_correct b,
+.wpcw_fe_quiz_q_correct
+	color #63a62f
 
 /**
 //// Media Queries
@@ -1388,6 +1566,28 @@ del
 		ul
 			li 
 				width 100%
+	
+	.wpcw_fe_progress_box_download
+		float left
+		margin 0
+		width 100%
+		
+		a
+			display block
+			float none
+			margin-left 0
+			margin 0 auto 20px auto
+	
+	.wpcw_fe_progress_download
+		float left
+		margin 0
+		width 100%
+		
+		a 
+			display block
+			float none
+			margin-left 0
+			margin 0 auto 20px auto
 				
 @media (min-width: 768px)
 	.EmpresasSistema-list
