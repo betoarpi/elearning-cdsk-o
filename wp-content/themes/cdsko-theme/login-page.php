@@ -19,7 +19,7 @@ get_header(); ?>
 
                         if ( ! is_user_logged_in() ) { // Display WordPress login form:
                         $args = array(
-                            'redirect' => '/mis-cursos/', 
+                            'redirect' => home_url('/mis-cursos/'), 
                             'form_id' => 'loginform-custom',
                             'label_username' => __( 'Nombre de Usuario' ),
                             'label_password' => __( 'Password' ),
