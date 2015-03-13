@@ -395,7 +395,7 @@ class WPCW_quiz_base
 			$html .= sprintf('<div class="wpcw_fe_quiz_q_title">%s #%d - %s%s</div>', 
 				__('Question', 'wp_courseware'),
 				$questionNum,
-				htmlspecialchars($this->quizItem->question_question),
+				nl2br(htmlspecialchars($this->quizItem->question_question)),
 				($wrongAnswerState ? '<span class="wpcw_fe_quiz_status">(' . __('Incorrect', 'wp_courseware') . ')</span>' : '')
 			);
 			

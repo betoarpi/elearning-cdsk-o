@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Courseware 3.2\n"
-"POT-Creation-Date: 2014-11-24 08:47-0700\n"
-"PO-Revision-Date: 2014-11-24 08:47-0700\n"
+"Project-Id-Version: WP Courseware 3.3\n"
+"POT-Creation-Date: 2015-03-03 10:59-0700\n"
+"PO-Revision-Date: 2015-03-03 10:59-0700\n"
 "Last-Translator: \n"
 "Language-Team: Fly Plugins\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-Basepath: ../\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
@@ -90,11 +90,11 @@ msgstr ""
 msgid "Are you sure you wish to delete this custom feedback message?"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:507
+#: classes/class_frontend_unit.inc.php:510
 msgid "Correct Answers for: "
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:529 classes/class_quiz_base.inc.php:396
+#: classes/class_frontend_unit.inc.php:532 classes/class_quiz_base.inc.php:396
 #: classes/class_quiz_multi.inc.php:66
 #: classes/class_quiz_open_entry.inc.php:62
 #: classes/class_quiz_truefalse.inc.php:62
@@ -103,125 +103,125 @@ msgstr ""
 msgid "Question"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:556
-#: classes/class_frontend_unit.inc.php:567
+#: classes/class_frontend_unit.inc.php:559
+#: classes/class_frontend_unit.inc.php:570
 msgid "Your Grade"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:557
+#: classes/class_frontend_unit.inc.php:560
 #: pages/page_user_progress.inc.php:134 pages/page_user_progress.inc.php:169
 msgid "Pending"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:580
+#: classes/class_frontend_unit.inc.php:583
 msgid "Correct "
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:585
+#: classes/class_frontend_unit.inc.php:588
 msgid "Incorrect "
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:615
+#: classes/class_frontend_unit.inc.php:618
 #: pages/page_user_progress.inc.php:435
 msgid "Open"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:617
+#: classes/class_frontend_unit.inc.php:620
 #: pages/page_user_progress.inc.php:437
 msgid "File"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:638
-#: classes/class_frontend_unit.inc.php:653
+#: classes/class_frontend_unit.inc.php:641
+#: classes/class_frontend_unit.inc.php:656
 msgid "Your Answer"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:654
+#: classes/class_frontend_unit.inc.php:657
 msgid "We don't have your answer for this question"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:664
+#: classes/class_frontend_unit.inc.php:667
 #: pages/page_user_progress.inc.php:471
 msgid "Correct Answer"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:680
+#: classes/class_frontend_unit.inc.php:683
 msgid "Other Possible Answers"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:721 classes/class_quiz_base.inc.php:258
+#: classes/class_frontend_unit.inc.php:724 classes/class_quiz_base.inc.php:258
 msgid "Explanation"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:771
+#: classes/class_frontend_unit.inc.php:774
 msgid "Download Certificate"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:932
+#: classes/class_frontend_unit.inc.php:935
 #, php-format
 msgid "Your grade for this quiz is <b>%d%%</b>."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:940
+#: classes/class_frontend_unit.inc.php:943
 #, php-format
 msgid "You got %d out of %d questions <b>(%d%%)</b> correct!"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:958
-#: classes/class_frontend_unit.inc.php:992
+#: classes/class_frontend_unit.inc.php:961
+#: classes/class_frontend_unit.inc.php:995
 msgid "You have had <b>1 previous attempt</b> at this quiz."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:959
-#: classes/class_frontend_unit.inc.php:993
+#: classes/class_frontend_unit.inc.php:962
+#: classes/class_frontend_unit.inc.php:996
 #, php-format
 msgid "You have had <b>%d previous attempts</b> at this quiz."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:968
+#: classes/class_frontend_unit.inc.php:971
 #, php-format
 msgid "The pass grade for this quiz is <b>(%d%%)</b>"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:973
+#: classes/class_frontend_unit.inc.php:976
 msgid "Congratulations, you have <b>passed</b> this quiz!"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:979
+#: classes/class_frontend_unit.inc.php:982
 msgid "Unfortunately, this means you have <b>failed</b> this quiz."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:984
+#: classes/class_frontend_unit.inc.php:987
 msgid "However, the instructor is allowing you to continue anyway."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:987
+#: classes/class_frontend_unit.inc.php:990
 msgid "To progress to the next unit, you need to pass this quiz."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1013
+#: classes/class_frontend_unit.inc.php:1016
 msgid "Completion Time"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1016
+#: classes/class_frontend_unit.inc.php:1019
 msgid "allowed"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1062
+#: classes/class_frontend_unit.inc.php:1065
 msgid "Download Results"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1185
+#: classes/class_frontend_unit.inc.php:1188
 msgid "The course instructor has required that you retake this quiz."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1208
+#: classes/class_frontend_unit.inc.php:1211
 msgid ""
 "The course instructor has allowed you to retake the quiz. To re-attempt the "
 "quiz, just click on the button below."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1213
+#: classes/class_frontend_unit.inc.php:1216
 #, php-format
 msgid ""
 "The recommended grade for this quiz is <b>%d%%</b> (and your grade is <b>%d"
@@ -229,113 +229,113 @@ msgid ""
 "wish to improve your grade."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1226
+#: classes/class_frontend_unit.inc.php:1229
 msgid ""
 "Unfortunately you have reached the maximum limit of attempts you are "
 "permitted for this quiz."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1244
+#: classes/class_frontend_unit.inc.php:1247
 msgid "Retake Quiz"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1288
+#: classes/class_frontend_unit.inc.php:1291
 msgid "Mark as Completed"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1336
+#: classes/class_frontend_unit.inc.php:1339
 msgid "This question cannot be rendered. This is an error."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1341 lib/common.inc.php:218
+#: classes/class_frontend_unit.inc.php:1344 lib/common.inc.php:218
 msgid "Unexpected question type, aborting."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1409
+#: classes/class_frontend_unit.inc.php:1412
 msgid "You can now review your answers before submitting them."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1436
+#: classes/class_frontend_unit.inc.php:1439
 #, php-format
 msgid ""
 "You'll need to correctly answer at least <b>%d of the %d</b> questions below "
 "(<b>at least %d%%</b>) to progress to the next unit."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1469
+#: classes/class_frontend_unit.inc.php:1472
 #, php-format
 msgid "You have <b>%s</b> to complete this quiz..."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1472
+#: classes/class_frontend_unit.inc.php:1475
 msgid "Begin Quiz..."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1515
+#: classes/class_frontend_unit.inc.php:1518
 #, php-format
 msgid "Question %d of %d"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1527
+#: classes/class_frontend_unit.inc.php:1530
 msgid "Answer Later..."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1537
+#: classes/class_frontend_unit.inc.php:1540
 msgid "Save &amp; Next Question &raquo;"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1545
+#: classes/class_frontend_unit.inc.php:1548
 msgid "Save &amp; Review Answers &raquo;"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1549
-#: classes/class_frontend_unit.inc.php:1605
+#: classes/class_frontend_unit.inc.php:1552
+#: classes/class_frontend_unit.inc.php:1608
 msgid "Submit Answers"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1558
+#: classes/class_frontend_unit.inc.php:1561
 msgid "&laquo; Previous Question"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1637
+#: classes/class_frontend_unit.inc.php:1640
 msgid "Previous Unit"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1650
+#: classes/class_frontend_unit.inc.php:1653
 msgid "Next Unit"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1685 lib/common.inc.php:1510
+#: classes/class_frontend_unit.inc.php:1688 lib/common.inc.php:1510
 #, php-format
 msgid "Your grade is %d%%"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1693 lib/common.inc.php:1518
+#: classes/class_frontend_unit.inc.php:1696 lib/common.inc.php:1518
 #, php-format
 msgid "%d out of %d correct (%d%%)"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:1872
+#: classes/class_frontend_unit.inc.php:1875
 msgid ""
 "An error occured, so your unit progress was not updated. Please refresh the "
 "page and try again."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:2423 wp-courseware.php:743
+#: classes/class_frontend_unit.inc.php:2426 wp-courseware.php:743
 msgid "Please provide an answer for all of the questions on this page."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:2555
+#: classes/class_frontend_unit.inc.php:2558
 msgid "Thank you for your responses. This unit is now complete."
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:2725
+#: classes/class_frontend_unit.inc.php:2728
 #: classes/class_quiz_truefalse.inc.php:93
 #: classes/class_quiz_truefalse.inc.php:121
 msgid "True"
 msgstr ""
 
-#: classes/class_frontend_unit.inc.php:2727
+#: classes/class_frontend_unit.inc.php:2730
 #: classes/class_quiz_truefalse.inc.php:98
 #: classes/class_quiz_truefalse.inc.php:122
 msgid "False"
@@ -654,7 +654,7 @@ msgid "required"
 msgstr ""
 
 #: lib/admin_only.inc.php:743 pages/page_settings.inc.php:118
-#: pages/page_settings_certificates.inc.php:164
+#: pages/page_settings_certificates.inc.php:167
 msgid "Save ALL Settings"
 msgstr ""
 
@@ -3903,13 +3903,13 @@ msgid "Please enter your Affiliate ID, which is only a number.."
 msgstr ""
 
 #: pages/page_settings.inc.php:121
-#: pages/page_settings_certificates.inc.php:166
+#: pages/page_settings_certificates.inc.php:169
 #: wplib/utils_settings.inc.php:60
 msgid "Settings successfully saved."
 msgstr ""
 
 #: pages/page_settings.inc.php:122
-#: pages/page_settings_certificates.inc.php:167
+#: pages/page_settings_certificates.inc.php:170
 #: wplib/utils_settings.inc.php:61
 msgid "There was a problem saving the settings."
 msgstr ""
@@ -4075,74 +4075,12 @@ msgstr ""
 msgid "Choose an image to use for the certificate background..."
 msgstr ""
 
-#: pages/page_settings_certificates.inc.php:133
-msgid "Language and Encoding Settings"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:137
-msgid "Certificate Encoding"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:140
-msgid ""
-"Choose a codepage encoding that matches your language to ensure certificates "
-"render correctly. You may need an encoding other than <code>ISO-8859-1</"
-"code> if you are using a non-English language."
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:142
-msgid ""
-"ISO-8859-1 - Latin alphabet - North America, Western Europe, Latin America, "
-"etc. (Default)"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:143
-msgid "ISO-8859-2 - Latin alphabet 2 - Eastern Europe."
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:144
-msgid "ISO-8859-3 - Latin alphabet 3 - SE Europe, Esperanto"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:145
-msgid "ISO-8859-4 - Latin alphabet 4 - Scandinavia/Baltics"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:146
-msgid ""
-"ISO-8859-5 - Latin/Cyrillic - Bulgarian, Belarusian, Russian and Macedonian"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:147
-msgid "ISO-8859-6 - Latin/Arabic - Arabic languages"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:148
-msgid "ISO-8859-7 - Latin/Greek - modern Greek language"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:149
-msgid "ISO-8859-8 - Latin/Hebrew - Hebrew languages"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:150
-msgid "ISO-8859-9 - Latin 5 part 9 - Turkish languages"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:151
-msgid "ISO-8859-10 - Latin 6 Lappish, Nordic, Eskimo - The Nordic languages"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:152
-msgid "ISO-8859-15 - Latin 9 (aka Latin 0) - Similar to ISO 8859-1"
-msgstr ""
-
-#: pages/page_settings_certificates.inc.php:178
-#: pages/page_settings_certificates.inc.php:180
+#: pages/page_settings_certificates.inc.php:181
+#: pages/page_settings_certificates.inc.php:183
 msgid "Preview Certificate"
 msgstr ""
 
-#: pages/page_settings_certificates.inc.php:179
+#: pages/page_settings_certificates.inc.php:182
 msgid ""
 "After saving the settings, you can preview the certificate using the button "
 "below. The preview opens in a new window."

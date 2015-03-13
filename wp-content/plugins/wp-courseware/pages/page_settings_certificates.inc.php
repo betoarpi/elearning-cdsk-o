@@ -128,35 +128,38 @@ function WPCW_showPage_Certificates_load()
 			),	
 			
 		// Section that allows you to choose which encoding to use for the certificate.
-		'section_encodings' 	=> array(
-				'type'	  	=> 'break',
-				'html'	   	=> WPCW_forms_createBreakHTML(__('Language and Encoding Settings', 'wp_courseware')),
-			),
+		// 'section_encodings' 	=> array(
+		// 		'type'	  	=> 'break',
+		// 		'html'	   	=> WPCW_forms_createBreakHTML(__('Language and Encoding Settings', 'wp_courseware')),
+		// 	),
 			
- 		'certificate_encoding' => array(
-				'label' 	=> __('Certificate Encoding', 'wp_courseware'),
-				'type'  	=> 'select',
-				'required'	=> true,
-				'desc'  	=> __('Choose a codepage encoding that matches your language to ensure certificates render correctly. You may need an encoding other than <code>ISO-8859-1</code> if you are using a non-English language.', 'wp_courseware'), 
-				'data'		=> array(
-					'ISO-8859-1' 	=> __('ISO-8859-1 - Latin alphabet - North America, Western Europe, Latin America, etc. (Default)', 'wp_courseware'),
-					'ISO-8859-2' 	=> __('ISO-8859-2 - Latin alphabet 2 - Eastern Europe.', 'wp_courseware'),
-					'ISO-8859-3' 	=> __('ISO-8859-3 - Latin alphabet 3 - SE Europe, Esperanto', 'wp_courseware'),
-					'ISO-8859-4' 	=> __('ISO-8859-4 - Latin alphabet 4 - Scandinavia/Baltics', 'wp_courseware'),
-					'ISO-8859-5' 	=> __('ISO-8859-5 - Latin/Cyrillic - Bulgarian, Belarusian, Russian and Macedonian', 'wp_courseware'),
-					'ISO-8859-6' 	=> __('ISO-8859-6 - Latin/Arabic - Arabic languages', 'wp_courseware'),
-					'ISO-8859-7' 	=> __('ISO-8859-7 - Latin/Greek - modern Greek language', 'wp_courseware'),
-					'ISO-8859-8' 	=> __('ISO-8859-8 - Latin/Hebrew - Hebrew languages', 'wp_courseware'),
-					'ISO-8859-9' 	=> __('ISO-8859-9 - Latin 5 part 9 - Turkish languages', 'wp_courseware'),
-					'ISO-8859-10' 	=> __('ISO-8859-10 - Latin 6 Lappish, Nordic, Eskimo - The Nordic languages', 'wp_courseware'),
-					'ISO-8859-15' 	=> __('ISO-8859-15 - Latin 9 (aka Latin 0) - Similar to ISO 8859-1', 'wp_courseware'),
+ 	// 	'certificate_encoding' => array(
+		// 		'label' 	=> __('Certificate Encoding', 'wp_courseware'),
+		// 		'type'  	=> 'select',
+		// 		'required'	=> true,
+		// 		'desc'  	=> __('Choose a codepage encoding that matches your language to ensure certificates render correctly. You may need an encoding other than <code>ISO-8859-1</code> if you are using a non-English language.', 'wp_courseware'), 
+		// 		'data'		=> array(
+		// 			'ISO-8859-1' 	=> __('ISO-8859-1 - Latin alphabet - North America, Western Europe, Latin America, etc. (Default)', 'wp_courseware'),
+		// 			'ISO-8859-2' 	=> __('ISO-8859-2 - Latin alphabet 2 - Eastern Europe.', 'wp_courseware'),
+		// 			'ISO-8859-3' 	=> __('ISO-8859-3 - Latin alphabet 3 - SE Europe, Esperanto', 'wp_courseware'),
+		// 			'ISO-8859-4' 	=> __('ISO-8859-4 - Latin alphabet 4 - Scandinavia/Baltics', 'wp_courseware'),
+		// 			'ISO-8859-5' 	=> __('ISO-8859-5 - Latin/Cyrillic - Bulgarian, Belarusian, Russian and Macedonian', 'wp_courseware'),
+		// 			'ISO-8859-6' 	=> __('ISO-8859-6 - Latin/Arabic - Arabic languages', 'wp_courseware'),
+		// 			'ISO-8859-7' 	=> __('ISO-8859-7 - Latin/Greek - modern Greek language', 'wp_courseware'),
+		// 			'ISO-8859-8' 	=> __('ISO-8859-8 - Latin/Hebrew - Hebrew languages', 'wp_courseware'),
+		// 			'ISO-8859-9' 	=> __('ISO-8859-9 - Latin 5 part 9 - Turkish languages', 'wp_courseware'),
+		// 			'ISO-8859-10' 	=> __('ISO-8859-10 - Latin 6 Lappish, Nordic, Eskimo - The Nordic languages', 'wp_courseware'),
+		// 			'ISO-8859-15' 	=> __('ISO-8859-15 - Latin 9 (aka Latin 0) - Similar to ISO 8859-1', 'wp_courseware'),
 			
-				// The following do not work with iconv(), hence are commented out.
-					//'ISO-8859-JP'	=> __('ISO-8859-JP - Latin/Japanese part 1 - The Japanese language', 'wp_courseware'),
-					//'ISO-8859-JP-2'	=> __('ISO-8859-JP-2 - Latin/Japanese part 2 - The Japanese language', 'wp_courseware'),
-					//'ISO-8859-KR'	=> __('ISO-8859-KR - Latin/Korean part 1 - The Korean language', 'wp_courseware')
-				),
-			),			
+		// 		// The following do not work with iconv(), hence are commented out.
+		// 			//'ISO-8859-JP'	=> __('ISO-8859-JP - Latin/Japanese part 1 - The Japanese language', 'wp_courseware'),
+		// 			//'ISO-8859-JP-2'	=> __('ISO-8859-JP-2 - Latin/Japanese part 2 - The Japanese language', 'wp_courseware'),
+		// 			//'ISO-8859-KR'	=> __('ISO-8859-KR - Latin/Korean part 1 - The Korean language', 'wp_courseware')
+		// 		),
+		// 	),
+
+
+					
 		);
 		
 	

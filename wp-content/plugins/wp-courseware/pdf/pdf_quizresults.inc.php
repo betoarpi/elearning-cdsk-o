@@ -209,7 +209,7 @@ class WPCW_QuizResults
 				$boxOfData = str_replace('</p>', '', $boxOfData);
 				
 				// Convert encoding of text
-				$boxOfData = iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $boxOfData);
+				//$boxOfData = iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $boxOfData);
 				
 				// Add CSS
 				$boxOfData .= $cssData;
@@ -276,14 +276,14 @@ class WPCW_QuizResults
 	{		
 		// Start with main content
 		$this->pdffile->setY(25);
-		$this->pdffile->SetFont('Helvetica', '', 11, '', true);
+		$this->pdffile->SetFont('dejavusans', '', 11, '', true);
 		
 		// Do codepage conversions of text used in the certificate.
 		$encoding = WPCW_arrays_getValue($this->settingsList, 'certificate_encoding', 'ISO-8859-1');
 		
-		$this->data_traineeName    	= iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $this->data_traineeName);
-		$this->data_courseName 		= iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $this->data_courseName);
-		$this->data_quizName 		= iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $this->data_quizName);
+		//$this->data_traineeName    	= iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $this->data_traineeName);
+		//$this->data_courseName 		= iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $this->data_courseName);
+		//$this->data_quizName 		= iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $this->data_quizName);
 		
 		// Work out the maximum width of labels to use so that the labels line up.
 		$labelList = array(
@@ -344,7 +344,7 @@ class WPCW_QuizResults
 			// Render as a single box with padding
 			if ($messageToShow) 
 			{
-				$this->pdffile->SetFont('Helvetica', '', 11);
+				$this->pdffile->SetFont('dejavusans', '', 11);
 				
 				// Set text colour based on pass or fail.
 				if ($this->data_Messages['error_mode']) {
@@ -368,7 +368,7 @@ class WPCW_QuizResults
 			$this->pdffile->Ln(3);
 			
 			// Set new body size 
-			$this->pdffile->SetFont('Helvetica', '', 10);
+			$this->pdffile->SetFont('dejavusans', '', 10);
 			
 			$showingTags = false;
 			$showingTimer = false;
@@ -426,12 +426,12 @@ class WPCW_QuizResults
 		{
 			// Create Results breakdown label
 			$this->pdffile->Ln(4);	
-			$this->pdffile->SetFont('Helvetica', 'B', 14);		
+			$this->pdffile->SetFont('dejavusansb', 'B', 14);		
 			$this->pdffile->Write(5, __('Your answer details:', 'wp_courseware'), false, false, 'C', true);
 			$this->pdffile->Ln(5);
 			
 			// Set up text size and compact it
-			$this->pdffile->SetFont('Helvetica', '', 10);
+			$this->pdffile->SetFont('dejavusans', '', 10);
 			$this->pdffile->setCellHeightRatio(.9);
 						
 			foreach ($this->data_Results as $singleLineOfData)
@@ -453,12 +453,12 @@ class WPCW_QuizResults
 		{
 			// Create Results breakdown label
 			$this->pdffile->Ln(4);	
-			$this->pdffile->SetFont('Helvetica', 'B', 14);		
+			$this->pdffile->SetFont('dejavusansb', 'B', 14);		
 			$this->pdffile->Write(5, __('Instructor Feedback:', 'wp_courseware'), false, false, 'C', true);
 			$this->pdffile->Ln(3);
 			
 			// Set up text size and compact it
-			$this->pdffile->SetFont('Helvetica', '', 10);
+			$this->pdffile->SetFont('dejavusans', '', 10);
 			$this->pdffile->setCellHeightRatio(1);
 						
 			foreach ($this->data_Feedback as $singleLineOfData)
@@ -504,7 +504,7 @@ class WPCW_PDF extends TCPDF
     	$this->SetY(15);
     	
         // Set font
-        $this->SetFont('helvetica', 'B', 20);
+        $this->SetFont('dejavusansb', 'B', 20);
         
         // Title
         $this->Cell(0, 15, __('Your Quiz Results', 'wp_courseware'), 0, false, 'C', 0, '', 0, false, 'M', 'M');
@@ -517,7 +517,7 @@ class WPCW_PDF extends TCPDF
     public function Footer() 
     {
         // Set font
-        $this->SetFont('helvetica', '', 8);
+        $this->SetFont('dejavusans', '', 8);
         
         // Page number
         $this->SetY(-18);

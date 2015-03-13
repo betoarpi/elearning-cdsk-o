@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: WP Courseware
- * Version: 3.2
+ * Version: 3.3
  * Plugin URI: http://flyplugins.com
  * Description: WP Courseware is WordPress's leading Learning Managment System (L.M.S.) plugin and is so simple you can create an online training course in minutes. It's as simple as drag and drop!
  * Author: Fly Plugins
@@ -53,7 +53,7 @@ function edd_sl_plugin_updater_WPCW() {
 
 	// setup the updater
 	$edd_updater = new EDD_SL_Plugin_Updater( EDD_SL_STORE_URL_WPCW, __FILE__, array( 
-			'version' 	=> '3.2', 				// current version number
+			'version' 	=> '3.3', 				// current version number
 			'license' 	=> $license_key, 		// license key (used get_option above to retrieve from DB)
 			'item_name' => EDD_SL_ITEM_NAME_WPCW, 	// name of this plugin
 			'author' 	=> 'Fly Plugins'  // author of this plugin

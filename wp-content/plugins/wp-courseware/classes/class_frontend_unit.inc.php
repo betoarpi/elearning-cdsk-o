@@ -531,7 +531,7 @@ class WPCW_UnitFrontend
 						$html .= sprintf('<div class="wpcw_fe_quiz_q_title">%s #%d - %s</div>', 
 							__('Question', 'wp_courseware'),
 							$questionNum++,
-							$question->question_question
+							nl2br(htmlspecialchars($question->question_question))
 						);
 						
 						// ### 3b - The question image - If there's an image for this quiz, then render it.

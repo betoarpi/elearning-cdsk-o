@@ -130,8 +130,8 @@ class WPCW_Certificate
 		// Do codepage conversions of text used in the certificate.
 		$encoding = WPCW_arrays_getValue($this->settingsList, 'certificate_encoding', 'ISO-8859-1');
 		
-		$student    = iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $student);
-		$courseName = iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $courseName);
+		//$student    = iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $student);
+		//$courseName = iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', $courseName);
 		
 		
 		$topLineY = 45;
@@ -157,22 +157,22 @@ class WPCW_Certificate
 		 
 		
 		// ...Certify...
-		$this->pdffile->SetFont('Helvetica','B', 32);		
-		$this->centerString(strtoupper(__('This is to certify that', 'wp_courseware')), $topLineY);
+		$this->pdffile->SetFont('dejavusansb','B', 22);		
+		$this->centerString(__('Esta constancia certifica que', 'wp_courseware'), $topLineY + 20);
 		
 		// Name with a line underneath
 		$this->pdffile->SetFont('ArchitectsDaughter','', 16, false, false);
-		$this->centerString($student, $topLineY + 20);		
-		$this->centerLine(120, $topLineY + 27);
+		$this->centerString($student, $topLineY + 35);		
+		$this->centerLine(120, $topLineY + 42);
 		
 		// ...Completed...
-		$this->pdffile->SetFont('Helvetica','B', 32);
-		$this->centerString(strtoupper(__('has successfully completed', 'wp_courseware')), $topLineY + 50);
+		$this->pdffile->SetFont('dejavusansb','B', 22);
+		$this->centerString(__('completó satisfactoriamente', 'wp_courseware'), $topLineY + 60);
 		
 		// Course
 		$this->pdffile->SetFont('ArchitectsDaughter','', 16);
-		$this->centerString($courseName, $topLineY + 70);		
-		$this->centerLine(180, $topLineY + 77);
+		$this->centerString($courseName, $topLineY + 75);		
+		$this->centerLine(180, $topLineY + 84);
 		
 		
 		$this->footer_line_length = 60;
@@ -186,15 +186,15 @@ class WPCW_Certificate
 		
 		// Date - field		
 		$this->pdffile->SetXY($date_X, $this->footer_Y+8);
-		$this->pdffile->Cell(0, 0, __('Date', 'wp_courseware'), false, false, 'L');		    	
+		$this->pdffile->Cell(0, 0, __('Fecha', 'wp_courseware'), false, false, 'L');		    	
 				
 		// Signature - field
-		$this->pdffile->SetXY($this->signature_X, $this->footer_Y+8);
-		$this->pdffile->Cell(0,0, __('Instructor', 'wp_courseware'), false, false, 'L');
+		//$this->pdffile->SetXY($this->signature_X, $this->footer_Y+8);
+		//$this->pdffile->Cell(0,0, __('Instructor', 'wp_courseware'), false, false, 'L');
 		
 		// Lines - Date, Signature
 		$this->pdffile->Line($date_X, 		$this->footer_Y+7, $date_X + $this->footer_line_length,	 	 $this->footer_Y+7);
-		$this->pdffile->Line($this->signature_X, 	$this->footer_Y+7, $this->signature_X + $this->footer_line_length, $this->footer_Y+7);
+		//$this->pdffile->Line($this->signature_X, 	$this->footer_Y+7, $this->signature_X + $this->footer_line_length, $this->footer_Y+7);
 		
 		
 		// Date - the date itself. Centre on the line
@@ -288,8 +288,8 @@ class WPCW_Certificate
 		{
 			// Use codepage translation of signature text
 			$encoding = WPCW_arrays_getValue($this->settingsList, 'certificate_encoding', 'ISO-8859-1');
-			$signature = iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', WPCW_arrays_getValue($this->settingsList, 'cert_sig_text'));
-			
+			//$signature = iconv('UTF-8', $encoding.'//TRANSLIT//IGNORE', WPCW_arrays_getValue($this->settingsList, 'cert_sig_text'));
+			$signature = WPCW_arrays_getValue($this->settingsList, 'cert_sig_text');
 			// Nothing to do, signature is empty
 			if (!$signature) {
 				return;

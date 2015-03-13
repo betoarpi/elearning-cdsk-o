@@ -342,3 +342,126 @@ require get_template_directory() . '/inc/template-tags.php';
  * @since Twenty Fifteen 1.0
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Add additional embotelladora field
+ */
+add_action ( 'show_user_profile', 'embotelladora_profile_field' );
+add_action ( 'edit_user_profile', 'embotelladora_profile_field' );
+
+function embotelladora_profile_field ( $user )
+{
+?>
+    <h3>Embotelladora</h3>
+    <!--<p>Tu embotelladora actual es: <?php echo esc_attr( get_the_author_meta( 'embotelladora', $user->ID ) ); ?></p>-->
+    <table class="form-table">
+        <tr>
+            <td>
+                <select name="embotelladora" id="embotelladora">
+                	<option value="0" selected>Seleccione una opción</option>
+                	<option value="1">Coca-Cola de México</option>
+                	<option value="2">Corporación del Fuerte</option>
+                	<option value="3">Bebidas Refrescantes de Nogales</option>
+                	<option value="4">Corporación RICA</option>
+                	<option value="5">Jugos del Valle</option>
+                	<option value="6">Arca-Continental</option>
+                	<option value="7">Coca-Cola Femsa</option>
+                	<option value="8">BEPENSA</option>
+                	<option value="9">Embotelladora de Colima</option>
+                	<option value="10">Embotelladora del Nayar</option>
+                	<option value="11">Industria Envasadora de Querétaro</option>
+                	<option value="12">Grupo Yoli</option>
+                	<option value="15">CEDESKO</option>
+                	<option value="20">Medrenlogic</option>
+                	<option value="21">Imer</option>
+                	<option value="22">PetStar</option>
+                	<option value="23">Laboratorio de Servicios Analíticos</option>
+                	<option value="24">Planta de Concentrados</option>
+                	<option value="25">Promesa</option>
+                	<option value="26">ASCOCA</option>
+                	<option value="27">KIOSKO</option>
+                	<option value="28">CEDESKO CONSULTORES</option>
+                	<option value="29">Llorente y Cuenca</option>
+                	<option value="30">The Coca-Cola Company</option>
+                	<option value="31">Avangard</option>
+                	<option value="32">Santaclara</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+<?php
+}
+
+add_action ( 'personal_options_update', 'my_save_extra_profile_fields' );
+add_action ( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
+
+function my_save_extra_profile_fields( $user_id )
+{
+    if ( !current_user_can( 'edit_user', $user_id ) )
+        return false;
+    update_usermeta( $user_id, 'embotelladora', $_POST['embotelladora'] );
+}
+
+/**
+ * Add embotelladora field to registration form
+ */
+add_action('register_form','show_first_name_field');
+add_action('register_post','check_fields',10,3);
+add_action('user_register', 'register_extra_fields');
+
+function show_first_name_field()
+{
+?>
+    <p>
+    <label>Embotelladora<br/>
+    	<select name="embotelladora" id="embotelladora">
+        	<option value="0">Seleccione una opción</option>
+        	<option value="1">Coca-Cola de México</option>
+        	<option value="2">Corporación del Fuerte</option>
+        	<option value="3">Bebidas Refrescantes de Nogales</option>
+        	<option value="4">Corporación RICA</option>
+        	<option value="5">Jugos del Valle</option>
+        	<option value="6">Arca-Continental</option>
+        	<option value="7">Coca-Cola Femsa</option>
+        	<option value="8">BEPENSA</option>
+        	<option value="9">Embotelladora de Colima</option>
+        	<option value="10">Embotelladora del Nayar</option>
+        	<option value="11">Industria Envasadora de Querétaro</option>
+        	<option value="12">Grupo Yoli</option>
+        	<option value="15">CEDESKO</option>
+        	<option value="20">Medrenlogic</option>
+        	<option value="21">Imer</option>
+        	<option value="22">PetStar</option>
+        	<option value="23">Laboratorio de Servicios Analíticos</option>
+        	<option value="24">Planta de Concentrados</option>
+        	<option value="25">Promesa</option>
+        	<option value="26">ASCOCA</option>
+        	<option value="27">KIOSKO</option>
+        	<option value="28">CEDESKO CONSULTORES</option>
+        	<option value="29">Llorente y Cuenca</option>
+        	<option value="30">The Coca-Cola Company</option>
+        	<option value="31">Avangard</option>
+        	<option value="32">Santaclara</option>
+        </select>
+    </label>
+    </p>
+<?php
+}
+
+function check_fields ( $login, $email, $errors )
+{
+    global $embotelladora;
+    if ( $_POST['embotelladora'] == '' )
+    {
+        $errors->add( 'empty_realname', "<strong>ERROR</strong>: Por favor, elige una embotelladora" );
+    }
+    else
+    {
+        $embotelladora = $_POST['embotelladora'];
+    }
+}
+
+function register_extra_fields ( $user_id, $password = "", $meta = array() )
+{
+    update_user_meta( $user_id, 'embotelladora', $_POST['embotelladora'] );
+}

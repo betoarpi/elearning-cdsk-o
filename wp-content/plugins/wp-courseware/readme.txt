@@ -3,9 +3,9 @@ Contributors: flyplugins
 Plugin URI: http://wpcourseware.com
 Author URI: http://flyplugins.com
 Tags: WordPress LMS,WordPress eCourse,WordPress Courseware,Word Press Learning Management System
-Requires at least: 3.7
-Tested up to: 4.0
-Stable tag: 3.1
+Requires at least: 3.8
+Tested up to: 4.1.1
+Stable tag: 3.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -28,6 +28,8 @@ What is WP Courseware? WP Courseware is a WordPress premium plugin that allows 
 
 WP Courseware is compatible with most membership plugins. However we do have integration with:
 
+* WooCommerce
+* Easy Digital Downloads
 * iThemes Exchange Membership
 * WishList Member
 * Magic Member
@@ -57,6 +59,16 @@ You can find our training videos in:
 * Check out our [You Tube channel](http://www.youtube.com/flyplugins)
 
 == Changelog ==
+
+= 3.3 =
+* Fix: Fixed bug with filter when adding a quiz questions from pool into quiz
+* Fix: Fixed bug where a quiz could be dragged/dropped onto an unassigned unit
+
+* Tweak: Certificate to be UTF-8 removing the options for specific encoding
+
+* New: Added 2 more fonts for certificates and quiz results and removed Helvetica which didn’t work well with other languages
+* New: Added support for line breaks (by using carriage return) with in quiz questions while leaving ability to have html tags as part of a question
+
 
 = 3.2 = 
 

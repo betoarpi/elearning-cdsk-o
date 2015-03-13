@@ -135,7 +135,13 @@ $j(function()
 		forcePlaceholderSize: true,							// Forces placeholder to be right size
 		cursor: 'pointer',									// Sets useful UI cursor
 		connectWith: ".wpcw_dragable_units_connected",		// Links the units		
-		stop: function(event, ui) { showUnitsChanged(); }	// UI change because ordering has started
+		stop: function(event, ui) { showUnitsChanged(); },	// UI change because ordering has started
+		receive: function( event, ui ) {
+			if ($j('#wpcw_unassigned_units .wpcw_one_only').children().length != 0) {	// Ensure units with quizzes can be moved to unassigned units area
+	            $j(ui.sender).sortable('cancel');
+	        }
+
+		}
 	}).disableSelection();	
 	
 	// Draggable quizzes
@@ -143,7 +149,7 @@ $j(function()
 		placeholder: "wpcw_dragable_quizzes_placeholder",	// Class for placeholder for CSS
 		forcePlaceholderSize: true,							// Forces placeholder to be right size
 		cursor: 'pointer',									// Sets useful UI cursor
-		connectWith: ".wpcw_dragable_quizzes_connected",	// Links the units		
+		connectWith: ".wpcw_dragable_modules .wpcw_dragable_quizzes_connected, #wpcw_unassigned_quizzes .wpcw_dragable_quizzes_connected",	// Links the units	
 		stop: function(event, ui) { showUnitsChanged(); },	// UI change because ordering has started
 		receive: function(event, ui) {
 	        if ($j(this).hasClass('wpcw_one_only') &&		// Ensure only units restrict to 1 
@@ -857,7 +863,7 @@ $j(function()
 			filterStr = $j('#wpcw_tb_question_pool_inner .wpcw_questions_tag_filter').val();
 		}
 		
-		wpcw_js_questionPool_refreshAJAXPage($j(this).attr('data-pagenum'), searchStr, '');
+		wpcw_js_questionPool_refreshAJAXPage($j(this).attr('data-pagenum'), searchStr, filterStr);
 	});
 	
 	/**
