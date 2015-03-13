@@ -748,6 +748,14 @@ del
 	
 	.MainContent-interna-item-container
 		padding 0 20px 10px 20px
+		
+	.loginform-container
+		display block
+		float none
+		margin 0 auto 40px auto
+		min-width 455px
+		overflow hidden
+		width 455px
 
 .MainContent-interna-item
 	padding 0 10px 20px 10px
@@ -1441,7 +1449,129 @@ a.fe_btn_navigation
 .wpcw_fe_quiz_q_correct b,
 .wpcw_fe_quiz_q_correct
 	color #63a62f
+/**
+//// Login Form
+////////////////////////////////////////////////////////////////
+*/	 
+#loginform-custom 
+	float left 
+	max-width 456px
+	width 100%
+	
+	p 
+		float left
+		width 100%
+		
+		label 
+			float left 
+			margin-right 20px
+			max-width 145px
+			min-width 145px
+			width 30%
+			
+			input[type="checkbox"]
+				appearance none
+				background white
+				border 1px solid rgba(0,0,0,0.15)
+				height 12px
+				margin 0 5px 0 0
+				max-height 12px
+				max-width 12px
+				min-height 12px
+				min-width 12px
+				position relative
+				width 12px
+				z-index 0
+				
+				&:checked
+					
+					&:after
+						color green
+						content "\e013"
+						font-family 'Glyphicons Halflings'
+						left -2px
+						position absolute
+						top -5px
+						z-index 2
+		
+		input 
+			border 1px solid rgba(0,0,0,0.15)
+			width 60%
+	
+		&.login-remember
+			max-width 30%
+		
+		&.login-submit
+			max-width 70%
 
+.button-primary
+	background red
+	border none
+	color white
+	float right
+	max-width 140px
+	min-width 140px
+	padding 5px 20px
+	position relative
+	transition all 0.2s ease-in-out
+	width 140px !important
+	
+	a 
+		color white
+		display block
+		text-align center
+		text-decoration none
+		width 100%
+	
+	&:hover
+		background black
+
+.registerBtn
+	border-top 1px solid rgba(0,0,0,0.2)
+	float left 
+	margin-top 10px
+	padding-top 10px
+	width 100%
+
+/**
+//// Courses Page
+////////////////////////////////////////////////////////////////
+*/
+.wpcw_fe_summary_course_progress
+	background white
+	float left
+	width 100%
+	
+	tr
+		&:first-child 
+			th
+				background-image none !important
+				background black !important
+				color white
+				font normal 18px/125% bodyFont
+		
+		td 
+			font normal 16px/125% bodyFont
+	
+	.wpcw_fe_table
+		background none !important
+		border none !important
+		width 100%
+		
+		tr 
+			&:first-child 
+				td 
+					background-image none !important
+					background none !important
+					border-bottom 1px solid #ddd !important
+					font normal 18px/125% titleFont
+			
+			&:last-child
+				td 
+					border-bottom none !important
+	
+	.wpcw_fe_course_progress_course
+		font normal 16px/125% titleFont
 /**
 //// Media Queries
 ////////////////////////////////////////////////////////////////
@@ -1700,3 +1830,20 @@ a.fe_btn_navigation
 		ul
 			padding-top 20px
 			text-align center
+	
+	.MainContent-interna-full .loginform-container
+		max-width 100%
+		min-width 100%
+		width 100%
+	
+	#loginform-custom p input
+		width 100%
+		
+	#loginform-custom p.login-submit
+		clear both
+		max-width 100%
+		min-width 100%
+		width 100%
+	#loginform-custom p input[class="button-primary"]
+		margin-right 0
+		width 100px
