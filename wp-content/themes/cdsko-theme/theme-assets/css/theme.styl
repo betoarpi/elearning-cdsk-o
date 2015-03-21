@@ -1453,7 +1453,10 @@ a.fe_btn_navigation
 //// Login Form
 ////////////////////////////////////////////////////////////////
 */	 
-#loginform-custom 
+#theme-my-login
+	padding 0
+				
+#loginform-custom, #registerform, #loginform
 	float left 
 	max-width 456px
 	width 100%
@@ -1493,6 +1496,12 @@ a.fe_btn_navigation
 						position absolute
 						top -5px
 						z-index 2
+			
+			select 
+				background white
+				border none
+				border 1px solid rgba(0,0,0,0.15)
+				margin-top 10px
 		
 		input 
 			border 1px solid rgba(0,0,0,0.15)
@@ -1504,7 +1513,8 @@ a.fe_btn_navigation
 		&.login-submit
 			max-width 70%
 
-.button-primary
+.button-primary,
+#wp-submit
 	background red
 	border none
 	color white
@@ -1526,12 +1536,36 @@ a.fe_btn_navigation
 	&:hover
 		background black
 
+#lostpasswordform
+	p 
+		input
+			width 100%
+		
+			&#wp-submit
+				max-width 260px
+				width 260px !important
+
 .registerBtn
 	border-top 1px solid rgba(0,0,0,0.2)
 	float left 
 	margin-top 10px
 	padding-top 10px
 	width 100%
+
+.tml-action-links 
+	border-top 1px solid rgba(0,0,0,0.15)
+	float left
+	margin-top 10px
+	padding 15px 0 0 0
+	width 100%
+	
+	li
+		border-right 1px solid rgba(0,0,0,0.15)
+		float left
+		padding 0 10px
+		
+		&:last-child
+			border none
 
 /**
 //// Courses Page
@@ -1836,14 +1870,17 @@ a.fe_btn_navigation
 		min-width 100%
 		width 100%
 	
-	#loginform-custom p input
+	#loginform-custom p input,
+	#registerform p input
 		width 100%
 		
-	#loginform-custom p.login-submit
+	#loginform-custom p.login-submit,
+	#registerform p.login-submit
 		clear both
 		max-width 100%
 		min-width 100%
 		width 100%
-	#loginform-custom p input[class="button-primary"]
+	#loginform-custom p input[class="button-primary"],
+	#registerform p input[class="button-primary"]
 		margin-right 0
 		width 100px

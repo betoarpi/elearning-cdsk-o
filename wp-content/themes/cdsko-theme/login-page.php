@@ -30,7 +30,7 @@ get_header(); ?>
                             <h3 class="Title"><?php the_title(); ?></h3>
                             <?php wp_login_form($args); ?>
                             <div class="registerBtn">
-                                <?php wp_register('De click aquí para ',''); ?>
+                                De click aquí para <a href="<?php bloginfo('siteurl'); ?>/registro/">Registrarse</a>
                             </div>
                         <?php } else { // If logged in: ?>
                             <h3 class="Title">Cerrar Sesión</h3>

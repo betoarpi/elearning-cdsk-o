@@ -7,7 +7,7 @@
     <li class="a-right no-border"><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/us.png" alt="en-icon"> Inglés</a></li>
     <li class="a-right inicio-sesion">
 		<?php if ( ! is_user_logged_in() ) { ?> 
-    	<a href="<?php bloginfo('siteurl'); ?>/iniciar-sesion/"><span class="glyphicon glyphicon-user"></span> Iniciar Sesión</a>
+    	<a href="<?php bloginfo('siteurl'); ?>/login/"><span class="glyphicon glyphicon-user"></span> Iniciar Sesión</a>
     	<?php } else {?>
     	<a href="<?php echo wp_logout_url( home_url() ); ?>"><span class="glyphicon glyphicon-user"></span> Cerrar Sesión</a>
     	<?php }?>
