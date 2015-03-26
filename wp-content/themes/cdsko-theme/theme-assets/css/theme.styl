@@ -32,6 +32,12 @@ titleFontItalic = 'exo_2.0extra_bold_italic', 'Arial Black', 'Arial Bold', sans-
 ////////////////////////////////////////////////////////////////
 */
 
+#wpadminbar 
+	display none
+
+html#no-margin 
+	margin-top 0px !important
+
 body
 	color black
 	font 16px/125% bodyFont normal
@@ -736,6 +742,22 @@ del
 			border 1px solid rgba(0,0,0,0.15)
 			border-bottom 4px solid shadowGray
 		
+		ul 
+			padding-left 20px
+			li 
+				list-style disc
+		
+		ol 
+			padding-left 20px
+		
+		strong 
+			font-family titleFont
+		
+		img.size-full
+			height: auto;
+			max-width 100%
+			width 100%
+		
 	&:nth-child(even)
 		clear left
 	
@@ -852,6 +874,26 @@ del
 		&:hover
 			border 1px solid rgba(0,0,0,0.15)
 			border-bottom 4px solid shadowGray
+			
+		#loginform
+			.login-submit
+				clear both
+				width 100% 
+				
+			input.input 
+				width 100%
+
+.LoginHeading
+	background #cd2f31
+	border-bottom 1px solid #7d2022
+	color #fff
+	float left
+	font normal 28px/125% 'exo_2.0extra_bold','Arial Black','Arial Bold',sans-serif
+	margin 0
+	padding 10px
+	position relative
+	top 0
+	width 100%
 
 /**
 //// Empresas del Sistema
@@ -909,6 +951,24 @@ del
 					height 60px
 					margin 0 auto 10px auto
 					max-width 100%
+	
+	&.Embotelladoras-list
+		ul 
+			li 
+				border-bottom 1px solid rgba(0,0,0,0.1)
+				padding 10px
+				width 100%
+				
+				a 
+					font-family titleFont
+					text-align left
+					
+					&:hover 
+						color red
+						text-decoration none
+				
+				&:last-child
+					border-bottom none
 
 .EmpresasSistema-toggle
 	color red
@@ -920,6 +980,39 @@ del
 	
 	&:hover 
 		color black
+
+/**
+//// ContentSlides
+////////////////////////////////////////////////////////////////
+*/
+.ContentSlides-container 
+	float left
+	margin 0 0 20px 0
+	padding 0
+	width 100%
+	
+#ContentSlides
+	float left
+	height 320px
+	width 100%
+	position relative
+	z-index 0
+	
+	.slides-control
+		max-width 473px
+		width 100%
+	
+	.slides-pagination
+		bottom 20px
+		
+		a 
+			border 2px solid white
+			
+			&.current 
+				background white 
+
+.ContentBanner-slider li 
+	padding 0
 
 /**
 //// Tab Panel
@@ -1571,6 +1664,21 @@ a.fe_btn_navigation
 //// Courses Page
 ////////////////////////////////////////////////////////////////
 */
+#wpcw_fe_course.wpcw_fe_table
+	background white
+	float left
+	width 100%
+	
+	tr
+		&:first-child 
+			th, td
+				background-image none !important
+				background black !important
+				color white
+				font normal 18px/125% bodyFont
+		
+		td 
+			font normal 16px/125% bodyFont
 .wpcw_fe_summary_course_progress
 	background white
 	float left
@@ -1587,25 +1695,35 @@ a.fe_btn_navigation
 		td 
 			font normal 16px/125% bodyFont
 	
-	.wpcw_fe_table
-		background none !important
-		border none !important
-		width 100%
-		
-		tr 
-			&:first-child 
-				td 
-					background-image none !important
-					background none !important
-					border-bottom 1px solid #ddd !important
-					font normal 18px/125% titleFont
-			
-			&:last-child
-				td 
-					border-bottom none !important
+#wpcw_fe_course_progress .wpcw_fe_table
+	background none !important
+	border none !important
+	width 100%
 	
-	.wpcw_fe_course_progress_course
-		font normal 16px/125% titleFont
+	tr 
+		&:first-child 
+			td 
+				background-image none !important
+				background white !important
+				border-bottom 1px solid #ddd !important
+				color black
+				font normal 18px/125% titleFont
+		
+		&:last-child
+			td 
+				border-bottom none !important
+	
+.wpcw_fe_course_progress_course
+	font normal 16px/125% titleFont
+
+.wpcw_fe_progress_box_pending
+	overflow hidden
+
+.wpcw_fe_progress_box_wrap
+	clear both
+	display block
+	margin 0 auto
+	width 80%
 /**
 //// Media Queries
 ////////////////////////////////////////////////////////////////

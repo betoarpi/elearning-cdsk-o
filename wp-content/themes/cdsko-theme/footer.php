@@ -8,11 +8,11 @@
 		<?php //Load Tab Panel
 			get_template_part( 'modules/tab', 'panel' ); ?>
 
-		<?php //Load Catalogo Programas
-			get_template_part( 'modules/catalogo', 'programas' ); ?>
-
-		<?php //Load Ad Area
-			get_template_part( 'modules/ad', 'area' ); ?>
+		<?php if ( is_tree(85) ) ://Load Catalogo Programas 
+            //Nothing will be loaded
+        else :
+			get_template_part( 'modules/catalogo', 'programas' ); 
+        endif;?>
 
         <footer class="MainFooter">
             <div class="container">

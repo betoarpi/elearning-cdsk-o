@@ -150,6 +150,26 @@ function twentyfifteen_widgets_init() {
 		'before_title'  => '<h6 class="MenuInterno-heading hidden-xs"><span class="glyphicon glyphicon-option-vertical hidden-sm"></span>',
 		'after_title'   => '</h6>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Widget Cedesko'),
+		'id'            => 'widget-cedesko',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h6 class="MenuInterno-heading hidden-xs"><span class="glyphicon glyphicon-option-vertical hidden-sm"></span>',
+		'after_title'   => '</h6>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Sidebar Der. Embotelladoras'),
+		'id'            => 'widget-embotelladoras-der',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h6 class="MenuInterno-heading hidden-xs"><span class="glyphicon glyphicon-option-vertical hidden-sm"></span>',
+		'after_title'   => '</h6>',
+	) );
 }
 add_action( 'widgets_init', 'twentyfifteen_widgets_init' );
 
@@ -342,6 +362,17 @@ require get_template_directory() . '/inc/template-tags.php';
  * @since Twenty Fifteen 1.0
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * If Page Is Parent or Child Functionality
+ */
+function is_tree($pid) {      // $pid = The ID of the page we're looking for pages underneath
+	global $post;         // load details about this page
+	if(is_page()&&($post->post_parent==$pid||is_page($pid))) 
+               return true;   // we're at the page or at a sub page
+	else 
+               return false;  // we're elsewhere
+};
 
 /**
  * Add additional embotelladora field

@@ -35,7 +35,7 @@ get_header(); ?>
 
 							<h3 class="Title"><?php the_title(); ?></h3>
 
-							<?php the_excerpt(); ?>
+							<?php the_content(); ?>
 					</article>
 				<div><!-- #post-## -->
 

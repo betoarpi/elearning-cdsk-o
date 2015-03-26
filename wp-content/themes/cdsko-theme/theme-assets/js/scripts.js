@@ -19,6 +19,15 @@ $(function() {
         pagination: true
     });
 
+    $('#ContentSlides').superslides({
+        inherit_height_from: '#ContentSlides',
+        inherit_width_from: '#ContentSlides',
+        animation: 'slide',
+        animation_speed: 'normal',
+        play: 8000,
+        pagination: true
+    });
+
     // Empresas Del Sistema Toggle
     function toggleMenu(){
     	event.preventDefault();

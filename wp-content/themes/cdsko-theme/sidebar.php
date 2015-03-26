@@ -23,7 +23,15 @@
 <?php elseif ( is_front_page() && is_home() ) : ?>
     <?php //Load Empresas Sistema
         get_template_part( 'modules/empresas', 'sistema' ); ?>
+<?php elseif (is_tree(30)) : ?>
+    <?php dynamic_sidebar( 'widget-cedesko' ); ?>
+<?php elseif (is_tree(69)) : ?>
+    <?php //Load Empresas Sistema
+        get_template_part( 'modules/embotelladoras', 'sidebar1' ); ?>
+<?php elseif (is_tree(85)) : ?>
+    <?php //Load Empresas Sistema
+        get_template_part( 'modules/programas', 'sidebar1' ); ?>
 <?php else : ?>
-<?php dynamic_sidebar( 'widget-internas' ); ?>
+    <?php dynamic_sidebar( 'widget-internas' ); ?>
 <?php endif;?>
 
