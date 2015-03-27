@@ -170,6 +170,16 @@ function twentyfifteen_widgets_init() {
 		'before_title'  => '<h6 class="MenuInterno-heading hidden-xs"><span class="glyphicon glyphicon-option-vertical hidden-sm"></span>',
 		'after_title'   => '</h6>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Sidebar Contacto'),
+		'id'            => 'widget-contacto',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h6 class="MenuInterno-heading"><span class="glyphicon glyphicon-option-vertical hidden-sm"></span>',
+		'after_title'   => '</h6>',
+	) );
 }
 add_action( 'widgets_init', 'twentyfifteen_widgets_init' );
 

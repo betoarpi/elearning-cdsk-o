@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Catalogo Programas
+ * Template Name: Contacto
  * @package WordPress
  */
 
@@ -12,7 +12,9 @@ get_header(); ?>
         </div>
     </div>
     <div class="row">
-        <?php get_sidebar(); ?>
+        <div class="Sidebar col-sm-3 hidden-xs">
+            <?php dynamic_sidebar( 'widget-internas' ); ?>
+        </div><!-- ends Menú Interno -->
 
         <div class="col-sm-6">
 
@@ -30,8 +32,13 @@ get_header(); ?>
             </main><!-- ends MainContent grid -->
         </div>
         
-        <?php //Load Aside Sidebar
-            get_template_part( 'modules/aside', 'sidebar' ); ?>  
+        <aside class="AsideSidebar col-sm-3 no-margin-top">
+            <article class="AsideSidebar-item">
+                <div class="AsideSidebar-item-container">
+                    <?php dynamic_sidebar( 'widget-contacto' ); ?>
+                </div>
+            </article>
+        </aside><!-- ends Menú Interno -->  
     </div>
 </div><!-- ends Main Content -->
 <?php get_footer(); ?>

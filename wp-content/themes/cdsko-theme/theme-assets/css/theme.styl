@@ -225,6 +225,10 @@ caption
 del
 	opacity 0.8
 
+#iFrame
+	display block
+	margin 0 auto
+
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder
 	color shadowGray
@@ -820,7 +824,10 @@ del
 ////////////////////////////////////////////////////////////////
 */  
 .AsideSidebar
-	padding 40px 0 0
+	padding 40px 0 0 0
+	
+	&.no-margin-top
+		padding-top 0
 	
 .AsideSidebar-item
 	float left
@@ -1724,6 +1731,28 @@ a.fe_btn_navigation
 	display block
 	margin 0 auto
 	width 80%
+
+/**
+//// Contact Form
+////////////////////////////////////////////////////////////////
+*/
+.wpcf7-form 
+	float left
+	width 100%
+	
+	.wpcf7-form-control-wrap
+		float left
+		width 100%
+		
+		input.form-field, input.captcha-field, textarea.form-field
+			border 1px solid rgba(0,0,0,0.15) 
+			margin-bottom 10px
+			width 100%
+	
+	.wpcf7-submit
+		clear both
+		margin-top 20px
+
 /**
 //// Media Queries
 ////////////////////////////////////////////////////////////////
