@@ -18,11 +18,12 @@
 				if ( is_page_template('iniciativa-sistema.php') ) ://Load Course Shortcode
 			   		if( get_field('shortcode_del_curso') ):
 			   			$shortcourse = get_field('shortcode_del_curso');
+			   			the_content();
 			           	echo do_shortcode($shortcourse);
 			        endif;
 			    endif;
 			} else {
-				the_content();
+				the_field('mensaje_no_registrados');
 			}
 		else : 
 			the_content(); 

@@ -10,14 +10,21 @@
                         'items_wrap' => '<ul id="%1$s" class="col-sm-5">%3$s</ul>', 
                         'container' => ''
                     )
-                ); ?>
-                
-                <div class="col-sm-4 SubMenu-featured">
-                    <img class="img-responsive" src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-1.jpg" alt="">
-                    <h4 class="title">Coca-Cola Life</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde asperiores nostrum nihil.</p>
-                    <a href="#" class="MoreBtn">Ver Más <span class="glyphicon glyphicon-menu-right"></span></a>
-                </div>
+                );
+                if ( have_posts() ) {
+                    query_posts( array( 'category' => 13, 'tag' => 'navegacion-principal', 'posts_per_page' => 1, 'order' => 'DESC' ) );
+                    while ( have_posts() ) {
+                        the_post(); ?>
+                        <div class="col-sm-4 SubMenu-featured">
+                            <?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?>
+                            <h4 class="title"><?php the_title(); ?></h4>
+                            <?php the_excerpt(); ?>
+                            <a href="<?php the_permalink(); ?>" class="MoreBtn">Ver Más <span class="glyphicon glyphicon-menu-right"></span></a>
+                        </div><!-- ends featured post in menu -->
+                    <?php } // end while
+                } // end if
+                wp_reset_query();
+                ?>
             </div>
         </div>
         
@@ -32,13 +39,22 @@
                         'items_wrap' => '<ul id="%1$s" class="col-sm-5">%3$s</ul>', 
                         'container' => ''
                     )
-                ); ?>
-                <div class="col-sm-4 SubMenu-featured">
-                    <img class="img-responsive" src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-3.jpg" alt="">
-                    <h4 class="title">Te mueves tú, se mueven todos</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde asperiores nostrum nihil.</p>
-                    <a href="#" class="MoreBtn">Ver Más <span class="glyphicon glyphicon-menu-right"></span></a>
-                </div>
+                ); 
+
+                if ( have_posts() ) {
+                    query_posts( array( 'category' => 13, 'tag' => 'navegacion-principal', 'posts_per_page' => 1, 'order' => 'DESC' ) );
+                    while ( have_posts() ) {
+                        the_post(); ?>
+                        <div class="col-sm-4 SubMenu-featured">
+                            <?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?>
+                            <h4 class="title"><?php the_title(); ?></h4>
+                            <?php the_excerpt(); ?>
+                            <a href="<?php the_permalink(); ?>" class="MoreBtn">Ver Más <span class="glyphicon glyphicon-menu-right"></span></a>
+                        </div><!-- ends featured post in menu -->
+                    <?php } // end while
+                } // end if
+                wp_reset_query();
+                ?>
             </div>
             
         </div>

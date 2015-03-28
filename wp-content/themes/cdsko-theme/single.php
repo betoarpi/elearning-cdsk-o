@@ -22,16 +22,16 @@ get_header(); ?>
 				while ( have_posts() ) : the_post(); ?>
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class('MainContent-interna-full'); ?>>
-					<article class="MainContent-interna-item-container">
+					<article class="MainContent-interna-item-container"><!-- 
 							<span class="ItemCategory PT10">
 								<?php
 								foreach((get_the_category()) as $category) { 
 								    echo $category->cat_name . ' '; 
 								} 
 								?>
-							</span>
+							</span> -->
 
-							<time><?php the_time('l, F j, Y'); ?></time>
+							<!-- <time><?php the_time('l, F j, Y'); ?></time> -->
 
 							<h3 class="Title"><?php the_title(); ?></h3>
 

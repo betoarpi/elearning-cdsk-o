@@ -18,6 +18,10 @@ get_header(); ?>
 				// Start the loop.
 				while ( have_posts() ) : the_post(); 
 
+				if ( is_home() ) {
+					query_posts( 'cat=2,4' ); 
+				}
+
 				// Include the page content template.
 					get_template_part( 'content', get_post_format() );
 
