@@ -36,6 +36,14 @@ get_header(); ?>
 							<h3 class="Title"><?php the_title(); ?></h3>
 
 							<?php the_content(); ?>
+
+							<?php if ( is_user_logged_in() ) {
+								the_field('contenido_solo_registrados'); ?>
+
+								<?php if( get_field('curso_link') ): ?>
+									<a class="MoreBtn" href="<?php the_field('curso_link'); ?>">¡Regístrate al curso!</a>
+								<?php endif; ?>
+							<?php } ?>
 					</article>
 				<div><!-- #post-## -->
 

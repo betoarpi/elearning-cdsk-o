@@ -20,7 +20,7 @@
 		</figure>
 		<?php } ?>
 
-		<time><?php the_time('l, F j, Y'); ?> someting</time>
+		<time><?php the_time('l, F j, Y'); ?></time>
 
 		<h3 class="Title"><?php the_title(); ?></h3>
 

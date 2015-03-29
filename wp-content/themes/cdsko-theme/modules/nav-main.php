@@ -12,12 +12,12 @@
                     )
                 );
                 if ( have_posts() ) {
-                    query_posts( array( 'category' => 13, 'tag' => 'navegacion-principal', 'posts_per_page' => 1, 'order' => 'DESC' ) );
+                    query_posts( array( 'category' => 13, 'tag' => 'navegacion-iniciativas', 'posts_per_page' => 1, 'order' => 'DESC' ) );
                     while ( have_posts() ) {
                         the_post(); ?>
                         <div class="col-sm-4 SubMenu-featured">
-                            <?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?>
-                            <h4 class="title"><?php the_title(); ?></h4>
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?></a>
+                            <h4 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                             <?php the_excerpt(); ?>
                             <a href="<?php the_permalink(); ?>" class="MoreBtn">Ver Más <span class="glyphicon glyphicon-menu-right"></span></a>
                         </div><!-- ends featured post in menu -->
@@ -42,7 +42,7 @@
                 ); 
 
                 if ( have_posts() ) {
-                    query_posts( array( 'category' => 13, 'tag' => 'navegacion-principal', 'posts_per_page' => 1, 'order' => 'DESC' ) );
+                    query_posts( array( 'category' => 14, 'tag' => 'navegacion-embajadores', 'posts_per_page' => 1, 'order' => 'DESC' ) );
                     while ( have_posts() ) {
                         the_post(); ?>
                         <div class="col-sm-4 SubMenu-featured">
