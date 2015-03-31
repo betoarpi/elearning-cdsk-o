@@ -6,6 +6,9 @@
 
 get_header(); ?>
 
+<?php if ( in_category( '37' )  ) {
+	get_template_part( 'modules/single', 'programa' );
+} else { ?>
 <div class="MainContent container">
     <div class="row">
         <div class="Sidebar col-sm-3 hidden-xs">
@@ -52,8 +55,7 @@ get_header(); ?>
 				?>
             </main><!-- ends MainContent grid -->
         </div>
-
-        
     </div>
 </div><!-- ends Main Content -->
+<?php } ?>
 <?php get_footer(); ?>

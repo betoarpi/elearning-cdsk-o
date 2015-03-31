@@ -6,17 +6,55 @@
 
 get_header(); ?>
 
-				<h1><?php
-					printf( __( 'Tag Archives: %s', 'twentyten' ), '' . single_tag_title( '', false ) . '' );
-				?></h1>
+<div class="MainContent container">
+    <div class="row">
+        <?php //Load Empresas Sistema
+        get_template_part( 'modules/programas', 'sidebar1' ); ?>
 
-<?php
-/* Run the loop for the tag archive to output the posts
- * If you want to overload this in a child theme then include a file
- * called loop-tag.php and that will be used instead.
- */
- get_template_part( 'loop', 'tag' );
-?>
+        <main class="MainContent-grid col-sm-9" role="main">
+        	<?php breadcrumb_trail(); ?>
 
-<?php get_sidebar(); ?>
+        	<?php if ( have_posts() ) : ?>
+
+        	<!-- <h1 class="ML20 MR20">
+        		<?php printf( __( 'Category Archives: %s', 'twentyten' ), '' . single_cat_title( '', false ) . '' ); ?>
+			</h1>
+        	<hr class="ML20 MR20"> -->
+			
+			<?php
+				// Start the Loop.
+				while ( have_posts() ) : the_post();
+
+				
+					/* Run the loop for the category page to output the posts.
+					 * If you want to overload this in a child theme then include a file
+					 * called loop-category.php and that will be used instead.
+					 */
+					get_template_part( 'content', get_post_format() );
+
+				// End the loop.
+				endwhile;
+
+				// Previous/next page navigation.
+				if(function_exists('wp_paginate')) {
+				    wp_paginate();
+				}
+				else {
+				    // Previous/next page navigation.
+					the_posts_pagination( array(
+						'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
+						'next_text'          => __( 'Next page', 'twentyfifteen' ),
+						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+					) );
+				}
+
+			// If no content, include the "No posts found" template.
+			else :
+				get_template_part( 'content', 'none' );
+
+			endif; ?> 
+        </main><!-- ends MainContent grid -->
+    </div>
+</div><!-- ends Main Content -->
+
 <?php get_footer(); ?>

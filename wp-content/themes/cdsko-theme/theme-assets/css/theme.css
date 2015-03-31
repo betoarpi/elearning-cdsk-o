@@ -721,8 +721,13 @@ del{opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 .MainContent-item .MainContent-item-container strong,.MainContent-interna-item .MainContent-item-container strong,.MainContent-interna-full .MainContent-item-container strong,.MainContent-item .MainContent-interna-item-container strong,.MainContent-interna-item .MainContent-interna-item-container strong,.MainContent-interna-full .MainContent-interna-item-container strong{font-family:'exo_2.0extra_bold','Arial Black','Arial Bold',sans-serif}
 .MainContent-item .MainContent-item-container img.size-full,.MainContent-interna-item .MainContent-item-container img.size-full,.MainContent-interna-full .MainContent-item-container img.size-full,.MainContent-item .MainContent-interna-item-container img.size-full,.MainContent-interna-item .MainContent-interna-item-container img.size-full,.MainContent-interna-full .MainContent-interna-item-container img.size-full{height:auto;max-width:100%;width:100%}
 .MainContent-item .MainContent-item-container iframe,.MainContent-interna-item .MainContent-item-container iframe,.MainContent-interna-full .MainContent-item-container iframe,.MainContent-item .MainContent-interna-item-container iframe,.MainContent-interna-item .MainContent-interna-item-container iframe,.MainContent-interna-full .MainContent-interna-item-container iframe{display:block;margin:0 auto}
-.MainContent-item:nth-child(even),.MainContent-interna-item:nth-child(even),.MainContent-interna-full:nth-child(even){clear:left}
+.MainContent-item .MainContent-item-container.Programa-content .row,.MainContent-interna-item .MainContent-item-container.Programa-content .row,.MainContent-interna-full .MainContent-item-container.Programa-content .row,.MainContent-item .MainContent-interna-item-container.Programa-content .row,.MainContent-interna-item .MainContent-interna-item-container.Programa-content .row,.MainContent-interna-full .MainContent-interna-item-container.Programa-content .row{border-bottom:1px solid rgba(0,0,0,0.15);padding:10px 0;}
+.MainContent-item .MainContent-item-container.Programa-content .row h4,.MainContent-interna-item .MainContent-item-container.Programa-content .row h4,.MainContent-interna-full .MainContent-item-container.Programa-content .row h4,.MainContent-item .MainContent-interna-item-container.Programa-content .row h4,.MainContent-interna-item .MainContent-interna-item-container.Programa-content .row h4,.MainContent-interna-full .MainContent-interna-item-container.Programa-content .row h4{margin-top:0}
+.MainContent-item .MainContent-item-container.Programa-content .row:last-child,.MainContent-interna-item .MainContent-item-container.Programa-content .row:last-child,.MainContent-interna-full .MainContent-item-container.Programa-content .row:last-child,.MainContent-item .MainContent-interna-item-container.Programa-content .row:last-child,.MainContent-interna-item .MainContent-interna-item-container.Programa-content .row:last-child,.MainContent-interna-full .MainContent-interna-item-container.Programa-content .row:last-child{border:none}
+.MainContent-item:nth-child(odd),.MainContent-interna-item:nth-child(odd),.MainContent-interna-full:nth-child(odd){clear:left}
 .MainContent-item.category-cedesko,.MainContent-interna-item.category-cedesko,.MainContent-interna-full.category-cedesko,.MainContent-item.category-ultimo-programa-desarrollado,.MainContent-interna-item.category-ultimo-programa-desarrollado,.MainContent-interna-full.category-ultimo-programa-desarrollado{float:right;clear:right}
+.MainContent-item.category-catalogo-de-programas:nth-child(odd){clear:none !important}
+.MainContent-item.category-catalogo-de-programas:nth-child(even){clear:left}
 .MainContent-interna-full{width:100%;}
 .MainContent-interna-full .MainContent-interna-item-container{padding:0 20px 10px 20px}
 .MainContent-interna-full .loginform-container{display:block;float:none;margin:0 auto 40px auto;min-width:455px;overflow:hidden;width:455px}
@@ -741,6 +746,12 @@ del{opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 .paginacion ol.wp-paginate li a{background:#e7e7e7;-webkit-border-radius:50%;border-radius:50%;color:#cd2f31;display:block;height:40px;max-height:40px;max-width:40px;padding:9px;text-align:cenrer;width:40px;}
 .paginacion ol.wp-paginate li a:hover{background:#cd2f31;color:#fff;text-decoration:none}
 .paginacion ol.wp-paginate li span.page.current{background:#cd2f31;-webkit-border-radius:50%;border-radius:50%;color:#fff;display:block;height:40px;max-height:40px;max-width:40px;padding:9px;text-align:cenrer;width:40px}
+.gallery{float:left;width:100%;}
+.gallery .gallery-item{float:left;width:33.33%;}
+.gallery .gallery-item .gallery-icon{float:left;padding:10px;width:100%;}
+.gallery .gallery-item .gallery-icon a{background:#fff;display:table;height:122px;overflow:hidden;width:100%;}
+.gallery .gallery-item .gallery-icon a img{display:table-cell;height:auto;margin:0 auto;max-height:120px;max-width:100%;text-align:center;vertical-align:middle;width:100%}
+.gallery .gallery-item:nth-child(3n+1){clear:both}
 .AsideSidebar{padding:40px 0 0 0;}
 .AsideSidebar.no-margin-top{padding-top:0}
 .AsideSidebar-item{float:left;margin-bottom:20px;width:100%;}
@@ -943,6 +954,7 @@ a.fe_btn_navigation:hover{background:#cd2f31}
 .wpcw_fe_progress_box_download a{display:block;float:none;margin-left:0;margin:0 auto 20px auto}
 .wpcw_fe_progress_download{float:left;margin:0;width:100%;}
 .wpcw_fe_progress_download a{display:block;float:none;margin-left:0;margin:0 auto 20px auto}
+.gallery .gallery-item{width:100%}
 }@media (min-width: 768px){.EmpresasSistema-list ul{display:block !important}
 .MenuInterno-list{display:block !important}
 }@media (max-width: 768px){.MainHeader .social-nav li.no-border{margin-top:0}

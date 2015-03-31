@@ -5,12 +5,11 @@
  * @package WordPress
  */
 ?>
-		<?php //Load Tab Panel
-			get_template_part( 'modules/tab', 'panel' ); ?>
 
-		<?php if ( is_tree(85) ) ://Load Catalogo Programas 
+		<?php if ( is_page('catalogo-de-programas') ) ://Load Catalogo Programas 
             //Nothing will be loaded
         else :
+            get_template_part( 'modules/tab', 'panel' );
 			get_template_part( 'modules/catalogo', 'programas' ); 
         endif;?>
 
@@ -21,22 +20,26 @@
                         <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/footer-logo.png" alt="Logo Cedesko">
                     </div>
                     <ul class="col-sm-3 hidden-xs">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Acerca de Cedesko</a></li>
-                        <li><a href="#">Iniciativas del Sistema</a></li>
-                        <li><a href="#">Embajadores Coca-Cola</a></li>
-                        <li><a href="#">Embotelladores</a></li>
-                        <li><a href="#">Latin Centro</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>">Inicio</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/acerca-de-cedesko/">Acerca de Cedesko</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/category/iniciativas-del-sistema/">Iniciativas del Sistema</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/category/embajadores-coca-cola/">Embajadores Coca-Cola</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/embotelladores/">Embotelladores</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/latin-centro/">Latin Centro</a></li>
                     </ul>
                     <ul class="col-sm-3 hidden-xs">
-                        <li><a href="#">Catálogo de Programas</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Comités</a></li>
-                        <li><a href="#">Consultores</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/catalogo-de-programas/">Catálogo de Programas</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/servicios/">Servicios</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/comites/">Comités</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/consultores/">Consultores</a></li>
                     </ul>
                     <ul class="col-sm-3 hidden-xs">
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Iniciar Sesión</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/contacto/">Contacto</a></li>
+                        <?php if ( ! is_user_logged_in() ) { ?> 
+                        <li><a href="<?php bloginfo('siteurl'); ?>/login/">Iniciar Sesión</a></li>
+                        <?php } else { ?>
+                        <li><a href="<?php echo wp_logout_url( home_url() ); ?>">Cerrar Sesión</a></li>
+                        <?php }?>
                     </ul>
                 </div>
 
@@ -51,9 +54,9 @@
                     </div>
                     <div class="col-sm-3 social-nav">
                         <ul>
-                            <li><a href="#" class="icon-facebook"><span class="seo-title">Facebook</span></a></li>
-                            <li><a href="#" class="icon-twitter"><span class="seo-title">Twitter</span></a></li>
-                            <li><a href="#" class="icon-linkedin"><span class="seo-title">Twitter</span></a></li>
+                            <li><a href="https://www.facebook.com/pages/Cedesko-Centro-de-Estrategia-y-Desarrollo-del-Sistema-Coca-Cola/136484526411763" class="icon-facebook" target="_blank"><span class="seo-title">Facebook</span></a></li>
+                            <li><a href="https://twitter.com/Cedesko" class="icon-twitter" target="_blank"><span class="seo-title">Twitter</span></a></li>
+                            <li><a href="https://www.linkedin.com/company/centro-de-estrategia-y-desarrollo-del-sistema-coca-cola" class="icon-linkedin" target="_blank"><span class="seo-title">Twitter</span></a></li>
                         </ul>
                     </div>
                 </div>
