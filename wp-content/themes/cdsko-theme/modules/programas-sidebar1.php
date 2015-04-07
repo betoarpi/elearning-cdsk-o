@@ -5,31 +5,31 @@
         <a href="#" class="EmpresasSistema-toggle"><span class="glyphicon glyphicon-menu-down"></span></a>
         <ul>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/<?php get_template_part( 'modules/category', 'slug' ); ?>&tag=calidad/">Calidad</a>
+                <a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/calidad/">Calidad</a>
             </li>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/<?php get_template_part( 'modules/category', 'slug' ); ?>&tag=comercial/">Comercial</a>
+                <a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/comercial/">Comercial</a>
             </li>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/<?php get_template_part( 'modules/category', 'slug' ); ?>&tag=finanzas/">Finanzas</a>
+                <a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/finanzas/">Finanzas</a>
             </li>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/<?php get_template_part( 'modules/category', 'slug' ); ?>&tag=sustentabilidad/">Sustentabilidad</a>
+                <a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/sustentabilidad/">Sustentabilidad</a>
             </li>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/<?php get_template_part( 'modules/category', 'slug' ); ?>&tag=seguridad/">Seguridad</a>
+                <a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/seguridad/">Seguridad</a>
             </li>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/<?php get_template_part( 'modules/category', 'slug' ); ?>&tag=cadena-de-suministro/">Cadena de Suministro</a>
+                <a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/cadena-de-suministros/">Cadena de Suministro</a>
             </li>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/<?php get_template_part( 'modules/category', 'slug' ); ?>&tag=operaciones/">Operaciones</a>
+                <a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/operaciones/">Operaciones</a>
             </li>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/<?php get_template_part( 'modules/category', 'slug' ); ?>&tag=recursos-humanos/">Recursos Humanos</a>
+                <a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/recursos-humanos/">Recursos Humanos</a>
             </li>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/<?php get_template_part( 'modules/category', 'slug' ); ?>&tag=desarrollo-de-habilidades/">Desarrollo de Habilidades</a>
+                <a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/desarrollo-de-habilidades/">Desarrollo de Habilidades</a>
             </li>
         </ul>
     </div>

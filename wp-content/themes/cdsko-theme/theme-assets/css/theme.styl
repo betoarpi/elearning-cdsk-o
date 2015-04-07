@@ -226,6 +226,7 @@ del
 	opacity 0.8
 
 #iFrame
+	clear both
 	display block
 	margin 0 auto
 
@@ -809,6 +810,23 @@ del
 	&:nth-child(even)
 		clear left
 
+.Embajadores-grid 
+	.MainContent-item
+		&:nth-child(odd)
+			clear none !important
+	
+		&:nth-child(even)
+			clear left
+
+body.category-noticias
+	.MainContent
+		.MainContent-item
+			&:nth-child(odd)
+				clear none !important
+		
+			&:nth-child(even)
+				clear left
+
 .MainContent-interna-full
 	width 100%
 	
@@ -858,6 +876,13 @@ del
 				
 				&.current
 					background black
+
+// Grid Posts
+.page-template-grid-posts
+	.MainContent
+		.row
+			.col-sm-4:nth-child(3n+1)
+				clear left
 /**
 //// Paginación
 ////////////////////////////////////////////////////////////////
@@ -940,6 +965,16 @@ del
 		
 		&:nth-child(3n+1)
 			clear both
+
+.embotelladoras-gallery
+	.col-sm-4
+		margin-bottom 20px
+		
+		a 
+			background white
+			float left
+			padding 10px
+			width 100%
 
 /**
 //// Aside Sidebar
@@ -1589,6 +1624,7 @@ ul.wpcw_fe_quiz_q_answers,
 		margin-left 0 !important
 
 .wpcw_fe_quiz_box_wrap
+	clear both
 	display block
 	overflow hidden
 	

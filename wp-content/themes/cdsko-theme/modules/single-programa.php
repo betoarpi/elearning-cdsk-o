@@ -1,7 +1,7 @@
 <div class="MainContent container">
     <div class="row">
        <?php //Load Empresas Sistema
-        get_template_part( 'modules/programas', 'sidebar2' ); ?>
+        get_template_part( 'modules/programas', 'sidebar1' ); ?>
 
         <div class="col-sm-9">
 

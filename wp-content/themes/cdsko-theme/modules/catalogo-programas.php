@@ -3,74 +3,74 @@
                 <h2 class="title"><span>Catálogo de Programas</span></h2>
                 <ul class="col-xs-12 CatalogoProgramas-list">
                     <li>
-                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/area-comercial-ejecucion/">
+                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/seguridad/">
                             <figure>
                                 <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/catalogo-programas/ac-ejecucion-icon.png" alt="">
-                                <figcaption>Área Comercial Ejecución</figcaption>
+                                <figcaption>Seguridad</figcaption>
                             </figure>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/area-comercial-estrategia/">
+                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/diplomados/">
                             <figure>
                                 <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/catalogo-programas/ac-estrategia-icon.png" alt="">
-                                <figcaption>Área Comercial Estrategia</figcaption>
+                                <figcaption>Diplomados</figcaption>
                             </figure>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/area-comercial-practica/">
+                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/finanzas/">
                             <figure>
                                 <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/catalogo-programas/ac-practica-icon.png" alt="">
-                                <figcaption>Área Comercial Práctica</figcaption>
+                                <figcaption>Finanzas</figcaption>
                             </figure>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/area-tecnica-ambiental/">
+                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/sustentabilidad/">
                             <figure>
                                 <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/catalogo-programas/at-ambiental-icon.png" alt="">
-                                <figcaption>Área Técnica Ambiental</figcaption>
+                                <figcaption>Sustentabilidad</figcaption>
                             </figure>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/area-tecnica-cadena-de-suministros/">
+                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/cadena-de-suministro/">
                             <figure>
                                 <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/catalogo-programas/at-cadena-suministros-icon.png" alt="">
-                                <figcaption>Área Técnica Cadena de Suministros</figcaption>
+                                <figcaption>Cadena de Suministro</figcaption>
                             </figure>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/area-tecnica-calidad/">
+                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/calidad/">
                             <figure>
                                 <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/catalogo-programas/at-calidad-icon.png" alt="">
-                                <figcaption>Área Técnica Calidad</figcaption>
+                                <figcaption>Calidad</figcaption>
                             </figure>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/area-tecnica-desarrollo-de-habilidades/">
+                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/desarrollo-de-habilidades/">
                             <figure>
                                 <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/catalogo-programas/at-desarrollo-habilidades-icon.png" alt="">
-                                <figcaption>Área Técnica Desarrollo de Habilidades</figcaption>
+                                <figcaption>Desarrollo de Habilidades</figcaption>
                             </figure>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/area-tecnica-finanzas/">
+                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/certificaciones/">
                             <figure>
                                 <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/catalogo-programas/at-finanzas-icon.png" alt="">
-                                <figcaption>Área Técnica Finanzas</figcaption>
+                                <figcaption>Certificaciones</figcaption>
                             </figure>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/area-tecnica-operaciones/">
+                        <a href="<?php bloginfo('siteurl') ?>/category/catalogo-de-programas/operaciones/">
                             <figure>
                                 <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/catalogo-programas/at-operaciones-icon.png" alt="">
-                                <figcaption>Área Técnica Operaciones</figcaption>
+                                <figcaption>Operaciones</figcaption>
                             </figure>
                         </a>
                     </li>

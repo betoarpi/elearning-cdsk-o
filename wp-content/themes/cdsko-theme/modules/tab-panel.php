@@ -12,65 +12,48 @@
             <div class="row tab-content TabPanel-content">
                 <section role="tabpanel" class="tab-pane active" id="embajadores">
                     <h2 class="seo-title">Embajadores Coca-Cola</h2>
-                    <article class="TabItem col-sm-3">
-                        <a href="#">
-                            <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-4.jpg" alt=""></figure>
-                            <h3 class="title">Coca-Cola Navidad</h3>
-                            <p>Esta Navidad regala lo mejor de ti, realiza buenas acciones y Haz Feliz a Alguien.</p>
-                        </a>
-                    </article>
-                    <article class="TabItem col-sm-3">
-                        <a href="#">
-                            <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-5.jpg" alt=""></figure>
-                            <h3 class="title">Comparte una Coca-Cola</h3>
-                            <p>Y tú, ¿Con quién compartirías una Coca-Cola?</p>
-                        </a>
-                    </article>
-                    <article class="TabItem col-sm-3">
-                        <a href="#">
-                            <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-6.jpg" alt=""></figure>
-                            <h3 class="title">Te mueves tú se mueven todos</h3>
-                            <p>Moverse es fácil y divertido con la canción Te Mueves Tú</p>
-                        </a>
-                    </article>
-                    <article class="TabItem col-sm-3">
-                        <a href="#">
-                            <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-7.jpg" alt=""></figure>
-                            <h3 class="title">DJ Head Hunterz En Directo</h3>
-                            <p>La música de DJ Head Hunterz en directo desde Plaza Condesa, tócalo aqui</p>
-                        </a>
-                    </article>
+                    
+                    <?php if ( have_posts() ) {
+                        query_posts( 'cat=13&posts_per_page=4' );
+                        while ( have_posts() ) {
+                            the_post(); ?>
+                            <article class="TabItem col-sm-3">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php if ( has_post_thumbnail() ) { ?>
+                                    <figure class="TabItem-thumbnail hidden-xs">
+                                        <?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?>
+                                    </figure>
+                                    <?php } ?>
+                                    <h3 class="title"><?php the_title(); ?></h3>
+                                    <?php the_excerpt(); ?>
+                                </a>
+                            </article>
+                        <?php } // end while
+                    } // end if
+                    wp_reset_query();
+                    ?>
                 </section>
                 <section role="tabpanel" class="tab-pane" id="iniciativas">
                     <h2 class="seo-title">Iniciativas del Sistema</h2>
-                    <article class="TabItem col-sm-3">
-                        <a href="#">
-                            <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-6.jpg" alt=""></figure>
-                            <h3 class="title">Te mueves tú se mueven todos</h3>
-                            <p>Moverse es fácil y divertido con la canción Te Mueves Tú</p>
-                        </a>
-                    </article>
-                    <article class="TabItem col-sm-3">
-                        <a href="#">
-                            <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-7.jpg" alt=""></figure>
-                            <h3 class="title">DJ Head Hunterz En Directo</h3>
-                            <p>La música de DJ Head Hunterz en directo desde Plaza Condesa, tócalo aqui</p>
-                        </a>
-                    </article>
-                    <article class="TabItem col-sm-3">
-                        <a href="#">
-                            <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-4.jpg" alt=""></figure>
-                            <h3 class="title">Coca-Cola Navidad</h3>
-                            <p>Esta Navidad regala lo mejor de ti, realiza buenas acciones y Haz Feliz a Alguien.</p>
-                        </a>
-                    </article>
-                    <article class="TabItem col-sm-3">
-                        <a href="#">
-                            <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/dummy-content/thumb-5.jpg" alt=""></figure>
-                            <h3 class="title">Comparte una Coca-Cola</h3>
-                            <p>Y tú, ¿Con quién compartirías una Coca-Cola?</p>
-                        </a>
-                    </article>
+                    <?php if ( have_posts() ) {
+                        query_posts( 'cat=14&posts_per_page=4' );
+                        while ( have_posts() ) {
+                            the_post(); ?>
+                            <article class="TabItem col-sm-3">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php if ( has_post_thumbnail() ) { ?>
+                                    <figure class="TabItem-thumbnail hidden-xs">
+                                        <?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?>
+                                    </figure>
+                                    <?php } ?>
+                                    <h3 class="title"><?php the_title(); ?></h3>
+                                    <?php the_excerpt(); ?>
+                                </a>
+                            </article>
+                        <?php } // end while
+                    } // end if
+                    wp_reset_query();
+                    ?>
                 </section>
             </div>
         </div><!-- ends Tab Panel -->

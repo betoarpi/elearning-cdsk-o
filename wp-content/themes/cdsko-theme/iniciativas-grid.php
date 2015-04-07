@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Category Archive pages.
+ * Template Name: Cuadricula Embajadores
  * @package WordPress
  */
 
@@ -9,17 +9,13 @@ get_header(); ?>
 <div class="MainContent container">
     <div class="row">
         <?php //Load Empresas Sistema
-        get_template_part( 'modules/programas', 'sidebar1' ); ?>
+        get_template_part( 'modules/embajadores', 'sidebar' ); ?>
 
-        <main class="MainContent-grid col-sm-9" role="main">
+        <main class="MainContent-grid col-sm-9 Embajadores-grid" role="main">
         	<?php breadcrumb_trail(); ?>
 
         	<?php if ( have_posts() ) : ?>
-        	<!-- <h1 class="ML20 MR20">
-        		<?php printf( __( 'Category Archives: %s', 'twentyten' ), '' . single_cat_title( '', false ) . '' ); ?>
-			</h1>
-        	<hr class="ML20 MR20"> -->
-			
+        	<?php query_posts( 'cat=13&posts_per_page=12' ); ?>
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();

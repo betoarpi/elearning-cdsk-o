@@ -14,9 +14,13 @@ get_header(); ?>
     <div class="row">
         <?php 
         if ( have_posts() ) {
-            wp_reset_query();
-            query_posts( 'cat=13' );
-            while ( have_posts() ) {
+            wp_reset_query(); ?>
+            <?php if ( is_page('iniciativas-del-sistema') ) { ?>
+                <?php query_posts( 'cat=14&posts_per_page=12' ); ?>
+            <?php } else if ( is_page('embajadores-coca-cola') ) { ?>
+                <?php query_posts( 'cat=13&posts_per_page=12' ); ?>
+            <?php } ?>
+            <?php while ( have_posts() ) {
                 the_post(); ?>
                 <div class="col-sm-4">
                     <article id="post-<?php the_ID(); ?>" <?php post_class('MainContent-item grid-posts'); ?>>

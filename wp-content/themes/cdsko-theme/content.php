@@ -15,7 +15,9 @@
 			} 
 			?>
 		</span>
-		<?php } ?>
+		<?php } else if ( in_category('13') ) { ?>
+			<span class="ItemCategory">Embajadores Coca-Cola</span>
+		<? } ?>
 		<?php if ( has_post_thumbnail() ) { ?>
 		<figure class="ItemThumbnail">
 			<?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?>

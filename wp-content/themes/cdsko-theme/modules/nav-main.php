@@ -1,6 +1,6 @@
 <a href="#" class="MainNav-toggle">Menu <span class="glyphicon glyphicon-option-vertical"></span></a>
 <ul class="MainNav">
-    <li><a href="#" class="less-padding">Iniciativas <br>del Sistema</a>
+    <li><a href="<?php bloginfo('siteurl'); ?>/iniciativas-del-sistema/" class="less-padding">Iniciativas <br>del Sistema</a>
         <div class="SubMenu container">
             <div class="row">
                 <h3 class="col-sm-3 title">Iniciativas del Sistema</h3>
@@ -29,7 +29,7 @@
         </div>
         
     </li>
-    <li><a href="#" class="less-padding">Embajadores <br>Coca-Cola</a>
+    <li><a href="<?php bloginfo('siteurl'); ?>/iniciativas-del-sistema/embajadores-coca-cola/" class="less-padding">Embajadores <br>Coca-Cola</a>
         <div class="SubMenu container">
             <div class="row">
                 <h3 class="col-sm-3 title">Embajadores <br>Coca-Cola</h3>
@@ -59,20 +59,20 @@
             
         </div>
     </li>
-    <li><a href="#">Programas</a>
+    <li><a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/">Programas</a>
         <div class="SubMenu container">
             <div class="row">
                 <h3 class="col-sm-3 title">Programas</h3>
                 <?php wp_nav_menu( 
                     array( 
-                        'menu' => 'programas-area-comercial', 
+                        'menu' => 'programas-area-tecnica', 
                         'items_wrap' => '<ul id="%1$s" class="col-sm-4">%3$s</ul>', 
                         'container' => ''
                     )
                 ); ?>
                 <?php wp_nav_menu( 
                     array( 
-                        'menu' => 'programas-area-tecnica', 
+                        'menu' => 'programas-area-comercial', 
                         'items_wrap' => '<ul id="%1$s" class="col-sm-4">%3$s</ul>', 
                         'container' => ''
                     )
@@ -81,7 +81,7 @@
         </div>
         
     </li>
-    <li><a href="#">Servicios</a>
+    <li><a href="<?php bloginfo('siteurl'); ?>/servicios/">Servicios</a>
         <div class="SubMenu container">
             <div class="row">
                 <h3 class="col-sm-3 title">Servicios</h3>
@@ -111,7 +111,7 @@
         </div>
         
     </li>
-    <li><a href="#">Latin Centro</a>
+    <li><a href="<?php bloginfo('siteurl'); ?>/latin-centro/">Latin Centro</a>
         <div class="SubMenu container">
             <div class="row">
                 <h3 class="col-sm-4 title">Latin Centro</h3>
