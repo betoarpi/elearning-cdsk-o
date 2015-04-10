@@ -96,10 +96,10 @@
         </div>
         
     </li>
-    <li><a href="<?php bloginfo('siteurl'); ?>/embotelladoras/">Embotelladoras</a>
+    <li><a href="<?php bloginfo('siteurl'); ?>/embotelladoras/" class="less-padding">Empresas del<br>Sistema</a>
         <div class="SubMenu container">
             <div class="row">
-                <h3 class="col-sm-4 title">Embotelladoras</h3>
+                <h3 class="col-sm-4 title">Empresas del Sistema</h3>
                 <?php wp_nav_menu( 
                     array( 
                         'menu' => 'embotelladoras', 
