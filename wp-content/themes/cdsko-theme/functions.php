@@ -80,7 +80,7 @@ if (!function_exists('twentyfifteen_setup')) :
 
         //Custom Thumbnail sizes:
         add_image_size('featured-thumb', 1280);
-        add_image_size('news-thumb', 315, 315);
+        add_image_size('news-thumb', 362, 145);
 
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus(array(
