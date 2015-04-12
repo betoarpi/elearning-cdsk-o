@@ -175,18 +175,18 @@ class Breadcrumb_Trail {
 	public function default_labels() {
 
 		$labels = array(
-			'browse'              => __( 'Browse:',                             'breadcrumb-trail' ),
-			'home'                => __( 'Home',                                'breadcrumb-trail' ),
-			'error_404'           => __( '404 Not Found',                       'breadcrumb-trail' ),
+			'browse'              => __( 'Buscar:',                             'breadcrumb-trail' ),
+			'home'                => __( 'Inicio',                                'breadcrumb-trail' ),
+			'error_404'           => __( '404 No se encontró',                       'breadcrumb-trail' ),
 			'archives'            => __( 'Archives',                            'breadcrumb-trail' ),
 			/* Translators: %s is the search query. The HTML entities are opening and closing curly quotes. */
-			'search'              => __( 'Search results for &#8220;%s&#8221;', 'breadcrumb-trail' ),
+			'search'              => __( 'Resultados de búsqueda para &#8220;%s&#8221;', 'breadcrumb-trail' ),
 			/* Translators: %s is the page number. */
-			'paged'               => __( 'Page %s',                             'breadcrumb-trail' ),
+			'paged'               => __( 'Página %s',                             'breadcrumb-trail' ),
 			/* Translators: Minute archive title. %s is the minute time format. */
-			'archive_minute'      => __( 'Minute %s',                           'breadcrumb-trail' ),
+			'archive_minute'      => __( 'Minuto %s',                           'breadcrumb-trail' ),
 			/* Translators: Weekly archive title. %s is the week date format. */
-			'archive_week'        => __( 'Week %s',                             'breadcrumb-trail' ),
+			'archive_week'        => __( 'Semana %s',                             'breadcrumb-trail' ),
 
 			/* "%s" is replaced with the translated date/time format. */
 			'archive_minute_hour' => '%s',

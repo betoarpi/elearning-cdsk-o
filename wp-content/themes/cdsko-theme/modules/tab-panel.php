@@ -22,8 +22,8 @@
                     <article class="TabItem col-sm-3">
                         <a href="<?php bloginfo('siteurl'); ?>/imcr/">
                             <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo('template_directory'); ?>/theme-assets/img/imcr.jpg" alt=""></figure>
-                            <h3 class="title">Top TV</h3>
-                            <p>Iniciativa del Sistema: Top TV</p>
+                            <h3 class="title">Sistema IMCR</h3>
+                            <p>Iniciativa del Sistema: Sistema IMCR</p>
                         </a>
                     </article>
                 </section>

@@ -731,8 +731,10 @@ del
 		
 		.ItemThumbnail
 			float left
-			width 100%
 			margin-bottom 10px
+			max-height 145px
+			overflow hidden
+			width 100%
 			
 			img 
 				display block 
@@ -841,6 +843,12 @@ body.category-noticias
 		min-width 455px
 		overflow hidden
 		width 455px
+		
+		ul 
+			padding-left 0
+			
+			li 
+				list-style none
 
 .MainContent-interna-item
 	padding 0 10px 20px 10px
@@ -1437,6 +1445,7 @@ body.category-noticias
 		
 	li 
 		float left
+		position relative
 		width 100%
 		
 		&:nth-child(odd)
@@ -1450,7 +1459,7 @@ body.category-noticias
 			padding 10px 10px 10px 10px
 			width 100%
 			
-			span
+			span.glyphicon
 				color rgba(0,0,0,0.15)
 				position absolute
 				right 80px
@@ -1462,7 +1471,7 @@ body.category-noticias
 				color red
 				text-decoration none
 				
-				span 
+				span .glyphicon
 					color red
 					opacity 1
 					right 0
@@ -1472,10 +1481,32 @@ body.category-noticias
 				height 60px
 				margin 0 auto 10px auto
 				max-width 100%
+		
+		span.glyphicon
+			color rgba(0,0,0,0.15)
+			position absolute
+			right 80px
+			opacity 0
+			top 12px
+			transition all 0.2s ease-in-out
+		
+		&:hover 
+			color red
+			text-decoration none
+			
+			span.glyphicon 
+				color red
+				opacity 1
+				right 0
 				
 		&:last-child
 			a 
 				border-bottom none
+		
+		&.current-menu-item
+			a 
+				color red 
+				font-family titleFont
 
 .MenuInterno-toggle
 	color red
