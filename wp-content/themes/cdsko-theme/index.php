@@ -29,9 +29,11 @@ get_header(); ?>
 				endwhile;
 
 				// Previous/next page navigation.
-				if(function_exists('wp_paginate')) {
-				    wp_paginate();
-				}
+				if(function_exists('wp_pagenavi')) { ?>
+				<nav class="paginacion">
+				    <?php wp_pagenavi(); ?>
+				</nav>
+				<?php }
 				else {
 				    // Previous/next page navigation.
 					the_posts_pagination( array(
