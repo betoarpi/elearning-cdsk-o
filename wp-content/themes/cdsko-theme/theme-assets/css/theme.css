@@ -937,6 +937,7 @@ a.fe_btn_navigation:hover{background:#cd2f31}
 @media (max-width: 1200px){.MainNav li a{padding:20px 15px;}
 .MainNav li a.less-padding{padding:10px 15px}
 .MainNav li .SubMenu{max-width:700px}
+.TopNav{background-position:118px 9px;-webkit-background-size:390px;-moz-background-size:390px;background-size:390px;}
 .TopNav li a{font-size:14px}
 .AsideSidebar .AsideSidebar-item .ItemCategory{font-size:20px}
 }@media (min-width: 992px){.TopNav{display:block !important}
