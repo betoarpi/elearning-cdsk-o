@@ -14,8 +14,9 @@
     </li>
     <?php
     if ( is_user_logged_in() ) {
-        echo '<li class="hidden-sm a-right PR15"><span class="glyphicon glyphicon-user"></span> Hola ';
+        $echobloginfo = get_bloginfo('siteurl');
+        echo "<li class='hidden-sm a-right inicio-sesion PR15'><a data-toggle='tooltip' data-placement='bottom' title='Accede a tus cursos dando click' href='$echobloginfo/mis-cursos/'><span class='glyphicon glyphicon-user'></span> Hola ";
         $current_user = wp_get_current_user(); 
-        echo ' ' . $current_user->display_name.'</li>';
+        echo ' ' . $current_user->display_name.'</a></li>';
     } ?>
 </ul>

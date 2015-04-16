@@ -14,10 +14,6 @@
         <li><a href="<?php bloginfo('siteurl'); ?>/servicios/alianzas/empresas-de-servicio-e-implantacion">Empresas de Servicio e Implantación <span class="glyphicon glyphicon-menu-right"></span></a></li>
         <li><a href="<?php bloginfo('siteurl'); ?>/servicios/alianzas/despachos">Despachos <span class="glyphicon glyphicon-menu-right"></span></a></li>
         <li><a href="<?php bloginfo('siteurl'); ?>/servicios/alianzas/instituciones-educativas">Instituciones Educativas <span class="glyphicon glyphicon-menu-right"></span></a></li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/servicios/alianzas/marketing-online">Marketing Online <span class="glyphicon glyphicon-menu-right"></span></a></li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/servicios/alianzas/modernizacion-de-apps">Modernización de Apps <span class="glyphicon glyphicon-menu-right"></span></a></li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/servicios/alianzas/reduccion-de-costos">Reducción de Costos <span class="glyphicon glyphicon-menu-right"></span></a></li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/servicios/alianzas/eliminacion-de-complejidad">Eliminación de Complejidad <span class="glyphicon glyphicon-menu-right"></span></a></li>
     </ul>
 </nav><!-- ends Menú Interno -->
 <?php elseif ( is_front_page() && is_home() ) : ?>
@@ -31,6 +27,9 @@
 <?php elseif (is_category(85)) : ?>
     <?php //Load Empresas Sistema
         get_template_part( 'modules/programas', 'sidebar1' ); ?>
+<?php elseif (is_page_template('iniciativa-sistema.php')) : ?>
+        <?php //Load Empresas Sistema
+        get_template_part( 'modules/embajadores', 'sidebar' ); ?>
 <?php else : ?>
     <?php dynamic_sidebar( 'widget-internas' ); ?>
 <?php endif;?>

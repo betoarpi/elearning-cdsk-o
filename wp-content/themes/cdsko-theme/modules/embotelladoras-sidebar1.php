@@ -1,5 +1,5 @@
 <aside class="EmpresasSistema col-sm-3">
-    <h6 class="EmpresasSistema-heading">Embotelladoras</h6>
+    <h6 class="EmpresasSistema-heading">Empresas del sistema</h6>
     <div class="EmpresasSistema-list Embotelladoras-list">
         <p class="Tcenter">Seleccione una empresa<br class="hidden-xs"/>para entrar al sistema</p>
         <a href="#" class="EmpresasSistema-toggle"><span class="glyphicon glyphicon-menu-down"></span></a>

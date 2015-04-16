@@ -11,10 +11,14 @@ get_header(); ?>
 } else { ?>
 <div class="MainContent container">
     <div class="row">
-        <div class="Sidebar col-sm-3 hidden-xs">
+    	<?php if (in_category(13)) {
+	        //Load Empresas Sistema
+	        get_template_part( 'modules/embajadores', 'sidebar' ); 
+    	} else { ?>
+		<div class="Sidebar col-sm-3 hidden-xs">
             <?php get_sidebar(); ?>
         </div><!-- ends Menú Interno -->
-
+    	<?php } ?>
         <div class="col-sm-9">
 
             <?php breadcrumb_trail(); ?>

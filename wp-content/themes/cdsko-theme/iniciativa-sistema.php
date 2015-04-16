@@ -12,9 +12,7 @@ get_header(); ?>
         </div>
     </div>
     <div class="row">
-        <div class="Sidebar col-sm-3 hidden-xs">
-            <?php dynamic_sidebar( 'widget-internas' ); ?>
-        </div><!-- ends Menú Interno -->
+        <?php get_sidebar(); ?>
 
         <div class="col-sm-6">
 

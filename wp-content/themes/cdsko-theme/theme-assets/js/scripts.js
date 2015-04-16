@@ -81,4 +81,6 @@ $(function() {
     //   //columnWidth: 200,
     //   itemSelector: '.MainContent-item'
     // });
+
+    $('[data-toggle="tooltip"]').tooltip()
 });
