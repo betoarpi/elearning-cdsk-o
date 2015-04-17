@@ -30,20 +30,22 @@
 
             <?php
             // check if the repeater field has rows of data
-            if( have_rows('acordion') ):
-              // loop through the rows of data
+            if( have_rows('acordion') ): ?>
+              <div class="Accordion-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <?php // loop through the rows of data
                 while ( have_rows('acordion') ) : the_row();
                 $acfTitulo = get_sub_field('titulo_acordion');
-                $collapseValue = trim($acfTitulo);
+                $collapseValue = preg_replace('/\s+/', '', $acfTitulo);
                  ?>
-                  <div class="Accordion-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  
                     <h3><a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $collapseValue; ?>" aria-expanded="true" aria-controls="collapse<?php echo $collapseValue; ?>"><?php the_sub_field('titulo_acordion'); ?></a></h3>
                     <div id="collapse<?php echo $collapseValue; ?>" class="collapse" role="tabpanel">
                       <?php the_sub_field('contenido_acordion'); ?>
                     </div>
-                  </div>
-                <? endwhile;
-            else :
+                 
+                <? endwhile; ?>
+                </div>
+            <?php else :
                 // no rows found
             endif;
             ?>
