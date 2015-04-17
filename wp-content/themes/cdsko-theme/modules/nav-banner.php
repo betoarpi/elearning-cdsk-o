@@ -14,10 +14,17 @@
                     </figure>
                     <?php if( get_field('encabezado') ): ?>
                     <div class="HomeBanner-textbox">
-                        <a href="#">
+                        <?php if( get_field('enlace_slider') ): ?>
+                        <a href="<?php the_field('enlace_slider'); ?>">
                             <h2><?php the_field('encabezado'); ?></h2>
                             <p><?php the_field('texto_acompañante_de_encabezado'); ?></p>
                         </a>
+                        <?php else : ?>
+                        <a href="<?php the_field('enlace_slider'); ?>">
+                            <h2><?php the_field('encabezado'); ?></h2>
+                            <p><?php the_field('texto_acompañante_de_encabezado'); ?></p>
+                        </a>
+                        <?php endif; ?>
                     </div>
                     <?php endif; ?>
                 </li>
