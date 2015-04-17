@@ -88,6 +88,18 @@
                     <span>Pet Star</span>
                 </a>
             </li>
+            <li>
+                <a href="<?php bloginfo('siteurl'); ?>/embotelladoras/instituto-de-bebidas-para-la-salud-y-el-bienestar/">
+                    <img src="<?php bloginfo('template_directory'); ?>/theme-assets/img/empresas-sistema/logo-ibsb.jpg" alt="">
+                    <span>Instituto de Bebidas para la Salud y el Bienestar</span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php bloginfo('siteurl'); ?>/embotelladoras/industria-mexicana-de-reciclaje/">
+                    <img src="<?php bloginfo('template_directory'); ?>/theme-assets/img/empresas-sistema/logo-imer.jpg" alt="">
+                    <span>Industria Mexicana de Reciclaje</span>
+                </a>
+            </li>
         </ul>
     </div>
 </aside><!-- ends Empresas del Sistema -->

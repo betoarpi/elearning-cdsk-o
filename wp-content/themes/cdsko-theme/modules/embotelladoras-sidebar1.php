@@ -46,6 +46,12 @@
             <li>
                 <a href="<?php bloginfo('siteurl'); ?>/embotelladoras/pet-star/">Pet Star</a>
             </li>
+            <li>
+                <a href="<?php bloginfo('siteurl'); ?>/embotelladoras/instituto-de-bebidas-para-la-salud-y-el-bienestar/">Instituto de Bebidas para la Salud y el Bienestar</a>
+            </li>
+            <li>
+                <a href="<?php bloginfo('siteurl'); ?>/embotelladoras/industria-mexicana-de-reciclaje/">Industria Mexicana de Reciclaje</a>
+            </li>
         </ul>
     </div>
 </aside><!-- ends Empresas del Sistema -->

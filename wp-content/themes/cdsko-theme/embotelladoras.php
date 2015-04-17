@@ -22,7 +22,7 @@ get_header(); ?>
                 while ( have_posts() ) : the_post();
 
                     // Include the page content template.
-                    get_template_part( 'content', 'page' );
+                    get_template_part( 'content', 'embotelladoras' );
 
                 // End the loop.
                 endwhile;

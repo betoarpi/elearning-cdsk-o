@@ -363,6 +363,13 @@ del
 				border none
 				padding 0
 				margin 0 5px
+			
+			&.red 
+				a 
+					color red
+					
+					&:hover
+						color black
 
 .Logo 
 	display block
@@ -809,6 +816,11 @@ del
 				
 				&:last-child
 					border none
+		
+		#accordion
+			h3
+				a:hover, a:active, a:visited
+					text-decoration none
 		
 	&:nth-child(odd)
 		clear left
