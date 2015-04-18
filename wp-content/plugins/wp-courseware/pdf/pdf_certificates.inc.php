@@ -152,27 +152,27 @@ class WPCW_Certificate
 		
 		// Use default image
 		else {
-			$this->pdffile->Image(WPCW_plugin_getPluginDirPath() . 'img/certificates/certificate_bg.jpg', 0, 0, 297, 210, '', '', '', false, 300, '', false, false, 0);
+			$this->pdffile->Image(WPCW_plugin_getPluginDirPath() . 'img/certificates/certificate_cdsko.jpg', 0, 0, 297, 210, '', '', '', false, 300, '', false, false, 0);
 		}
 		 
 		
 		// ...Certify...
-		$this->pdffile->SetFont('dejavusansb','B', 22);		
-		$this->centerString(__('Esta constancia certifica que', 'wp_courseware'), $topLineY + 20);
+		$this->pdffile->SetFont('Helvetica','B', 21);		
+		$this->centerString(__('Constacia de la realización de la capacitación', 'wp_courseware'), $topLineY + 20);
 		
 		// Name with a line underneath
-		$this->pdffile->SetFont('ArchitectsDaughter','', 16, false, false);
-		$this->centerString($student, $topLineY + 35);		
-		$this->centerLine(120, $topLineY + 42);
+		$this->pdffile->SetFont('Helvetica','', 18, false, false);
+		$this->centerString($student, $topLineY + 30);		
+		//$this->centerLine(120, $topLineY + 42);
 		
 		// ...Completed...
-		$this->pdffile->SetFont('dejavusansb','B', 22);
-		$this->centerString(__('completó satisfactoriamente', 'wp_courseware'), $topLineY + 60);
+		$this->pdffile->SetFont('Helvetica','', 18);
+		$this->centerString(__('Ha realizado satisfactoriamente la capacitación:', 'wp_courseware'), $topLineY + 38);
 		
 		// Course
-		$this->pdffile->SetFont('ArchitectsDaughter','', 16);
-		$this->centerString($courseName, $topLineY + 75);		
-		$this->centerLine(180, $topLineY + 84);
+		$this->pdffile->SetFont('Helvetica','B', 24);
+		$this->centerString($courseName, $topLineY + 48);		
+		//$this->centerLine(180, $topLineY + 84);
 		
 		
 		$this->footer_line_length = 60;
@@ -185,20 +185,20 @@ class WPCW_Certificate
 		$this->pdffile->SetFont('Helvetica','', 14);
 		
 		// Date - field		
-		$this->pdffile->SetXY($date_X, $this->footer_Y+8);
-		$this->pdffile->Cell(0, 0, __('Fecha', 'wp_courseware'), false, false, 'L');		    	
+		//$this->pdffile->SetXY($date_X, $this->footer_Y+8);
+		//$this->pdffile->Cell(0, 0, __('Fecha', 'wp_courseware'), false, false, 'L');		    	
 				
 		// Signature - field
 		//$this->pdffile->SetXY($this->signature_X, $this->footer_Y+8);
 		//$this->pdffile->Cell(0,0, __('Instructor', 'wp_courseware'), false, false, 'L');
 		
 		// Lines - Date, Signature
-		$this->pdffile->Line($date_X, 		$this->footer_Y+7, $date_X + $this->footer_line_length,	 	 $this->footer_Y+7);
+		//$this->pdffile->Line($date_X, 		$this->footer_Y+7, $date_X + $this->footer_line_length,	 	 $this->footer_Y+7);
 		//$this->pdffile->Line($this->signature_X, 	$this->footer_Y+7, $this->signature_X + $this->footer_line_length, $this->footer_Y+7);
 		
 		
 		// Date - the date itself. Centre on the line
-		$this->pdffile->SetFont('ArchitectsDaughter','', $footer_font_size);
+		$this->pdffile->SetFont('Helvetica','', $footer_font_size);
 				
 		// Use date of completion if available from certificate details
 		$completeDate = false;
@@ -216,7 +216,7 @@ class WPCW_Certificate
 		$date_str_len = $this->pdffile->GetStringWidth($date_str);
 				
 		$this->pdffile->SetXY($date_X + (($this->footer_line_length - $date_str_len)/2), $this->footer_Y);
-		$this->pdffile->Cell(0,0, $date_str, false, false);
+		$this->pdffile->Cell(0,0, "México, D.F. $date_str", false, false);
 		
 		// Signature - signature itself			
 		$this->render_handleSignature();

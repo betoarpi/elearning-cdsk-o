@@ -1,9 +1,9 @@
 <?php
 /*
- * Plugin Name: WP Courseware
+ * Plugin Name: WP Courseware - Versión Medrenlogic
  * Version: 3.3
  * Plugin URI: http://flyplugins.com
- * Description: WP Courseware is WordPress's leading Learning Managment System (L.M.S.) plugin and is so simple you can create an online training course in minutes. It's as simple as drag and drop!
+ * Description: <strong>Nota: ¡No actualizar!</strong> WP Courseware is WordPress's leading Learning Managment System (L.M.S.) plugin and is so simple you can create an online training course in minutes. It's as simple as drag and drop!
  * Author: Fly Plugins
  * Author URI: http://flyplugins.com
  */

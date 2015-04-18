@@ -15,7 +15,7 @@ class WPCW_quiz_FileUpload extends WPCW_quiz_base
 		$this->questionType = 'upload';		
 		$this->cssClasses = 'wpcw_question_type_upload';
 		
-		$this->hint = __('(Optional) Use this to guide the user what they should upload.', 'wp_courseware');
+		$this->hint = __('(Opcional) Usa está guía para mostrar al usuario que subir.', 'wp_courseware');
 	}	
 	
 	
@@ -84,13 +84,13 @@ class WPCW_quiz_FileUpload extends WPCW_quiz_base
 			// Show a bit of the form that allows the user to determine what kind of size
 			// the answer box should be.
 			$html .= sprintf('<tr class="alternate %s">', $errorClass_FileType);
-				$html .= sprintf('<th>%s</th>', __('Permitted file extensions?', 'wp_courseware'));
+				$html .= sprintf('<th>%s</th>', __('¿Extensiones de Archivo permitidas?', 'wp_courseware'));
 			
 				$html .= sprintf('<td class="wpcw_quiz_details_answer_file_type_selection">');
 					$html .= sprintf('<input type="text" name="question_answer_file_types_%s" value="%s" />', $this->quizItem->question_id, $this->quizItem->question_answer_file_types);
 									
 					$html .= sprintf('<span>%s<br/>%s</span>', 
-						__('Just list the permitted extensions without the dot.', 'wp_courseware'),
+						__('Solo enlista las exteciones permitidas sin usar el punto.', 'wp_courseware'),
 						__('e.g. "pdf, xls, mp3"', 'wp_courseware')
 					);
 				$html .= '</td>';			
@@ -123,12 +123,12 @@ class WPCW_quiz_FileUpload extends WPCW_quiz_base
 			$this->extraQuizHTML .= sprintf('<div class="wpcw_fe_quiz_q_upload_existing">
 												%s <b><a href="%s%s" target="_blank">.%s %s (%s)</a></b> %s 
 											 </div>',
-					__('You have uploaded a', 'wp_courseware'), 
+					__('Has subido un', 'wp_courseware'), 
 					WP_CONTENT_URL, $selectedAnswer,
 					pathinfo($selectedAnswer, PATHINFO_EXTENSION),
 					__('file', 'wp_courseware'), 					
 					WPCW_files_getFileSize_human($selectedAnswer),
-					__('for this answer.', 'wp_courseware')
+					__('para esta respuesta.', 'wp_courseware')
 				); 
 				
 			// Shows the link to change the file
@@ -138,8 +138,8 @@ class WPCW_quiz_FileUpload extends WPCW_quiz_base
 												<div class="wpcw_fe_quiz_q_upload_change_holder"></div>
 											</div>', 
 											$fieldID,
-											__('Click here to upload a different file...', 'wp_courseware'),
-											__('Cancel uploading a different file', 'wp_courseware')
+											__('Da click aquí para subir un archivo diferente...', 'wp_courseware'),
+											__('Cancela subiendo un archivo differente', 'wp_courseware')
 										);
 		} 
 		
@@ -160,7 +160,7 @@ class WPCW_quiz_FileUpload extends WPCW_quiz_base
 		if (!empty($fileTypes)) 
 		{
 			// Show message about permitted file types, which can be customised if needed.
-			$permittedFiles =  apply_filters('wpcw_front_quiz_upload_permitted_files', __('Allowed file types: ', 'wp_courseware') . implode(', ', $fileTypes) . '. ', $fileTypes);	
+			$permittedFiles =  apply_filters('wpcw_front_quiz_upload_permitted_files', __('Tipos de archivo permitidos: ', 'wp_courseware') . implode(', ', $fileTypes) . '. ', $fileTypes);	
 		}
 				
 		// Add the hint if there is one
@@ -234,33 +234,33 @@ class WPCW_quiz_FileUpload extends WPCW_quiz_base
 				// Got a PHP upload error?
 				if ($file_error > 0)
 				{
-					$errMsg = __('Error. An unknown file upload error occurred.', 'wp_courseware');
+					$errMsg = __('Error. Ocurrió un error desconocido al subir el archivo.', 'wp_courseware');
 					
 					switch ($file_error)
 					{
 						case UPLOAD_ERR_FORM_SIZE:
 						case UPLOAD_ERR_INI_SIZE:
-								$errMsg = sprintf(__('Error. The uploaded file exceeds the maximum file upload size (%s).', 'wp_courseware'), WPCW_files_getMaxUploadSize());
+								$errMsg = sprintf(__('Error. El archivo excede el tamaño máximo permitido (%s).', 'wp_courseware'), WPCW_files_getMaxUploadSize());
 							break;
 													
 						case UPLOAD_ERR_PARTIAL:
-								$errMsg = __('Error. The uploaded file was only partially uploaded.', 'wp_courseware');
+								$errMsg = __('Error. El archivo se subió parcialmente.', 'wp_courseware');
 							break;
 							
 						case UPLOAD_ERR_NO_FILE:
-								$errMsg = __('Error. No file was uploaded.', 'wp_courseware');
+								$errMsg = __('Error. No se subió el archivo.', 'wp_courseware');
 							break;
 							
 						case UPLOAD_ERR_NO_TMP_DIR:
-								$errMsg = __('Error. The temporary upload directory does not exist.', 'wp_courseware');
+								$errMsg = __('Error. El directorio temporal de subida de archivos no existe.', 'wp_courseware');
 							break;
 							
 						case UPLOAD_ERR_CANT_WRITE:
-								$errMsg = __('Error. Could not write the uploaded file to disk.', 'wp_courseware');
+								$errMsg = __('Error. No se pudo sobreescribir el directorio de subida de archivos.', 'wp_courseware');
 							break;
 	 
 						case UPLOAD_ERR_EXTENSION:
-								$errMsg = __('Error. An extension stopped the file upload.', 'wp_courseware');
+								$errMsg = __('Error. Una extensión detuvo la subida del archivo.', 'wp_courseware');
 							break;
 					}
 										
@@ -277,7 +277,7 @@ class WPCW_quiz_FileUpload extends WPCW_quiz_base
 				// File extension is not valid, so abort and move to next file.
 				if (!in_array($thisFileExtension, $extensionTypes)) 
 				{
-					$results['upload_errors'][$qID] = sprintf(__('Error. Extension of file does not match allowed file types of %s.', 'wp_courseware'), implode(', ', $extensionTypes));
+					$results['upload_errors'][$qID] = sprintf(__('Error. La extensión del archivo no esta en la liste de archivos permitidos de %s.', 'wp_courseware'), implode(', ', $extensionTypes));
 					continue;
 				}
 					
@@ -292,7 +292,7 @@ class WPCW_quiz_FileUpload extends WPCW_quiz_base
 				
 				// Could not move file - might be out of space, or a write error.
 				else {
-					$results['upload_errors'][$qID] = __('Error. Could not move file to your training directory.', 'wp_courseware');
+					$results['upload_errors'][$qID] = __('Error. No se pudo mover tu archivo al directorio de cursos.', 'wp_courseware');
 					continue;
 				}
 			}

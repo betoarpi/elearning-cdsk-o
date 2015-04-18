@@ -45,11 +45,11 @@
 
                 <div class="row">
                     <div class="col-sm-9 copyright">
-                        <p>© 2015 Centro de Desarrollo del Sistema Coca-Cola. All Rights Reserved. Powered by <a href="#">Medrenlogic ©</a></p>
+                        <p>© 2015 Centro de Desarrollo del Sistema Coca-Cola. All Rights Reserved. Powered by <a href="http://medrenlogic.com.mx/" target="_blank">Medrenlogic ©</a></p>
                         <ul>
-                            <li><a href="#">Aviso de Privacidad</a></li>
-                            <li>|</li>
-                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="<?php bloginfo('siteurl'); ?>/aviso-de-privacidad/">Aviso de Privacidad</a></li>
+                            <!-- <li>|</li>
+                            <li><a href="<?php bloginfo('siteurl'); ?>/terminos-y-condiciones/">Términos y condiciones</a></li> -->
                         </ul>
                     </div>
                     <div class="col-sm-3 social-nav">

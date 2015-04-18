@@ -152,27 +152,27 @@ class WPCW_Certificate
 		
 		// Use default image
 		else {
-			$this->pdffile->Image(WPCW_plugin_getPluginDirPath() . 'img/certificates/certificate_bg.jpg', 0, 0, 297, 210, '', '', '', false, 300, '', false, false, 0);
+			$this->pdffile->Image(WPCW_plugin_getPluginDirPath() . 'img/certificates/certificate_cdsko.jpg', 0, 0, 297, 210, '', '', '', false, 300, '', false, false, 0);
 		}
 		 
 		
 		// ...Certify...
-		$this->pdffile->SetFont('dejavusansb','B', 32);		
-		$this->centerString(__('This is to certify that', 'wp_courseware'), $topLineY);
+		$this->pdffile->SetFont('dejavusansb','B', 22);		
+		$this->centerString(__('Esta constancia certifica que', 'wp_courseware'), $topLineY + 20);
 		
 		// Name with a line underneath
 		$this->pdffile->SetFont('ArchitectsDaughter','', 16, false, false);
-		$this->centerString($student, $topLineY + 20);		
-		$this->centerLine(120, $topLineY + 27);
+		$this->centerString($student, $topLineY + 35);		
+		$this->centerLine(120, $topLineY + 42);
 		
 		// ...Completed...
-		$this->pdffile->SetFont('dejavusansb','B', 32);
-		$this->centerString(__('has successfully completed', 'wp_courseware'), $topLineY + 50);
+		$this->pdffile->SetFont('dejavusansb','B', 22);
+		$this->centerString(__('completó satisfactoriamente', 'wp_courseware'), $topLineY + 60);
 		
 		// Course
 		$this->pdffile->SetFont('ArchitectsDaughter','', 16);
-		$this->centerString($courseName, $topLineY + 70);		
-		$this->centerLine(180, $topLineY + 77);
+		$this->centerString($courseName, $topLineY + 75);		
+		$this->centerLine(180, $topLineY + 84);
 		
 		
 		$this->footer_line_length = 60;
@@ -186,15 +186,15 @@ class WPCW_Certificate
 		
 		// Date - field		
 		$this->pdffile->SetXY($date_X, $this->footer_Y+8);
-		$this->pdffile->Cell(0, 0, __('Date', 'wp_courseware'), false, false, 'L');		    	
+		$this->pdffile->Cell(0, 0, __('Fecha', 'wp_courseware'), false, false, 'L');		    	
 				
 		// Signature - field
-		$this->pdffile->SetXY($this->signature_X, $this->footer_Y+8);
-		$this->pdffile->Cell(0,0, __('Instructor', 'wp_courseware'), false, false, 'L');
+		//$this->pdffile->SetXY($this->signature_X, $this->footer_Y+8);
+		//$this->pdffile->Cell(0,0, __('Instructor', 'wp_courseware'), false, false, 'L');
 		
 		// Lines - Date, Signature
 		$this->pdffile->Line($date_X, 		$this->footer_Y+7, $date_X + $this->footer_line_length,	 	 $this->footer_Y+7);
-		$this->pdffile->Line($this->signature_X, 	$this->footer_Y+7, $this->signature_X + $this->footer_line_length, $this->footer_Y+7);
+		//$this->pdffile->Line($this->signature_X, 	$this->footer_Y+7, $this->signature_X + $this->footer_line_length, $this->footer_Y+7);
 		
 		
 		// Date - the date itself. Centre on the line

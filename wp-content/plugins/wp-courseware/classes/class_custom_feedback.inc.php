@@ -110,8 +110,8 @@ class WPCW_quiz_CustomFeedback
 			
 				// Label
 				$html .= sprintf('<th>%s:<span class="wpcw_inner_hint">%s</span></th>',  
-					__('Message Description', 'wp_courseware'),
-					__('(Required) A quick summary for this message. This will not be displayed to students.')
+					__('Mensaje de descripción', 'wp_courseware'),
+					__('(Obligatorio) Un breve resumen para este mensaje. Esto no se mostrará a los estudiantes.')
 				);	
 								
 				$html .= '<td>';
@@ -120,11 +120,11 @@ class WPCW_quiz_CustomFeedback
 					$html .= sprintf('<input name="%s" type="text" value="%s" class="wpcw_qcfm_sgl_summary" placeholder="%s">',
 						$fieldPrefix . 'summary' . $fieldSuffix,  
 						$this->feedbackMsgDetails->qfeedback_summary,
-						__('e.g. Low score on MyTag section', 'wp_courseware')
+						__('ejemplo: Puntaje bajo en sección MyTag', 'wp_courseware')
 					);
 					
 					// Error message if incomplete
-					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_error">%s</span>', __('Please specify a quick summary for this message.', 'wp_courseware'));
+					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_error">%s</span>', __('Por favor, asigne un breve resumen para este mensaje.', 'wp_courseware'));
 					
 				$html .= '</td>';	
 				
@@ -141,18 +141,18 @@ class WPCW_quiz_CustomFeedback
 			
 				// Label
 				$html .= sprintf('<th>%s:<span class="wpcw_inner_hint">%s</span></th>',  
-					__('Select Question Tag', 'wp_courseware'),
-					__('(Required) Select the tag for which you want to provide feedback.')
+					__('Seleccione una etiqueta de pregunta', 'wp_courseware'),
+					__('(Obligatorio) Seleccione la etiqueta a la que desea aportar un mensaje.')
 				);	
 				
 				// Tag selection
 				$html .= '<td>';
 				
 					// Dropdown for the tags
-					$html .= WPCW_questions_tags_getTagDropdown(__('-- Please choose a tag ---', 'wp_courseware'), $fieldPrefix . 'tag' . $fieldSuffix, $this->feedbackMsgDetails->qfeedback_tag_id, 'wpcw_qcfm_sgl_tag', false, false);
+					$html .= WPCW_questions_tags_getTagDropdown(__('-- Elija una etiqueta por favor ---', 'wp_courseware'), $fieldPrefix . 'tag' . $fieldSuffix, $this->feedbackMsgDetails->qfeedback_tag_id, 'wpcw_qcfm_sgl_tag', false, false);
 					
 					// Error message if incomplete
-					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_error">%s</span>', __('Please select a tag for this message.', 'wp_courseware'));
+					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_error">%s</span>', __('Por favor, seleccione una etiqueta para este mensaje.', 'wp_courseware'));
 					
 					// Shows the count of how many tags are available for this tag
 					// This has not been continued for now, as it's an extremely expensive operation due to the random questions.
@@ -186,13 +186,13 @@ class WPCW_quiz_CustomFeedback
 			
 				// Label
 				$html .= sprintf('<th>%s:<span class="wpcw_inner_hint">%s</span></th>',  
-					__('Select Question Tag', 'wp_courseware'),
-					__('(Required) Select the tag for which you want to provide feedback.')
+					__('Seleccione una etiqueta de pregunta', 'wp_courseware'),
+					__('(Obligatorio) Seleccione la etiqueta a la que desea aportar un mensaje.')
 				);	
 				
 				$html .= '<td class="wpcw_quiz_custom_feedback_score">';
 				
-					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_score_label_first">%s</span>', __('Display this message to students who score:', 'wp_courseware'));
+					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_score_label_first">%s</span>', __('Mostrar este mensaje a estudiantes con puntaje:', 'wp_courseware'));
 				
 					// Score condition check
 					$html .= '<span class="wpcw_quiz_custom_feedback_score_radio_wrap">';
@@ -212,10 +212,10 @@ class WPCW_quiz_CustomFeedback
 					
 					// Score selection
 					$html .= WPCW_forms_createDropdown($fieldPrefix . 'score_grade' . $fieldSuffix, WPCW_quizzes_getPercentageList(false), $this->feedbackMsgDetails->qfeedback_score_grade);					
-					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_score_label_second">%s</span>', __('across all questions for the tag selected above', 'wp_courseware'));
+					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_score_label_second">%s</span>', __('entre todas las preguntas para la etiqueta seleccionada arriba', 'wp_courseware'));
 					
 					// Error message if incomplete
-					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_error">%s</span>', __('Please select a trigger score for this message.', 'wp_courseware'));
+					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_error">%s</span>', __('Por favor, seleccione un puntaje de activación para este mensaje.', 'wp_courseware'));
 
 				$html .= '</td>';
 
@@ -227,8 +227,8 @@ class WPCW_quiz_CustomFeedback
 			
 				// Label
 				$html .= sprintf('<th>%s:<span class="wpcw_inner_hint">%s</span></th>',  
-					__('Custom Feedback Message', 'wp_courseware'),
-					__('(Required) Enter the message to display to students when conditions above are met.'),
+					__('Mensaje de Retroalimentación Personalizado', 'wp_courseware'),
+					__('(Obligatorio) Ingrese el mensaje para mostrar a los estudiantes cuando se cumplan las condiciones.'),
 					'test'
 				);	
 				
@@ -241,7 +241,7 @@ class WPCW_quiz_CustomFeedback
 					);		
 					
 					// Error message if incomplete
-					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_error">%s</span>', __('Please enter a helpful feedback message for the trainee.', 'wp_courseware'));
+					$html .= sprintf('<span class="wpcw_quiz_custom_feedback_error">%s</span>', __('Por favor, ingrese un mensaje de ayuda para el alumno.', 'wp_courseware'));
 					
 				$html .= '</td>';
 
@@ -253,7 +253,7 @@ class WPCW_quiz_CustomFeedback
 				<td colspan="3" class="wpcw_question_actions">
 					<a href="#" class="wpcw_delete_icon" rel="%s">Delete</a>
 				</td>
-			</tr>', __('Are you sure you wish to delete this custom feedback message?', 'wp_courseware'));
+			</tr>', __('¿Está seguro que desea borrar este mensaje de Retroalimentación Personalizado?', 'wp_courseware'));
 			
 				
 		$html .= '</tbody></table></div>';

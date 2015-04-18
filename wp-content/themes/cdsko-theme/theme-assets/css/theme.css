@@ -691,6 +691,8 @@ del{opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 .HomeBanner-textbox a{color:#fff;display:block;margin:0 auto;text-decoration:none;width:80%;}
 .HomeBanner-textbox a h1,.HomeBanner-textbox a h2,.HomeBanner-textbox a h3,.HomeBanner-textbox a h4,.HomeBanner-textbox a h5,.HomeBanner-textbox a h6{color:#fff}
 .HomeBanner-textbox a h2{font-family:'exo_2.0extra_bold','Arial Black','Arial Bold',sans-serif;font-size:28px;margin:0 0 5px 0;text-transform:uppercase}
+.HomeBanner-textbox h1,.HomeBanner-textbox h2,.HomeBanner-textbox h3,.HomeBanner-textbox h4,.HomeBanner-textbox h5,.HomeBanner-textbox h6{color:#fff}
+.HomeBanner-textbox h2{font-family:'exo_2.0extra_bold','Arial Black','Arial Bold',sans-serif;font-size:28px;margin:0 0 5px 0;text-transform:uppercase}
 .slides-navigation{display:block !important;}
 .slides-navigation a{color:#fff;font-size:30px;opacity:.6;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";filter:alpha(opacity=60);}
 .slides-navigation a:hover{opacity:1;-ms-filter:none;filter:none}

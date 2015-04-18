@@ -127,9 +127,9 @@ class WPCW_quiz_base
 				</td>
 			</tr>
 			', $columnCount, 		
-			__('Are you sure you wish to delete this question?', 'wp_courseware'),
-			__('Delete', 'wp_courseware'), 
-			__('Move', 'wp_courseware')
+			__('¿Está seguro que quiere borrar esta pregunta?', 'wp_courseware'),
+			__('Borrar', 'wp_courseware'), 
+			__('Mover', 'wp_courseware')
 			);
 	}
 	
@@ -158,7 +158,7 @@ class WPCW_quiz_base
 			if (!$this->hideQuestionUsageCount) 
 			{
 				$html .= sprintf('<span class="wpcw_quiz_row_header_usage_count">(%s)</span>', 
-					sprintf(_n( 'In use by 1 quiz', 'In use by %d quizzes', $this->quizItem->question_usage_count, 'wp_courseware'), $this->quizItem->question_usage_count)
+					sprintf(_n( 'En uso por 1 quiz', 'En uso por %d quizzes', $this->quizItem->question_usage_count, 'wp_courseware'), $this->quizItem->question_usage_count)
 				);	
 			}		
 			
@@ -208,8 +208,8 @@ class WPCW_quiz_base
 	{
 		$html = sprintf('<tr data-questionsaved="%s">', ($questionNotSavedYet ? 'no' : 'yes'));
 			$html .= sprintf('<th>%s<span class="wpcw_inner_hint">%s</span></th>', 
-				__('Question Tags', 'wp_courseware'),
-				__('(Optional) Add tags to this question to add it to your pool of questions to reuse in other quizzes.', 'wp_courseware')
+				__('Etiquetas para preguntas', 'wp_courseware'),
+				__('(Opcional) Añade etiquetas para esta pregunta para que esta pregunta esté disponible en el banco de preguntas y pueda ser reutilizada por otros quizzes.', 'wp_courseware')
 			);
 			
 			// For new questions, to ensure they get replaced with IDs, we need to add an _ to the question ID, but without
@@ -255,8 +255,8 @@ class WPCW_quiz_base
 	{
 		$html = '<tr>';
 			$html .= sprintf('<th>%s<span class="wpcw_inner_hint">%s</span></th>', 
-				__('Explanation', 'wp_courseware'),
-				__('(Optional) Displayed after the quiz is submitted to offer information on the correct answer.', 'wp_courseware')
+				__('Explicación', 'wp_courseware'),
+				__('(Opcional) Se muestra después de que se envió el questionario para dar información sobre la respuesta correcta.', 'wp_courseware')
 			);
 			
 			$html .= '<td class="wpcw_quiz_details_question_explanation">';
@@ -315,8 +315,8 @@ class WPCW_quiz_base
 	{
 		$html = '<tr>';
 			$html .= sprintf('<th>%s<span class="wpcw_inner_hint">%s</span></th>', 
-				__('Question Image URL', 'wp_courseware'),
-				__('(Optional) An image to show with the question.', 'wp_courseware')
+				__('URL para imagen de Pregunta', 'wp_courseware'),
+				__('(Opcional) Esta imagen se mostrará junto con la pregunta.', 'wp_courseware')
 			);
 			
 			$html .= '<td class="wpcw_quiz_details_question_image">';
@@ -328,11 +328,11 @@ class WPCW_quiz_base
 				
 				// The add media button
 				$html .= sprintf('<span class="wpcw_insert_image_wrap"><a href="#" class="button wpcw_insert_image" data-uploader_title="%s" data-uploader_btn_text="%s" data-target="wpcw_insert_image_holder_%s" title="%s"><span class="wpcw_insert_image_img"></span> %s</a></span>',
-					__('Choose an image for your question...', 'wp_courseware'),
-					__('Select Image...', 'wp_courseware'),
+					__('Elije una imagen para la pregunta...', 'wp_courseware'),
+					__('Selecciona imagen...', 'wp_courseware'),
 					$this->quizItem->question_id,
-					__('Select Image', 'wp_courseware'),
-					__('Select Image', 'wp_courseware')
+					__('Selecciona imagen', 'wp_courseware'),
+					__('Selecciona imagen', 'wp_courseware')
 				);
 				
 			$html .= '</td>';
@@ -393,7 +393,7 @@ class WPCW_quiz_base
 		
 			// Question title
 			$html .= sprintf('<div class="wpcw_fe_quiz_q_title">%s #%d - %s%s</div>', 
-				__('Question', 'wp_courseware'),
+				__('Pregunta', 'wp_courseware'),
 				$questionNum,
 				nl2br(htmlspecialchars($this->quizItem->question_question)),
 				($wrongAnswerState ? '<span class="wpcw_fe_quiz_status">(' . __('Incorrect', 'wp_courseware') . ')</span>' : '')

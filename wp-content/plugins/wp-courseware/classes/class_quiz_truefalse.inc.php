@@ -15,7 +15,7 @@ class WPCW_quiz_TrueFalse extends WPCW_quiz_base
 		$this->questionType = 'truefalse';
 		$this->cssClasses = 'wpcw_question_type_truefalse';	
 
-		$this->hint = __('(Optional) Use this to guide the user that they should make a selection.', 'wp_courseware');
+		$this->hint = __('(Opcional) Usa está guía para mostrar al usuario que deben hacer una elección.', 'wp_courseware');
 	}
 	
 	
@@ -59,7 +59,7 @@ class WPCW_quiz_TrueFalse extends WPCW_quiz_base
 			// Main question details here...		
 			$html .= sprintf('<tr class="wpcw_quiz_row_question %s">', $errorClass_Question);
 			
-				$html .= sprintf('<th>%s</th>', __('Question', 'wp_courseware'));
+				$html .= sprintf('<th>%s</th>', __('Pregunta', 'wp_courseware'));
 				
 				// T/F Type
 				$html .= sprintf('<td>');

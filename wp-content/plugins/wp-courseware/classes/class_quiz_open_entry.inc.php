@@ -15,7 +15,7 @@ class WPCW_quiz_OpenEntry extends WPCW_quiz_base
 		$this->questionType = 'open';		
 		$this->cssClasses = 'wpcw_question_type_open';
 		
-		$this->hint = __('(Optional) Use this to guide the user on the expected answer or length of answer. This is shown when the question is shown.', 'wp_courseware');
+		$this->hint = __('(Opcional) Usa esto para guiar al usuario con la respuesta esperada o la longitud de respuesta. Esto se mostrará cuando se muestre la pregunta.', 'wp_courseware');
 	}	
 	
 	
@@ -82,7 +82,7 @@ class WPCW_quiz_OpenEntry extends WPCW_quiz_base
 			// Show a bit of the form that allows the user to determine what kind of size
 			// the answer box should be.
 			$html .= sprintf('<tr class="alternate %s">', $errorClass_AnswerType);
-				$html .= sprintf('<th>%s</th>', __('Size of box for user to type answer?', 'wp_courseware'));
+				$html .= sprintf('<th>%s</th>', __('¿Tamaño de la caja para que el usuario escriba su pregunta?', 'wp_courseware'));
 			
 				$html .= sprintf('<td class="wpcw_quiz_details_answer_type_selection"><li>');
 				
@@ -167,10 +167,10 @@ class WPCW_quiz_OpenEntry extends WPCW_quiz_base
 	public static function getValidAnswerTypes() 
 	{
 		return $answerTypes = array(
-			'single_line' 		=> __('<b>Single Line</b> of Text', 'wp_courseware'),
-			'small_textarea' 	=> __('<b>Small</b> Text Box - about 4 Lines of Text', 'wp_courseware'),
-			'medium_textarea' 	=> __('<b>Medium</b> Text Box - about 8 Lines of Text', 'wp_courseware'),
-			'large_textarea' 	=> __('<b>Large</b> Text Box - about 15 Lines of Text', 'wp_courseware'),
+			'single_line' 		=> __('<b>Linea simple</b> de Texto', 'wp_courseware'),
+			'small_textarea' 	=> __('<b>Pequeña</b> Caja de Texto - 4 líneas de Texto aprox.', 'wp_courseware'),
+			'medium_textarea' 	=> __('<b>Mediana</b> Caja de Texto - 8 líneas de Texto aprox.', 'wp_courseware'),
+			'large_textarea' 	=> __('<b>Grande</b> Caja de Texto - 15 líneas de Texto aprox.', 'wp_courseware'),
 		);
 	}
 	

@@ -507,7 +507,7 @@ class WPCW_UnitFrontend
 				$html .= '<div class="wpcw_fe_quiz_box wpcw_fe_quiz_box_pending">';
 				
 				// #### 1 - Quiz Title - constant for all quizzes
-				$html .= sprintf('<div class="wpcw_fe_quiz_title"><b>%s</b> %s</div>', __('Correct Answers for: ', 'wp_courseware'), $this->unitQuizDetails->quiz_title);
+				$html .= sprintf('<div class="wpcw_fe_quiz_title"><b>%s</b> %s</div>', __('Respuestas correctas para: ', 'wp_courseware'), $this->unitQuizDetails->quiz_title);
 				
 				// #### 2 - Header before questions
 				$html .= '<div class="wpcw_fe_quiz_q_hdr"></div>';
@@ -529,7 +529,7 @@ class WPCW_UnitFrontend
 		
 						// ### 3a - Question title
 						$html .= sprintf('<div class="wpcw_fe_quiz_q_title">%s #%d - %s</div>', 
-							__('Question', 'wp_courseware'),
+							__('Pregunta', 'wp_courseware'),
 							$questionNum++,
 							nl2br(htmlspecialchars($question->question_question))
 						);
@@ -556,8 +556,8 @@ class WPCW_UnitFrontend
 											if (isset($this->unitQuizProgress->quiz_needs_marking_list) && is_array($this->unitQuizProgress->quiz_needs_marking_list) && in_array($question->question_id, $this->unitQuizProgress->quiz_needs_marking_list))
 											{
 												$html .= sprintf('<div class="wpcw_fe_quiz_q_result wpcw_fe_quiz_q_user_grade"><b>%s:</b>&nbsp;&nbsp;%s</div>', 
-													__('Your Grade', 'wp_courseware'),
-													__('Pending', 'wp_courseware')
+													__('Su Puntaje', 'wp_courseware'),
+													__('Pendiente', 'wp_courseware')
 												);
 											}
 	
@@ -567,7 +567,7 @@ class WPCW_UnitFrontend
 												$gradePercentage = WPCW_arrays_getValue($theirAnswerDetails, 'their_grade');
 												
 												$html .= sprintf('<div class="wpcw_fe_quiz_q_result wpcw_fe_quiz_q_user_grade"><b>%s:</b>&nbsp;&nbsp;%d%%</div>', 
-													__('Your Grade', 'wp_courseware'),
+													__('Su Puntaje', 'wp_courseware'),
 													$gradePercentage
 												);
 											}
@@ -580,12 +580,12 @@ class WPCW_UnitFrontend
 											// Got it right...
 											if ('yes' == WPCW_arrays_getValue($theirAnswerDetails, 'got_right'))
 											{
-												$html .= sprintf('<div class="wpcw_fe_quiz_q_result wpcw_fe_quiz_q_result_correct">%s</div>', __('Correct ', 'wp_courseware'));
+												$html .= sprintf('<div class="wpcw_fe_quiz_q_result wpcw_fe_quiz_q_result_correct">%s</div>', __('Correcta ', 'wp_courseware'));
 											}
 											
 											// Got it wrong...
 											else {
-												$html .= sprintf('<div class="wpcw_fe_quiz_q_result wpcw_fe_quiz_q_result_incorrect">%s</div>', __('Incorrect ', 'wp_courseware'));
+												$html .= sprintf('<div class="wpcw_fe_quiz_q_result wpcw_fe_quiz_q_result_incorrect">%s</div>', __('Incorrecta ', 'wp_courseware'));
 											}
 										break;
 								}
@@ -638,7 +638,7 @@ class WPCW_UnitFrontend
 							if (!is_null($theirAnswer))
 							{
 								$html .= sprintf('<div class="wpcw_fe_quiz_q_your_answer"><b>%s:</b>&nbsp;&nbsp;%s</div>', 
-									__('Your Answer', 'wp_courseware'),
+									__('Tu respuesta', 'wp_courseware'),
 									$theirAnswer
 								);
 								
@@ -653,8 +653,8 @@ class WPCW_UnitFrontend
 							else 
 							{
 								$html .= sprintf('<div class="wpcw_fe_quiz_q_your_answer wpcw_fe_quiz_q_your_answer_none_found"><b>%s:</b>&nbsp;&nbsp;(%s)</div>', 
-									__('Your Answer', 'wp_courseware'),
-									__('We don\'t have your answer for this question', 'wp_courseware')
+									__('Su respuesta', 'wp_courseware'),
+									__('No tenemos su respuesta para esta pregunta', 'wp_courseware')
 								);
 							}
 						} // end if ($setting_showUserAnswer)
@@ -664,7 +664,7 @@ class WPCW_UnitFrontend
 						if ($setting_showCorrectAnswer && in_array($question->question_type, array('truefalse', 'multi')))
 						{						
 							$html .= sprintf('<div class="wpcw_fe_quiz_q_correct"><b>%s:</b>&nbsp;&nbsp;%s</div>', 
-								__('Correct Answer', 'wp_courseware'),
+								__('Respuesta Correcta', 'wp_courseware'),
 								$correctAnswer
 							);
 							
@@ -680,7 +680,7 @@ class WPCW_UnitFrontend
 						if ($setting_showOtherPossible && 'multi' == $question->question_type)
 						{												
 							$html .= sprintf('<div class="wpcw_fe_quiz_q_possible"><b>%s:</b><ul class="wpcw_fe_quiz_q_possible_list">', 
-								__('Other Possible Answers', 'wp_courseware')
+								__('Otras Respuestas Posibles', 'wp_courseware')
 							);	
 							
 							$answerList = WPCW_quizzes_decodeAnswers($question->question_data_answers);
@@ -771,7 +771,7 @@ class WPCW_UnitFrontend
 			if ('use_certs' == $this->parentData->course_opt_use_certificate && $certificateDetails)
 			{		
 				$certHTML = sprintf('<div class="wpcw_fe_progress_box_download"><a href="%s" class="fe_btn fe_btn_download">%s</a></div>', 
-					WPCW_certificate_generateLink($certificateDetails->cert_access_key), __('Download Certificate', 'wp_courseware')
+					WPCW_certificate_generateLink($certificateDetails->cert_access_key), __('Descargar el Certificado', 'wp_courseware')
 				);
 			}
 					
@@ -932,7 +932,7 @@ class WPCW_UnitFrontend
 				// Open-ended - just show grade.
 				if ($this->unitQuizDetails->has_open_questions)
 				{
-					$rtnDetails[0]['msg_overall_grade'] = sprintf(__('Your grade for this quiz is <b>%d%%</b>.', 'wp_courseware'), 
+					$rtnDetails[0]['msg_overall_grade'] = sprintf(__('Su puntaje para este cuestionario es <b>%d%%</b>.', 'wp_courseware'), 
 						$this->unitQuizProgress->quiz_grade
 					);
 				}
@@ -940,7 +940,7 @@ class WPCW_UnitFrontend
 				// Just closed questions, show out of message.
 				else 
 				{
-					$rtnDetails[0]['msg_overall_grade'] = sprintf(__('You got %d out of %d questions <b>(%d%%)</b> correct!', 'wp_courseware'), 
+					$rtnDetails[0]['msg_overall_grade'] = sprintf(__('Obtuvo %d de %d respuestas <b>(%d%%)</b> correctas!', 'wp_courseware'), 
 						$this->unitQuizProgress->quiz_correct_questions, 
 						$this->unitQuizProgress->quiz_question_total, 
 						$this->unitQuizProgress->quiz_grade
@@ -958,8 +958,8 @@ class WPCW_UnitFrontend
 					if ($this->check_quizzes_NonBlockingQuizOffersRetakeButton() && $attemptCount > 0)
 					{
 						$rtnDetails[1]['msg_attempts'] = ($attemptCount == 1 
-							? __('You have had <b>1 previous attempt</b> at this quiz.', 'wp_courseware')  
-							: sprintf(__('You have had <b>%d previous attempts</b> at this quiz.', 'wp_courseware'), $attemptCount)
+							? __('Ya ha intentado <b>1 vez</b> con este quiz.', 'wp_courseware')  
+							: sprintf(__('Ya ha intentado <b>%d varias veces</b> con este quiz.', 'wp_courseware'), $attemptCount)
 						);
 					}
 				}
@@ -968,32 +968,32 @@ class WPCW_UnitFrontend
 				else
 				{
 					// 5) Show the pass mark.
-					$rtnDetails[0]['msg_block_pass_grade'] = sprintf(__('The pass grade for this quiz is <b>(%d%%)</b>', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
+					$rtnDetails[0]['msg_block_pass_grade'] = sprintf(__('El puntaje m&iacute;nimo para este quiz es de <b>(%d%%)</b>', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
 					
 					// 6) Show if they have passed or failed.						
 					if ($this->check_quizzes_hasUserPassedQuiz())
 					{						
-						$rtnDetails[1]['msg_block_pass_has_passed'] = sprintf(__('Congratulations, you have <b>passed</b> this quiz!', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
+						$rtnDetails[1]['msg_block_pass_has_passed'] = sprintf(__('Felicidades, has <b>completado</b> el cuestionario.', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
 						$rtnDetails[1]['msg_block_pass_has_passed_unit_complete'] = $this->parentData->course_message_unit_complete;
 					}
 					else 
 					{
 						$errorMode = true;
-						$rtnDetails[1]['msg_block_pass_has_failed'] = sprintf(__('Unfortunately, this means you have <b>failed</b> this quiz.', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
+						$rtnDetails[1]['msg_block_pass_has_failed'] = sprintf(__('Desafortunadamente ha <b>fallado</b> la aprobación del quiz.', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
 						
 						// 6) Show message that they need to pass to progress (as long as admin says that they can't progress anyway).
 						if ('progress_anyway' == $this->unitQuizProgress->quiz_next_step_type)
 						{
-							$rtnDetails[1]['msg_block_pass_next_action'] = sprintf(__('However, the instructor is allowing you to continue anyway.', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
+							$rtnDetails[1]['msg_block_pass_next_action'] = sprintf(__('De todas formas, el instructor le permitirá seguir.', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
 						}
 						else {
-							$rtnDetails[1]['msg_block_pass_next_action'] = sprintf(__('To progress to the next unit, you need to pass this quiz.', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
+							$rtnDetails[1]['msg_block_pass_next_action'] = sprintf(__('Pra pasar a la siguiente unidad, usted necesita aprobar este quiz.', 'wp_courseware'), $this->unitQuizDetails->quiz_pass_mark);
 						}
 						
 						// 7) How many attempts have they now had?						
 						$rtnDetails[2]['msg_attempts'] = ($attemptCount == 1 
-								? __('You have had <b>1 previous attempt</b> at this quiz.', 'wp_courseware')  
-								: sprintf(__('You have had <b>%d previous attempts</b> at this quiz.', 'wp_courseware'), $attemptCount)
+								? __('Ya ha intentado <b>1 vez</b> con este quiz.', 'wp_courseware')  
+								: sprintf(__('Ya ha intentado <b>%d varias veces</b> con este quiz.', 'wp_courseware'), $attemptCount)
 							);
 						
 					}
@@ -1013,7 +1013,7 @@ class WPCW_UnitFrontend
 					)
 				{
 					$rtnDetails['msg_results_by_timer'] = sprintf('<b>%s:</b> %s (%s %s)',
-						__('Completion Time', 'wp_courseware'),
+						__('Tiempo de Finalización', 'wp_courseware'),
 						WPCW_time_convertSecondsToHumanLabel($this->unitQuizProgress->quiz_completion_time_seconds),
 						WPCW_time_convertMinutesToHumanLabel($this->unitQuizDetails->quiz_timer_mode_limit),
 						__('allowed', 'wp_courseware')
@@ -1062,7 +1062,7 @@ class WPCW_UnitFrontend
 					<a href="%s" class="fe_btn fe_btn_completion fe_btn_small">%s</a>
 				</div>',
 					$msgDetails['button_dl_results_url'], 
-					__('Download Results', 'wp_courseware')
+					__('Bajar los Resultados', 'wp_courseware')
 				);
 		}
 		
@@ -1185,7 +1185,7 @@ class WPCW_UnitFrontend
 						if ('retake_quiz' == $this->unitQuizProgress->quiz_next_step_type)
 						{
 							// Show a generic message that the quiz needs to be re-taken.
-							$messageToShow .= wpautop(__('The course instructor has required that you retake this quiz.', 'wp_courseware'));
+							$messageToShow .= wpautop(__('El instructor de este curso a pedido que termine este quiz.', 'wp_courseware'));
 								
 							// Add the custom message if there was one, which is personalised from the instructor.
 							if ($this->unitQuizProgress->quiz_next_step_msg) {
@@ -1208,12 +1208,12 @@ class WPCW_UnitFrontend
 								{
 									case 'quiz_block':
 											// Show a generic message that the quiz needs to be re-taken.
-											$messageToShow .= wpautop(__('The course instructor has allowed you to retake the quiz. To re-attempt the quiz, just click on the button below.', 'wp_courseware'));
+											$messageToShow .= wpautop(__('El instructor del curso le ha permitido tomar este quiz de nuevo. Para volver a tomarlo solo de click en el botón que se muestra abajo.', 'wp_courseware'));
 										break;
 										
 									case 'quiz_noblock':
 											// Show a message about the recommended score.
-											$messageToShow .= wpautop(sprintf(__('The recommended grade for this quiz is <b>%d%%</b> (and your grade is <b>%d%%</b>). The course instructor has allowed you to retake this quiz if you wish to improve your grade.', 'wp_courseware'), 
+											$messageToShow .= wpautop(sprintf(__('El puntaje recomedado para este quiz es <b>%d%%</b> (y su puntaje es <b>%d%%</b>). El instructor del curso le ha permitido tomar este quiz de nuevo si desea mejorar su puntaje.', 'wp_courseware'), 
 												$this->unitQuizDetails->show_recommended_percentage, $this->unitQuizProgress->quiz_grade
 											));
 										break;
@@ -1226,7 +1226,7 @@ class WPCW_UnitFrontend
 							else 
 							{
 								$showRetakeButton = false;
-								$messageToShow .= wpautop(__('Unfortunately you have reached the maximum limit of attempts you are permitted for this quiz.', 'wp_courseware'));
+								$messageToShow .= wpautop(__('Desafortunadamente ha alcanzado el limite de veces permitidas para tomar este quiz.', 'wp_courseware'));
 							}
 						}
 						
@@ -1244,7 +1244,7 @@ class WPCW_UnitFrontend
 								WPCW_plugin_getPluginPath(),
 								$this->unitQuizDetails->quiz_id,
 								$this->unitPost->ID,
-								__('Retake Quiz', 'wp_courseware'));
+								__('Hacer Quiz de Nuevo', 'wp_courseware'));
 						}
 
 						// Finally show the message to the user.
@@ -1288,7 +1288,7 @@ class WPCW_UnitFrontend
 				</div>', 
 					$this->unitPost->ID, 
 					WPCW_plugin_getPluginPath() . 'img',
-					$this->unitPost->ID, __('Mark as Completed', 'wp_courseware'), 
+					$this->unitPost->ID, __('Completado', 'wp_courseware'), 
 					$this->parentData->course_message_unit_pending
 				);
 		}
@@ -1336,12 +1336,12 @@ class WPCW_UnitFrontend
 				break;
 				
 			case 'random_selection':
-				die(__('This question cannot be rendered. This is an error.', 'wp_courseware'));
+				die(__('Esta pregunta no se puede mostrar. Ha ocurrido un error.', 'wp_courseware'));
 				break;							
 				
 			// Not expecting anything here... so not handling the error case.
 			default:			
-				die(__('Unexpected question type, aborting.', 'wp_courseware'));		
+				die(__('Tipo de pregunta inesperado, cancelando.', 'wp_courseware'));		
 				break;
 		}
 		
@@ -1409,7 +1409,7 @@ class WPCW_UnitFrontend
 			if ($this->check_paging_shouldWeShowReviewPage_rightNow())
 			{
 				// To do, show a message here about reviewing answers...
-				$html .= WPCW_UnitFrontend::message_createMessage_warning(__('You can now review your answers before submitting them.',  'wp_courseware'));
+				$html .= WPCW_UnitFrontend::message_createMessage_warning(__('Puede revisar sus respuestas antes de enviarlas.',  'wp_courseware'));
 			}
 			
 			// Use any raw selection data that we have so far to pre-fill answers.
@@ -1436,7 +1436,7 @@ class WPCW_UnitFrontend
 					$passQs  = ceil(($this->unitQuizDetails->quiz_pass_mark / 100) * $totalQs);
 				
 					$html .= '<div class="wpcw_fe_quiz_pass_mark">';
-					$html .= sprintf(__('You\'ll need to correctly answer at least <b>%d of the %d</b> questions below (<b>at least %d%%</b>) to progress to the next unit.', 'wp_courseware'),
+					$html .= sprintf(__('Nececita contestar al menos <b>%d de %d</b> de las preguntas (<b>por lo menos %d%%</b>) para pasar a la siguiente actividad.', 'wp_courseware'),
 								$passQs, $totalQs, $this->unitQuizDetails->quiz_pass_mark);
 					$html .= '</div>';
 				}
@@ -1469,10 +1469,10 @@ class WPCW_UnitFrontend
 										</div>
 									</div>',
 							
-									sprintf(__('You have <b>%s</b> to complete this quiz...', 'wp_coursware'), WPCW_time_convertMinutesToHumanLabel($this->unitQuizDetails->quiz_timer_mode_limit)), 
+									sprintf(__('Tiene <b>%s</b> para completar el quiz...', 'wp_coursware'), WPCW_time_convertMinutesToHumanLabel($this->unitQuizDetails->quiz_timer_mode_limit)), 
 									$this->unitQuizDetails->quiz_id,
 									$this->unitPost->ID,
-									__('Begin Quiz...', 'wp_courseware'),
+									__('Comenzar...', 'wp_courseware'),
 									WPCW_plugin_getPluginPath()
 								);
 							
@@ -1527,7 +1527,7 @@ class WPCW_UnitFrontend
 							if ($this->check_paging_shouldWeShowAnswerLaterButton())
 							{
 								$html .= sprintf('<div class="wpcw_fe_quiz_answer_later"><a href="#" class="fe_btn fe_btn_small fe_btn_navigation" id="wpcw_fe_quiz_answer_later">%s</a></div>', 
-									__('Answer Later...', 'wp_courseware')
+									__('Contestar después...', 'wp_courseware')
 								);
 							}
 							
@@ -1537,7 +1537,7 @@ class WPCW_UnitFrontend
 							
 							// Work out what caption to show for the submit button. Change this if we're about to
 							// submit the answers for the final question or review our answers.
-							$buttonCaption = __('Save &amp; Next Question &raquo;', 'wp_courseware');
+							$buttonCaption = __('Guardar &amp; Siguiente Pregunta &raquo;', 'wp_courseware');
 							
 							
 							// Are we showing the last incomplete question (and we're nearly complete)
@@ -1545,11 +1545,11 @@ class WPCW_UnitFrontend
 							{
 								// We appear to be on the last question. Are we going to review too?
 								if ($this->check_paging_shouldWeShowReviewPage()) {
-									$buttonCaption = __('Save &amp; Review Answers &raquo;', 'wp_courseware');
+									$buttonCaption = __('Guardar &amp; Revisar Respuestas &raquo;', 'wp_courseware');
 								}
 								// No review, just submit
 								else {
-									$buttonCaption = __('Submit Answers', 'wp_courseware');
+									$buttonCaption = __('Enviar Respuestas', 'wp_courseware');
 								}
 							} 
 							
@@ -1558,7 +1558,7 @@ class WPCW_UnitFrontend
 							if ($this->check_paging_shouldWeShowPreviousButton())
 							{
 								$buttonPreviousClicker = sprintf('<input type="submit" class="fe_btn fe_btn_completion btn_completion" id="fe_btn_quiz_previous" name="previous_question" value="%s">', 
-									__('&laquo; Previous Question', 'wp_courseware')
+									__('&laquo; Pregunta Anterior', 'wp_courseware')
 								);
 							}						
 							
@@ -1605,7 +1605,7 @@ class WPCW_UnitFrontend
 									
 									WPCW_content_progressBar(0, 'wpcw_fe_upload_progress'), 
 									WPCW_plugin_getPluginPath(), 					
-									__('Submit Answers', 'wp_courseware')
+									__('Enviar Respuestas', 'wp_courseware')
 								);	
 						} // end of check for paging.
 					} 	// end of check of showing questions (e.g. timer mode)
@@ -1637,7 +1637,7 @@ class WPCW_UnitFrontend
 		{
 			$html .= sprintf('<a href="%s" class="fe_btn fe_btn_navigation">&laquo; %s</a> ',
 				get_permalink($nextAndPrev['prev']),
-				__('Previous Unit', 'wp_courseware')
+				__('Actividad Aterior', 'wp_courseware')
 			);
 		}
 		
@@ -1650,7 +1650,7 @@ class WPCW_UnitFrontend
 			$html .= sprintf('<a href="%s" class="fe_btn fe_btn_navigation %s">%s &raquo;</a>',
 				get_permalink($nextAndPrev['next']),
 				false,
-				__('Next Unit', 'wp_courseware')
+				__('Siguiente Actividad', 'wp_courseware')
 			);
 		}
 		
@@ -1685,7 +1685,7 @@ class WPCW_UnitFrontend
 				{
 					$html[] = sprintf('<b>%s:</b> %s', 
 						$tagDetails['tag_details']->question_tag_name, 
-						sprintf(__('Your grade is %d%%', 'wp_courseware'), $tagDetails['score_total'])
+						sprintf(__('Su Puntaje es %d%%', 'wp_courseware'), $tagDetails['score_total'])
 					);
 				}
 				
@@ -1693,7 +1693,7 @@ class WPCW_UnitFrontend
 				else 
 				{
 					$html[] = sprintf('<b>%s:</b> %s', $tagDetails['tag_details']->question_tag_name, 
-						sprintf(__('%d out of %d correct (%d%%)', 'wp_courseware'),
+						sprintf(__('%d de %d correctas (%d%%)', 'wp_courseware'),
 							$tagDetails['score_correct_questions'],
 							$tagDetails['question_count'],
 							$tagDetails['score_total']
@@ -1872,7 +1872,7 @@ class WPCW_UnitFrontend
 	 */
 	static function message_error_getCompletionBox_error()
 	{
-		return WPCW_UnitFrontend::message_createMessage_error(__('An error occured, so your unit progress was not updated. Please refresh the page and try again.', 'wp_courseware'));
+		return WPCW_UnitFrontend::message_createMessage_error(__('Ocurrió un error, el progreso de su actividad no se pudo actualizar. Por favor, recargue la página e intente de nuevo.', 'wp_courseware'));
 	}
 	
 	
@@ -2423,7 +2423,7 @@ class WPCW_UnitFrontend
 		if ($this->unitQuizDetails->questions &&  $answerCountSoFar < count($this->unitQuizDetails->questions)) 
 		{
 			// Error - not all questions are answered
-			echo WPCW_UnitFrontend::message_createMessage_error(__('Please provide an answer for all of the questions on this page.', 'wp_courseware'));
+			echo WPCW_UnitFrontend::message_createMessage_error(__('Por favor, conteste todas las preguntas de esta página.', 'wp_courseware'));
 			
 			// This will trigger the form to show again with missing answers, using the ansers the user provided
 			// through what has been stored in $this->unchecked_QuizAnswersToGrade
@@ -2555,7 +2555,7 @@ class WPCW_UnitFrontend
 			}
 	
 			// No answers to check. Say thanks
-			echo WPCW_UnitFrontend::message_createMessage_success(__('Thank you for your responses. This unit is now complete.', 'wp_courseware'));		
+			echo WPCW_UnitFrontend::message_createMessage_success(__('Gracias por sus respuestas. Esta actividad está completa.', 'wp_courseware'));		
 		}
 		
 		// #### Quiz Mode - so yes, we do check for correct answers.
