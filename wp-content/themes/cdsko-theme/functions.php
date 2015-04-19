@@ -570,12 +570,6 @@ function show_first_name_field() {
                     select.add(option);
                 }
 
-                if (embo == 9) {
-                    option = document.createElement("OPTION");
-                    option.value = "@gocsa.com.mx";
-                    option.text = "@gocsa.com.mx";
-                    select.add(option);
-                }
 
                 if (embo == 10) {
                     option = document.createElement("OPTION");
@@ -584,12 +578,7 @@ function show_first_name_field() {
                     select.add(option);
                 }
 
-                if (embo == 11) {
-                    option = document.createElement("OPTION");
-                    option.value = "@ieqsa.com.mx";
-                    option.text = "@ieqsa.com.mx";
-                    select.add(option);
-                }
+             
 
                 if (embo == 12) {
                     option = document.createElement("OPTION");
@@ -660,12 +649,7 @@ function show_first_name_field() {
                     select.add(option);
                 }
 
-                if (embo == 22) {
-                    option = document.createElement("OPTION");
-                    option.value = "@petstar.mx";
-                    option.text = "@petstar.mx";
-                    select.add(option);
-                }
+                
 
                 if (embo == 23) {
                     option = document.createElement("OPTION");
@@ -686,6 +670,10 @@ function show_first_name_field() {
                     option.value = "@promesanet.com.mx";
                     option.text = "@promesanet.com.mx";
                     select.add(option);
+					option2 = document.createElement("OPTION");
+                    option2.value = "@ieqsa.com.mx";
+                    option2.text = "@ieqsa.com.mx";
+                    select.add(option2);
                 }
 
                 if (embo == 26) {
@@ -700,6 +688,10 @@ function show_first_name_field() {
                     option.value = "@mikiosko.mx";
                     option.text = "@mikiosko.mx";
                     select.add(option);
+					option2 = document.createElement("OPTION");
+                    option2.value = "@gocsa.com.mx";
+                    option2.text = "@gocsa.com.mx";
+                    select.add(option2);
                 }
                 if (embo == 28) {
                     option = document.createElement("OPTION");
@@ -708,31 +700,30 @@ function show_first_name_field() {
                     select.add(option);
                 }
 
-                if (embo == 29) {
-                    option = document.createElement("OPTION");
-                    option.value = "@llorenteycuenca.com";
-                    option.text = "@llorenteycuenca.com";
-                    select.add(option);
-                }
-
-                if (embo == 30) {
-                    option = document.createElement("OPTION");
-                    option.value = "@coca-cola.com";
-                    option.text = "@coca-cola.com";
-                    select.add(option);
-                }
+          
 
                 if (embo == 31) {
                     option = document.createElement("OPTION");
                     option.value = "@avangard.com";
                     option.text = "@avangard.com";
                     select.add(option);
+					option2 = document.createElement("OPTION");
+                    option2.value = "@petstar.mx";
+                    option2.text = "@petstar.mx";
+                    select.add(option2);
                 }
 
                 if (embo == 32) {
                     option = document.createElement("OPTION");
-                    option.value = "@santaclara.com.m";
-                    option.text = "@santaclara.com.m";
+                    option.value = "@santaclara.com.mx";
+                    option.text = "@santaclara.com.mx";
+                    select.add(option);
+                }
+				
+				   if (embo == 33) {
+                    option = document.createElement("OPTION");
+                    option.value = "@institutodebebidas.org.mx";
+                    option.text = "@institutodebebidas.org.mx";
                     select.add(option);
                 }
 
@@ -766,24 +757,23 @@ function show_first_name_field() {
                 <option value="6">Arca-Continental</option>
                 <option value="7">Coca-Cola Femsa</option>
                 <option value="8">BEPENSA</option>
-                <option value="9">Embotelladora de Colima</option>
                 <option value="10">Embotelladora del Nayar</option>
-                <option value="11">Industria Envasadora de Querétaro</option>
                 <option value="12">Grupo Yoli</option>
                 <option value="15">CEDESKO</option>
                 <option value="20">Medrenlogic</option>
                 <option value="21">Imer</option>
-                <option value="22">PetStar</option>
+               
                 <option value="23">Laboratorio de Servicios Analíticos</option>
                 <option value="24">Planta de Concentrados</option>
                 <option value="25">Promesa</option>
                 <option value="26">ASCOCA</option>
                 <option value="27">KIOSKO</option>
                 <option value="28">CEDESKO CONSULTORES</option>
-                <option value="29">Llorente y Cuenca</option>
-                <option value="30">The Coca-Cola Company</option>
+               
+            
                 <option value="31">Avangard</option>
                 <option value="32">Santaclara</option>
+				<option value="33">Instituto de Bebidas</option>
             </select>
         </label>
     </p>
