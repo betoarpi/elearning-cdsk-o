@@ -7,7 +7,11 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
+		<?php if ( is_category() ) : ?>
+		<h1 class="page-title">Muy Pronto.</h1>
+		<?php else : ?>
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'twentyfifteen' ); ?></h1>
+		<?php endif; ?>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -20,6 +24,12 @@
 
 			<p><?php _e( 'Lo siento pero no hay nada que se ajuste a tus criterios de búsqueda. Por favor, inténtalo de nuevo con palabras claves distintas.' ); ?></p>
 			<?php get_search_form(); ?>
+
+		<?php elseif ( is_category() ) : ?>
+
+			<p>Por el momento seguimos trabajando para tener más y mejor contenido.</p>
+
+			<h4>¡Regresa pronto!</h4>
 
 		<?php else : ?>
 

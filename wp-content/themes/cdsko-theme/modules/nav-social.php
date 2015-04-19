@@ -1,5 +1,5 @@
 <ul class="social-nav">
-    <li class="hidden-xs"><a href="<?php bloginfo('siteurl'); ?>"><span class="glyphicon glyphicon-home"></span><span class="visible-devices"> Inicio</span></a></li>
+    <li class="hidden-xs"><a href="http://www.cedesko.com.mx"><span class="glyphicon glyphicon-home"></span><span class="visible-devices"> Inicio</span></a></li>
     <li class="hidden-xs"><a href="<?php bloginfo('siteurl'); ?>/acerca-de-cedesko/">Acerca de Cedesko</a></li>
     <li class="hidden-xs"><a href="<?php bloginfo('siteurl'); ?>/consultores/">Consultores</a></li>
     <li class="hidden-xs"><a href="<?php bloginfo('siteurl'); ?>/comites/">Comités</a></li>

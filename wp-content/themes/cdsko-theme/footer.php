@@ -20,15 +20,15 @@
                         <img src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/img/footer-logo.png" alt="Logo Cedesko">
                     </div>
                     <ul class="col-sm-3 hidden-xs">
-                        <li><a href="<?php bloginfo('siteurl'); ?>">Inicio</a></li>
+                        <li><a href="http://www.cedesko.com.mx">Inicio</a></li>
                         <li><a href="<?php bloginfo('siteurl'); ?>/acerca-de-cedesko/">Acerca de Cedesko</a></li>
-                        <li><a href="<?php bloginfo('siteurl'); ?>/category/iniciativas-del-sistema/">Iniciativas del Sistema</a></li>
-                        <li><a href="<?php bloginfo('siteurl'); ?>/category/embajadores-coca-cola/">Embajadores Coca-Cola</a></li>
-                        <li><a href="<?php bloginfo('siteurl'); ?>/embotelladores/">Embotelladores</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/iniciativas-del-sistema/">Iniciativas del Sistema</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/iniciativas-del-sistema/embajadores-coca-cola/">Embajadores Coca-Cola</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/empresas-del-sistema/">Empresas del Sistema</a></li>
                         <li><a href="<?php bloginfo('siteurl'); ?>/latin-centro/">Latin Centro</a></li>
                     </ul>
                     <ul class="col-sm-3 hidden-xs">
-                        <li><a href="<?php bloginfo('siteurl'); ?>/catalogo-de-programas/">Catálogo de Programas</a></li>
+                        <li><a href="<?php bloginfo('siteurl'); ?>/category/catalogo-de-programas/">Catálogo de Programas</a></li>
                         <li><a href="<?php bloginfo('siteurl'); ?>/servicios/">Servicios</a></li>
                         <li><a href="<?php bloginfo('siteurl'); ?>/comites/">Comités</a></li>
                         <li><a href="<?php bloginfo('siteurl'); ?>/consultores/">Consultores</a></li>
@@ -71,14 +71,18 @@
         <!--<script src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/js/masonry.pkgd.min.js"></script>-->
         <script src="<?php bloginfo( 'template_directory' ); ?>/theme-assets/js/scripts.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-16665034-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        swfobject.registerObject("FlashID");
         </script>
 		
 		<?php wp_footer(); ?>

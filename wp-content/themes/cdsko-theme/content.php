@@ -6,7 +6,14 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('MainContent-item'); ?>>
-	<a href="<?php the_permalink(); ?>" class="MainContent-item-container">
+	<a href="
+		<?php 
+			if ( in_category('4') ) { ?>
+				http://cedesko1.com/category/catalogo-de-programas/
+			<?php } else { 
+				the_permalink(); 
+			} ?>
+		" class="MainContent-item-container">
 		<?php if ( in_category( array( 2,3,4 ) )  ) { ?>
 		<span class="ItemCategory">
 			<?php

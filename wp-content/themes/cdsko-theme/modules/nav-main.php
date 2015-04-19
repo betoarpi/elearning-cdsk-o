@@ -96,7 +96,7 @@
         </div>
         
     </li>
-    <li><a href="<?php bloginfo('siteurl'); ?>/embotelladoras/" class="less-padding">Empresas del<br>Sistema</a>
+    <li><a href="<?php bloginfo('siteurl'); ?>/empresas-del-sistema/" class="less-padding">Empresas del<br>Sistema</a>
         <div class="SubMenu container">
             <div class="row">
                 <h3 class="col-sm-4 title">Empresas del Sistema</h3>
@@ -114,14 +114,14 @@
     <li><a href="<?php bloginfo('siteurl'); ?>/latin-centro/">Latin Centro</a>
         <div class="SubMenu container">
             <div class="row">
-                <h3 class="col-sm-4 title">Latin Centro</h3>
-                <?php wp_nav_menu( 
-                    array( 
-                        'menu' => 'latin-centro', 
-                        'items_wrap' => '<ul id="%1$s" class="col-sm-8">%3$s</ul>', 
-                        'container' => ''
-                    )
-                ); ?>
+                <h3 class="col-sm-4 title">Latin Centro: ¡Próximamente!</h3>
+                <?php //wp_nav_menu( 
+                    //array( 
+                        //'menu' => 'latin-centro', 
+                        //'items_wrap' => '<ul id="%1$s" class="col-sm-8">%3$s</ul>', 
+                        //'container' => ''
+                    //)
+                //); ?>
             </div>
         </div>
     </li>

@@ -737,8 +737,8 @@ del{opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 .MainContent-item .MainContent-item-container #accordion h3:last-of-type,.MainContent-interna-item .MainContent-item-container #accordion h3:last-of-type,.MainContent-interna-full .MainContent-item-container #accordion h3:last-of-type,.MainContent-item .MainContent-interna-item-container #accordion h3:last-of-type,.MainContent-interna-item .MainContent-interna-item-container #accordion h3:last-of-type,.MainContent-interna-full .MainContent-interna-item-container #accordion h3:last-of-type{border-bottom:none}
 .MainContent-item:nth-child(odd),.MainContent-interna-item:nth-child(odd),.MainContent-interna-full:nth-child(odd){clear:left}
 .MainContent-item.category-cedesko,.MainContent-interna-item.category-cedesko,.MainContent-interna-full.category-cedesko,.MainContent-item.category-ultimo-programa-desarrollado,.MainContent-interna-item.category-ultimo-programa-desarrollado,.MainContent-interna-full.category-ultimo-programa-desarrollado{float:right;clear:right}
-.MainContent-item.category-catalogo-de-programas:nth-child(odd){clear:none !important}
-.MainContent-item.category-catalogo-de-programas:nth-child(even){clear:left}
+.MainContent-item.category-catalogo-de-programas:nth-child(odd),body.search-results .MainContent-item:nth-child(odd){clear:none !important}
+.MainContent-item.category-catalogo-de-programas:nth-child(even),body.search-results .MainContent-item:nth-child(even){clear:left}
 .Embajadores-grid .MainContent-item:nth-child(odd){clear:none !important}
 .Embajadores-grid .MainContent-item:nth-child(even){clear:left}
 body.category-noticias .MainContent .MainContent-item:nth-child(odd){clear:none !important}
