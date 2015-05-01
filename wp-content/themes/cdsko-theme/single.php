@@ -42,9 +42,15 @@ get_header(); ?>
 
 							<h3 class="Title"><?php the_title(); ?></h3>
 
+							<?php if ( has_post_thumbnail() ) { ?>
+    							<figure class="left w100 MB20">
+    								<?php the_post_thumbnail( 'full', array('class' => "img-responsive") ); ?>
+    							</figure>
+    						<?php } ?>
+
 							<?php the_content(); ?>
 
-							<?php if ( is_user_logged_in() ) {
+							<?php if ( get_field('contenido_solo_registrados') ) {
 								the_field('contenido_solo_registrados'); ?>
 
 								<?php if( get_field('curso_link') ): ?>

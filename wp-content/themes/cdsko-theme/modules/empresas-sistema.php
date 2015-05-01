@@ -7,7 +7,7 @@
             <li>
                 <a href="<?php bloginfo('siteurl'); ?>/embotelladoras/embotelladora-arca-continental/">
                     <img src="<?php bloginfo('template_directory'); ?>/theme-assets/img/empresas-sistema/logo-arca.jpg" alt="">
-                    <span>Embotelladora Acra Continental</span>
+                    <span>Embotelladora ARCA Continental</span>
                 </a>
             </li>
             <li>

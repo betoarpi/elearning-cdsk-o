@@ -13,7 +13,18 @@
 				<div id="post-<?php the_ID(); ?>" <?php post_class('MainContent-interna-full'); ?>>
 					<article class="MainContent-interna-item-container Programa-content">
 
-							<h3 class="Title"><?php the_title(); ?></h3>
+							<div class="row">
+								<div class="col-sm-4">
+									<?php if ( has_post_thumbnail() ) { ?>
+		    							<figure class="left w100 MT20 MB20">
+		    								<?php the_post_thumbnail( 'full', array('class' => "img-responsive") ); ?>
+		    							</figure>
+		    						<?php } ?>
+								</div>
+								<div class="col-sm-8">
+									<h3 class="Title"><?php the_title(); ?></h3>
+								</div>
+							</div>
 
 							<?php if(get_field('seccion_contenido')): ?>
 								<?php while(has_sub_field('seccion_contenido')): ?>

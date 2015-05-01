@@ -49,13 +49,7 @@
     <div class="row">
         <div id="InnerBanner-img">
             <div class="InnerBanner-slider slides-container">
-			<?php if ( has_post_thumbnail() ) { ?>
-    			<?php the_post_thumbnail( 'full' ); ?>
-            <?php } else if ( is_category() ) { ?>
-                <img src="<?php bloginfo('template_directory'); ?>/theme-assets/img/banners/generico-banner.jpg" alt="">
-    		<?php } else { ?>
-    			<img src="<?php bloginfo('template_directory'); ?>/theme-assets/img/banners/generico-banner.jpg" alt="">
-    		<?php } ?>
+    			<img src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/2015/04/banner-calidad-3.jpg" alt="">
             </div>
         </div>
     </div>

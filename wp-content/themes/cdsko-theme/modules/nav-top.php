@@ -1,6 +1,6 @@
 <ul class="TopNav">
     <li class="visible-xs"><a href="http://www.cedesko.com.mx"><span class="glyphicon glyphicon-home"></span><span class="visible-devices"> Inicio</span></a></li>
-    <li class="visible-xs"><a href="<?php bloginfo('siteurl'); ?>/acerca-de-cedesko/">Acerca de Cedesko</a></li>
+    <li class="visible-xs"><a href="<?php bloginfo('siteurl'); ?>/acerca-de-cedesko/">Acerca de CEDESKO</a></li>
     <li class="visible-xs"><a href="<?php bloginfo('siteurl'); ?>/consultores/">Consultores</a></li>
     <li class="visible-xs"><a href="<?php bloginfo('siteurl'); ?>/comites/">Comités</a></li>
     <li class="visible-xs"><a href="<?php bloginfo('siteurl'); ?>/contacto/">Contacto</a></li>
