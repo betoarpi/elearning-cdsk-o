@@ -114,7 +114,7 @@
     <li><a href="<?php bloginfo('siteurl'); ?>/latin-centro/">Latin Centro</a>
         <div class="SubMenu container">
             <div class="row">
-                <h3 class="col-sm-4 title">Latin Centro: ¡Próximamente!</h3>
+                <h3 class="col-sm-4 title">Latin Centro<br>¡En Construcción!</h3>
                 <?php //wp_nav_menu( 
                     //array( 
                         //'menu' => 'latin-centro', 

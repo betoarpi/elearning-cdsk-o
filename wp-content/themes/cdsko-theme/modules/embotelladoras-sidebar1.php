@@ -5,7 +5,7 @@
         <a href="#" class="EmpresasSistema-toggle"><span class="glyphicon glyphicon-menu-down"></span></a>
         <ul>
             <li>
-                <a href="<?php bloginfo('siteurl'); ?>/embotelladoras/embotelladora-arca-continental/">Embotelladora ARCA Continental</a>
+                <a href="<?php bloginfo('siteurl'); ?>/embotelladoras/embotelladora-arcacontinental/">Embotelladora Arcacontinental</a>
             </li>
             <li>
                 <a href="<?php bloginfo('siteurl'); ?>/embotelladoras/bepensa/">Bepensa</a>
