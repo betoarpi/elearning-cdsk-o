@@ -55,7 +55,7 @@
                     
                     <div class="row embotelladoras-gallery">
                         <div class="col-sm-4">
-                        	<a href="<?php bloginfo('siteurl'); ?>/empresas-del-sistema/embotelladora-arca-continental/">
+                        	<a href="<?php bloginfo('siteurl'); ?>/empresas-del-sistema/embotelladora-arcacontinental/">
                             	<img class="img-responsive" src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/2015/03/logo-arca.jpg" class="attachment-thumbnail" alt="logo-arca">
                             </a>
                         </div>

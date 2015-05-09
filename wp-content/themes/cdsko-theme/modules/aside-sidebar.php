@@ -1,19 +1,4 @@
 <aside class="AsideSidebar col-sm-3 no-margin-top">
-    <?php query_posts('cat=4&posts_per_page=1'); ?>
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <article class="AsideSidebar-item">
-        <a class="AsideSidebar-item-container" href="<?php the_permalink(); ?>">
-            <span class="ItemCategory">Último Programa Desarrollado</span>
-            <figure class="ItemThumbnail">
-                <?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?>
-            </figure>
-            <h3 class="Title"><?php the_title(); ?></h3>
-            <?php the_excerpt(); ?>
-            <button class="MoreBtn">Ver Más <span class="glyphicon glyphicon-menu-right"></span></button>
-        </a>
-    </article>
-    <?php endwhile; endif; ?>
-    <?php wp_reset_query(); ?>
     <article class="AsideSidebar-item">
         <h4 class="LoginHeading">Iniciar Sesión</h4>
         <div class="AsideSidebar-item-container">
@@ -35,4 +20,19 @@
             </form>
         </div>
     </article>
+    <?php query_posts('cat=4&posts_per_page=1'); ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <article class="AsideSidebar-item">
+        <a class="AsideSidebar-item-container" href="<?php the_permalink(); ?>">
+            <span class="ItemCategory">Último Programa Desarrollado</span>
+            <figure class="ItemThumbnail">
+                <?php the_post_thumbnail('news-thumb', array('class' => "img-responsive")); ?>
+            </figure>
+            <h3 class="Title"><?php the_title(); ?></h3>
+            <?php the_excerpt(); ?>
+            <button class="MoreBtn">Ver Más <span class="glyphicon glyphicon-menu-right"></span></button>
+        </a>
+    </article>
+    <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>    
 </aside>
