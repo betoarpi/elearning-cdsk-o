@@ -20,7 +20,7 @@
                         </a>
                     </article>
                     <article class="TabItem col-sm-3">
-                        <a href="<?php bloginfo('siteurl'); ?>/imcr/">
+                        <a href="http://www.cedesko.mx/imcr/">
                             <figure class="TabItem-thumbnail hidden-xs"><img src="<?php bloginfo('template_directory'); ?>/theme-assets/img/imcr.jpg" alt=""></figure>
                             <h3 class="title">Sistema IMCR</h3>
                             <p>Iniciativa del Sistema: Sistema IMCR</p>
